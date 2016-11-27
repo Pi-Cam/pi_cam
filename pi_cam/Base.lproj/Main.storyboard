@@ -1,26 +1,190 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raspberry_Pi_Logo2xSVG" translatesAutoresizingMaskIntoConstraints="NO" id="dXN-e7-zEy">
+                                <rect key="frame" x="92.5" y="129" width="135" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="BtF-r4-BMb"/>
+                                    <constraint firstAttribute="height" constant="172" id="GzU-ih-iX4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scaning for Touch ID…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMa-wu-Oeh">
+                                <rect key="frame" x="52.5" y="323" width="215" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="SR6-yP-Qo0"/>
+                                    <constraint firstAttribute="height" constant="21" id="TOz-dH-UZr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.66274509803921566" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-Il-pBl">
+                                <rect key="frame" x="73" y="366" width="174" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="YeA-XQ-HzR"/>
+                                    <constraint firstAttribute="height" constant="14" id="sy4-rf-RgX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Log on with email">
+                                    <color key="titleColor" red="0.73725490196078436" green="0.066666666666666666" blue="0.25882352941176467" alpha="0.64364182692307692" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ajE-0A-m9h" kind="presentation" id="7YK-M2-Gdd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dXN-e7-zEy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="109" id="6T3-Qa-3ev">
+                                <variation key="heightClass=compact-widthClass=compact" constant="149"/>
+                            </constraint>
+                            <constraint firstItem="dXN-e7-zEy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HDl-hv-xi6"/>
+                            <constraint firstItem="DQo-Il-pBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I5c-Ma-W5N"/>
+                            <constraint firstItem="GMa-wu-Oeh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZY4-Lj-tCH"/>
+                            <constraint firstItem="DQo-Il-pBl" firstAttribute="top" secondItem="GMa-wu-Oeh" secondAttribute="bottom" constant="22" id="tH1-Si-w3n"/>
+                            <constraint firstItem="GMa-wu-Oeh" firstAttribute="top" secondItem="dXN-e7-zEy" secondAttribute="bottom" constant="22" id="uhg-qf-s0A"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-41" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ezb-QC-Wcd">
+            <objects>
+                <viewController id="ajE-0A-m9h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61K-4w-XrK"/>
+                        <viewControllerLayoutGuide type="bottom" id="lVy-Hi-nc3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rXH-Kw-DcL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raspberry_Pi_Logo2xSVG" translatesAutoresizingMaskIntoConstraints="NO" id="yrW-hO-Uni">
+                                <rect key="frame" x="92.5" y="66" width="135" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="chD-gn-gIL"/>
+                                    <constraint firstAttribute="height" constant="172" id="kIn-1E-z8E"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textLabel" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-mY-x61">
+                                <rect key="frame" x="42.5" y="258" width="235" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Cd-9F-gkd"/>
+                                    <constraint firstAttribute="width" constant="235.5" id="uUq-nk-Dn0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textLabel" translatesAutoresizingMaskIntoConstraints="NO" id="ygG-VF-LLU">
+                                <rect key="frame" x="41.5" y="308" width="237" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eAW-uv-xXM"/>
+                                    <constraint firstAttribute="width" constant="236.5" id="f0l-ha-jeh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcE-bp-dLY">
+                                <rect key="frame" x="42.5" y="358" width="235" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="44y-CG-NyX"/>
+                                    <constraint firstAttribute="width" constant="235.5" id="KH2-5o-InD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="LogonButton"/>
+                                <connections>
+                                    <segue destination="a9c-gZ-VTh" kind="presentation" id="cVr-ia-M5b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb9-qd-3Yc">
+                                <rect key="frame" x="73.5" y="419" width="173" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173.5" id="eiZ-8e-H8Q"/>
+                                    <constraint firstAttribute="height" constant="14" id="sT2-Jf-yEX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Log on with email">
+                                    <color key="titleColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.64364182690000005" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yrW-hO-Uni" firstAttribute="top" secondItem="61K-4w-XrK" secondAttribute="bottom" constant="46" id="NNm-nU-mgv"/>
+                            <constraint firstItem="Bb9-qd-3Yc" firstAttribute="centerX" secondItem="rXH-Kw-DcL" secondAttribute="centerX" id="VpY-iw-vgQ"/>
+                            <constraint firstItem="ygG-VF-LLU" firstAttribute="centerX" secondItem="rXH-Kw-DcL" secondAttribute="centerX" id="W8T-qX-zgG"/>
+                            <constraint firstItem="rA8-mY-x61" firstAttribute="top" secondItem="yrW-hO-Uni" secondAttribute="bottom" constant="20" id="XE4-ko-RlX"/>
+                            <constraint firstItem="yrW-hO-Uni" firstAttribute="centerX" secondItem="rXH-Kw-DcL" secondAttribute="centerX" id="YYs-G2-Zpl"/>
+                            <constraint firstItem="jcE-bp-dLY" firstAttribute="centerX" secondItem="rXH-Kw-DcL" secondAttribute="centerX" id="d1I-HS-EOl"/>
+                            <constraint firstItem="jcE-bp-dLY" firstAttribute="top" secondItem="ygG-VF-LLU" secondAttribute="bottom" constant="10" id="dIF-oG-FZ2"/>
+                            <constraint firstItem="ygG-VF-LLU" firstAttribute="top" secondItem="rA8-mY-x61" secondAttribute="bottom" constant="10" id="gZ9-yf-9Nb"/>
+                            <constraint firstItem="Bb9-qd-3Yc" firstAttribute="top" secondItem="jcE-bp-dLY" secondAttribute="bottom" constant="21" id="jWX-lg-wgK"/>
+                            <constraint firstItem="rA8-mY-x61" firstAttribute="centerX" secondItem="rXH-Kw-DcL" secondAttribute="centerX" id="lnI-Pg-X9n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBK-Z8-syH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="125"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AQN-fm-nHw">
+            <objects>
+                <viewController id="XRB-eC-7Vt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aiu-Zf-2XC"/>
+                        <viewControllerLayoutGuide type="bottom" id="atY-E6-r9k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B81-FZ-U3S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hd1-ho-HRq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hH-wS-kF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280.8000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1nJ-f5-c0g">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a9c-gZ-VTh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fgv-2Q-7rX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XRB-eC-7Vt" kind="relationship" relationship="viewControllers" id="LIx-eW-kDs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNu-kv-9Ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogonButton" width="472" height="80"/>
+        <image name="Raspberry_Pi_Logo2xSVG" width="270" height="344"/>
+        <image name="textLabel" width="476" height="84"/>
+    </resources>
 </document>

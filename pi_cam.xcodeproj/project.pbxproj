@@ -54,6 +54,9 @@
 		C06ACA3C1DEB7C320080048D /* pi_cam */ = {
 			isa = PBXGroup;
 			children = (
+				C06ACA511DEB7D840080048D /* Controller */,
+				C06ACA501DEB7D7F0080048D /* View */,
+				C06ACA4F1DEB7D750080048D /* Model */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
 				C06ACA3F1DEB7C320080048D /* ViewController.swift */,
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
@@ -62,6 +65,27 @@
 				C06ACA491DEB7C320080048D /* Info.plist */,
 			);
 			path = pi_cam;
+			sourceTree = "<group>";
+		};
+		C06ACA4F1DEB7D750080048D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C06ACA501DEB7D7F0080048D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C06ACA511DEB7D840080048D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
