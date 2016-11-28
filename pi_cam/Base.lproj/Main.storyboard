@@ -199,7 +199,9 @@
         <scene sceneID="DCS-IZ-phv">
             <objects>
                 <viewControllerPlaceholder storyboardName="MainScreen" id="K7W-sP-iFQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mPs-Mj-yGs"/>
+                    <tabBarItem key="tabBarItem" title="" image="Main" selectedImage="Main" id="mPs-Mj-yGs">
+                        <inset key="imageInsets" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCF-nf-Yk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +211,7 @@
         <scene sceneID="GQx-ET-2pb">
             <objects>
                 <viewControllerPlaceholder storyboardName="PreviousStreams" id="kXq-cn-O2F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="J4f-OY-Zs5"/>
+                    <tabBarItem key="tabBarItem" title="" image="Previous" selectedImage="Previous" id="J4f-OY-Zs5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtN-17-tj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +221,7 @@
         <scene sceneID="KZH-j9-X9z">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" id="8ye-eX-sy5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zpu-Ij-yE2"/>
+                    <tabBarItem key="tabBarItem" title="" image="Settings" selectedImage="Settings" id="zpu-Ij-yE2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdv-nF-Bu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +231,7 @@
         <scene sceneID="zJe-uV-blF">
             <objects>
                 <viewControllerPlaceholder storyboardName="Account" id="c9Y-r0-JGB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yxM-3q-v5R"/>
+                    <tabBarItem key="tabBarItem" title="" image="Account" selectedImage="Account" id="yxM-3q-v5R"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWb-Fa-voS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,8 +239,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Account" width="50" height="50"/>
         <image name="LogonButton" width="472" height="80"/>
+        <image name="Main" width="50" height="50"/>
+        <image name="Previous" width="50" height="34"/>
         <image name="Raspberry_Pi_Logo2xSVG" width="270" height="344"/>
+        <image name="Settings" width="50" height="50"/>
         <image name="textLabel" width="476" height="84"/>
     </resources>
 </document>
