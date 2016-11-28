@@ -174,116 +174,7 @@
             </objects>
             <point key="canvasLocation" x="1701" y="-140"/>
         </scene>
-        <!--MainScreen-->
-        <scene sceneID="QDt-Wj-s8s">
-            <objects>
-                <viewController storyboardIdentifier="UIViewController-FdY-iN-aaG" title="MainScreen" id="FdY-iN-aaG" customClass="MainScreenViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wr7-jv-1Vz"/>
-                        <viewControllerLayoutGuide type="bottom" id="QsN-NQ-9SF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mwe-PM-TYG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-ae-mpv">
-                                <rect key="frame" x="0.0" y="20" width="320" height="51"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pi connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbZ-40-HUG">
-                                        <rect key="frame" x="22" y="15" width="101" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Oval2x" translatesAutoresizingMaskIntoConstraints="NO" id="UEx-45-Z37">
-                                        <rect key="frame" x="126" y="22" width="8" height="8"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="dzh-yN-LUq"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="khc-eZ-AHA">
-                                <rect key="frame" x="0.0" y="79" width="320" height="489"/>
-                                <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="Tb7-Vi-6eL">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </view>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BaH-mo-bLg">
-                                    <rect key="frame" x="0.0" y="130" width="320" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <state key="normal" title="Add new service">
-                                        <color key="titleColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                </button>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="streamingServicerCell" rowHeight="100" id="F3b-iS-sJM" customClass="StreamingServiceTableViewCell" customModule="pi_cam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30" width="320" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F3b-iS-sJM" id="8kH-RK-nWc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMI-oa-gXy">
-                                                    <rect key="frame" x="0.0" y="2" width="320" height="96"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube-logo-full_color" translatesAutoresizingMaskIntoConstraints="NO" id="zwj-V7-WeS">
-                                                            <rect key="frame" x="44" y="8" width="232" height="80"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="zwj-V7-WeS" firstAttribute="top" secondItem="HMI-oa-gXy" secondAttribute="top" constant="8" id="7ZN-EJ-rQU"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zwj-V7-WeS" secondAttribute="bottom" constant="8" id="oTU-dp-ltr"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zwj-V7-WeS" secondAttribute="trailing" constant="43.5" id="qLk-gl-y91"/>
-                                                        <constraint firstItem="zwj-V7-WeS" firstAttribute="leading" secondItem="HMI-oa-gXy" secondAttribute="leading" constant="43.5" id="upu-u2-6bD"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="HMI-oa-gXy" firstAttribute="leading" secondItem="8kH-RK-nWc" secondAttribute="leading" id="Pf9-fa-YJA"/>
-                                                <constraint firstItem="HMI-oa-gXy" firstAttribute="top" secondItem="8kH-RK-nWc" secondAttribute="top" constant="2" id="kG8-w7-tFa"/>
-                                                <constraint firstAttribute="bottom" secondItem="HMI-oa-gXy" secondAttribute="bottom" constant="2" id="xfW-n5-9Rz"/>
-                                                <constraint firstAttribute="trailing" secondItem="HMI-oa-gXy" secondAttribute="trailing" id="xqj-nP-fRT"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="streamingServiceImage" destination="zwj-V7-WeS" id="4e5-Bc-x4a"/>
-                                            <segue destination="cjJ-lN-ykF" kind="show" id="pA5-wr-cgz">
-                                                <nil key="action"/>
-                                            </segue>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="khc-eZ-AHA" firstAttribute="leading" secondItem="Mwe-PM-TYG" secondAttribute="leading" id="6KM-om-Xjv"/>
-                            <constraint firstAttribute="trailing" secondItem="jnE-ae-mpv" secondAttribute="trailing" id="FJ8-5O-e33"/>
-                            <constraint firstAttribute="trailing" secondItem="khc-eZ-AHA" secondAttribute="trailing" id="KgH-7Q-2Ey"/>
-                            <constraint firstItem="jnE-ae-mpv" firstAttribute="top" secondItem="Wr7-jv-1Vz" secondAttribute="bottom" id="ZLr-ax-9gr"/>
-                            <constraint firstItem="khc-eZ-AHA" firstAttribute="top" secondItem="jnE-ae-mpv" secondAttribute="bottom" constant="8" id="e5r-c9-V9g"/>
-                            <constraint firstItem="jnE-ae-mpv" firstAttribute="leading" secondItem="Mwe-PM-TYG" secondAttribute="leading" id="fHb-bc-2zx"/>
-                            <constraint firstItem="QsN-NQ-9SF" firstAttribute="top" secondItem="khc-eZ-AHA" secondAttribute="bottom" id="r8N-4P-jBp"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="lRq-FA-RbN"/>
-                    <navigationItem key="navigationItem" id="eP9-Ef-5HT"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntm-Jm-geQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4665" y="-592.6056338028169"/>
-        </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="n7E-o1-9ph">
             <objects>
                 <viewController id="6bR-sN-bSF" sceneMemberID="viewController">
@@ -296,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="C9w-17-uT8"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="StartStream" systemItem="favorites" id="C9w-17-uT8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv9-u8-uHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,150 +231,6 @@
             </objects>
             <point key="canvasLocation" x="6823" y="675"/>
         </scene>
-        <!--Setup Pi View Controller-->
-        <scene sceneID="iIl-Mv-cVk">
-            <objects>
-                <viewController id="cjJ-lN-ykF" customClass="SetupPiViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4uL-eE-Z2p"/>
-                        <viewControllerLayoutGuide type="bottom" id="QDM-hM-QiY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IH4-ov-fuo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configuring Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-mO-zMB">
-                                <rect key="frame" x="24" y="73" width="272" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.38823529410000002" green="0.61568627450000002" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tv-W9-trt">
-                                <rect key="frame" x="76" y="137" width="168" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Choose different service">
-                                    <color key="titleColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonPressed:" destination="cjJ-lN-ykF" eventType="touchUpInside" id="6lZ-nY-7PG"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Service: Youtube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN2-y9-KW6">
-                                <rect key="frame" x="64" y="108" width="192" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pi Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPl-xt-Sn9">
-                                <rect key="frame" x="53" y="253" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9By-Y4-tfH">
-                                <rect key="frame" x="53" y="289" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connecting to Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2j-Kb-iNA">
-                                <rect key="frame" x="53" y="328" width="149" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwF-XD-kPL">
-                                <rect key="frame" x="42" y="352" width="236" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="1xx-wn-oBb"/>
-                                    <constraint firstAttribute="height" constant="40" id="PAi-2v-8Vq"/>
-                                </constraints>
-                                <state key="normal" image="StartStream"/>
-                                <connections>
-                                    <segue destination="7Og-C0-K0I" kind="show" id="cZO-WO-ISv">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isv-SR-f4D">
-                                <rect key="frame" x="127" y="195" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-dC-fk5">
-                                <rect key="frame" x="90" y="224" width="140" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.36834978909999999" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="ZwF-XD-kPL" firstAttribute="centerX" secondItem="IH4-ov-fuo" secondAttribute="centerX" id="WKF-Zn-voA"/>
-                            <constraint firstItem="QDM-hM-QiY" firstAttribute="top" secondItem="ZwF-XD-kPL" secondAttribute="bottom" constant="127" id="e7b-21-gC7"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AR1-o2-3YY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5450.625" y="-592.6056338028169"/>
-        </scene>
-        <!--Stream View Controller-->
-        <scene sceneID="PMC-be-Ex3">
-            <objects>
-                <viewController id="7Og-C0-K0I" customClass="StreamViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="osU-jh-KDo"/>
-                        <viewControllerLayoutGuide type="bottom" id="sSt-LR-G2T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4jg-sg-tnA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOJ-FO-lpC">
-                                <rect key="frame" x="0.0" y="73" width="320" height="445"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.082151442310000003" colorSpace="calibratedWhite"/>
-                            </webView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z94-a9-ioT">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjh-Wr-vhm">
-                                        <rect key="frame" x="99" y="10" width="123" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="CANCEL STREAM">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelStreamButtonPressed:" destination="7Og-C0-K0I" eventType="touchUpInside" id="9v1-H4-5HW"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pi Connected: Youtube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAL-tJ-oD7">
-                                <rect key="frame" x="72" y="37" width="176" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YF6-ao-OCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6221.25" y="-593.66197183098598"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CJd-6P-fsG">
             <objects>
@@ -494,7 +241,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FdY-iN-aaG" kind="relationship" relationship="viewControllers" id="wbh-tA-pgS"/>
+                        <segue destination="1TN-JW-zo5" kind="relationship" relationship="viewControllers" id="wbh-tA-pgS"/>
                         <segue destination="6bR-sN-bSF" kind="relationship" relationship="viewControllers" id="cWN-h7-H15"/>
                         <segue destination="dk5-MU-JGa" kind="relationship" relationship="viewControllers" id="7r8-h2-5op"/>
                         <segue destination="deD-Ny-gIB" kind="relationship" relationship="viewControllers" id="qxk-3A-uen"/>
@@ -504,13 +251,21 @@
             </objects>
             <point key="canvasLocation" x="3583" y="-529"/>
         </scene>
+        <!--UIViewController-FdY-iN-aaG-->
+        <scene sceneID="Qr4-dK-sUw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-FdY-iN-aaG" storyboardName="MainScreen" referencedIdentifier="UIViewController-FdY-iN-aaG" id="1TN-JW-zo5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RnB-ZA-UId"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aw-zn-nur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4665" y="-592.6056338028169"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LogonButton" width="472" height="80"/>
-        <image name="Oval2x" width="18" height="18"/>
         <image name="Raspberry_Pi_Logo2xSVG" width="270" height="344"/>
         <image name="StartStream" width="472" height="80"/>
-        <image name="YouTube-logo-full_color" width="773" height="481"/>
         <image name="textLabel" width="476" height="84"/>
     </resources>
 </document>
