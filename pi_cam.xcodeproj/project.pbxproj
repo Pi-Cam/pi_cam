@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C01C0AB61DEB9AD70011E8E1 /* LoginWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0AB51DEB9AD70011E8E1 /* LoginWithEmailViewController.swift */; };
-		C01C0ABB1DEBA5BD0011E8E1 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01C0ABA1DEBA5BD0011E8E1 /* MainScreen.storyboard */; };
-		C01C0AC11DEBA9B20011E8E1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01C0AC01DEBA9B20011E8E1 /* Account.storyboard */; };
-		C01C0AC31DEBA9F00011E8E1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01C0AC21DEBA9F00011E8E1 /* Settings.storyboard */; };
-		C01C0AC51DEBAA180011E8E1 /* PreviousStreams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01C0AC41DEBAA180011E8E1 /* PreviousStreams.storyboard */; };
-		C01C0AC71DEBAEDE0011E8E1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0AC61DEBAEDE0011E8E1 /* MainScreenViewController.swift */; };
-		C01C0AC91DEBAEFE0011E8E1 /* SetupPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0AC81DEBAEFE0011E8E1 /* SetupPiViewController.swift */; };
-		C01C0ACB1DEBAF130011E8E1 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0ACA1DEBAF130011E8E1 /* StreamViewController.swift */; };
-		C01C0ACD1DEBB4D40011E8E1 /* StreamingServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0ACC1DEBB4D40011E8E1 /* StreamingServiceTableViewCell.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA401DEB7C320080048D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3F1DEB7C320080048D /* ViewController.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
@@ -25,14 +17,6 @@
 
 /* Begin PBXFileReference section */
 		C01C0AB51DEB9AD70011E8E1 /* LoginWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWithEmailViewController.swift; sourceTree = "<group>"; };
-		C01C0ABA1DEBA5BD0011E8E1 /* MainScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
-		C01C0AC01DEBA9B20011E8E1 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		C01C0AC21DEBA9F00011E8E1 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		C01C0AC41DEBAA180011E8E1 /* PreviousStreams.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreviousStreams.storyboard; sourceTree = "<group>"; };
-		C01C0AC61DEBAEDE0011E8E1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		C01C0AC81DEBAEFE0011E8E1 /* SetupPiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupPiViewController.swift; sourceTree = "<group>"; };
-		C01C0ACA1DEBAF130011E8E1 /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
-		C01C0ACC1DEBB4D40011E8E1 /* StreamingServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingServiceTableViewCell.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA3F1DEB7C320080048D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,53 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C01C0AB91DEBA4900011E8E1 /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-				C01C0ABF1DEBA96E0011E8E1 /* Previous Streams */,
-				C01C0ABE1DEBA94F0011E8E1 /* Account */,
-				C01C0ABD1DEBA9350011E8E1 /* Settings */,
-				C01C0ABC1DEBA6360011E8E1 /* MainScreen */,
-			);
-			name = StoryBoards;
-			sourceTree = "<group>";
-		};
-		C01C0ABC1DEBA6360011E8E1 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C01C0ABA1DEBA5BD0011E8E1 /* MainScreen.storyboard */,
-				C01C0AC81DEBAEFE0011E8E1 /* SetupPiViewController.swift */,
-				C01C0AC61DEBAEDE0011E8E1 /* MainScreenViewController.swift */,
-				C01C0ACA1DEBAF130011E8E1 /* StreamViewController.swift */,
-				C01C0ACC1DEBB4D40011E8E1 /* StreamingServiceTableViewCell.swift */,
-			);
-			name = MainScreen;
-			sourceTree = "<group>";
-		};
-		C01C0ABD1DEBA9350011E8E1 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				C01C0AC21DEBA9F00011E8E1 /* Settings.storyboard */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
-		C01C0ABE1DEBA94F0011E8E1 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				C01C0AC01DEBA9B20011E8E1 /* Account.storyboard */,
-			);
-			name = Account;
-			sourceTree = "<group>";
-		};
-		C01C0ABF1DEBA96E0011E8E1 /* Previous Streams */ = {
-			isa = PBXGroup;
-			children = (
-				C01C0AC41DEBAA180011E8E1 /* PreviousStreams.storyboard */,
-			);
-			name = "Previous Streams";
-			sourceTree = "<group>";
-		};
 		C06ACA311DEB7C320080048D = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +56,6 @@
 		C06ACA3C1DEB7C320080048D /* pi_cam */ = {
 			isa = PBXGroup;
 			children = (
-				C01C0AB91DEBA4900011E8E1 /* StoryBoards */,
 				C06ACA511DEB7D840080048D /* Controller */,
 				C06ACA501DEB7D7F0080048D /* View */,
 				C06ACA4F1DEB7D750080048D /* Model */,
@@ -217,11 +153,7 @@
 			files = (
 				C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */,
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
-				C01C0AC11DEBA9B20011E8E1 /* Account.storyboard in Resources */,
-				C01C0AC31DEBA9F00011E8E1 /* Settings.storyboard in Resources */,
-				C01C0ABB1DEBA5BD0011E8E1 /* MainScreen.storyboard in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
-				C01C0AC51DEBAA180011E8E1 /* PreviousStreams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,11 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01C0AC91DEBAEFE0011E8E1 /* SetupPiViewController.swift in Sources */,
 				C01C0AB61DEB9AD70011E8E1 /* LoginWithEmailViewController.swift in Sources */,
-				C01C0ACB1DEBAF130011E8E1 /* StreamViewController.swift in Sources */,
-				C01C0ACD1DEBB4D40011E8E1 /* StreamingServiceTableViewCell.swift in Sources */,
-				C01C0AC71DEBAEDE0011E8E1 /* MainScreenViewController.swift in Sources */,
 				C06ACA401DEB7C320080048D /* ViewController.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 			);
