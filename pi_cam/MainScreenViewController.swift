@@ -17,7 +17,6 @@ class InitialScreenVC: UIViewController {
     // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-  
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +34,9 @@ class InitialScreenVC: UIViewController {
         
         view.addSubview(dotViewFour)
         setUpdotViewFour()
+        
+        view.addSubview(leftButton)
+        setUpLeftButton()
 
         UIView.animate(withDuration: 0.7, delay: 1, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.piImage.alpha = 1.0
@@ -46,17 +48,20 @@ class InitialScreenVC: UIViewController {
         }, completion: nil)
         
         
-        if startCount == true{
+        if startCount == true {
             timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: "countUp", userInfo: nil, repeats: true)
         }
-
+        
+        displayAlert("Connection error", message: "Make sure your blutooth conntectinos is connected")
     }
+    
+
     
     func countUp(){
         counter += 1
         print(counter)
         
-        if (counter > 2 && counter % 2 == 0) {
+        if (counter > 1 && counter % 2 == 0) {
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.dotViewOne.alpha = 1
             }, completion: nil)
@@ -133,8 +138,21 @@ class InitialScreenVC: UIViewController {
         return dotViewFour
     }()
     
+    lazy var leftButton:UIButton = {
+        var leftButton = UIButton()
+        leftButton.backgroundColor = UIColor.red
+        leftButton.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        
+        return leftButton
+    }()
+    
     var a = 17
     var outer = 30
+    
+    
+    func setUpLeftButton(){
+        leftButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+    }
     
     func setUpPiImage(){
         piImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -164,6 +182,16 @@ class InitialScreenVC: UIViewController {
         dotViewFour.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewFour.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+    }
+    
+    func displayAlert(_ title: String, message: String){
+        
+        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle:UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
