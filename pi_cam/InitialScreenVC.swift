@@ -52,7 +52,7 @@ class InitialScreenVC: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: "countUp", userInfo: nil, repeats: true)
         }
         
-        displayAlert("Connection error", message: "Make sure your blutooth conntectinos is connected")
+//        displayAlert("Connection error", message: "Make sure your blutooth conntectinos is connected")
     }
     
 
@@ -140,18 +140,21 @@ class InitialScreenVC: UIViewController {
     
     lazy var leftButton:UIButton = {
         var leftButton = UIButton()
-        leftButton.backgroundColor = UIColor.red
-        leftButton.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        
+//        leftButton.backgroundColor = UIColor.red
+        leftButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("goToNextScreen")))
+        leftButton.isUserInteractionEnabled = true
         return leftButton
     }()
+    
+    
     
     var a = 17
     var outer = 30
     
-    
     func setUpLeftButton(){
-        leftButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        leftButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        leftButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        leftButton.frame = CGRect(x: (view.bounds.size.width/2), y: (view.bounds.size.height/2) + 200 , width: 200, height: 200)
     }
     
     func setUpPiImage(){
@@ -182,6 +185,17 @@ class InitialScreenVC: UIViewController {
         dotViewFour.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewFour.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+    }
+    
+    
+    func goToNextScreen(){
+        print("Lit")
+        //let viewController = WifiView()
+        //self.present(viewController, animated: true, completion: nil)
+        //performSegue(withIdentifier: "showWifi", sender: self)
+
+        let viewController: SelectWifiViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifi") as! SelectWifiViewController
+        self.present(viewController, animated: true, completion: nil)
     }
     
     func displayAlert(_ title: String, message: String){

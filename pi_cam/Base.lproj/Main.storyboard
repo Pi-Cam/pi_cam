@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uue-Pg-RMz">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Initial ScreenVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InitialScreenVC" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialScreenVC" id="BYZ-38-t0r" customClass="InitialScreenVC" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,5 +27,105 @@
             </objects>
             <point key="canvasLocation" x="3671" y="-511"/>
         </scene>
+        <!--Select Wifi View Controller-->
+        <scene sceneID="QxC-yC-3Ua">
+            <objects>
+                <viewController storyboardIdentifier="SelectWifi" id="Uue-Pg-RMz" customClass="SelectWifiViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ruu-qw-fju"/>
+                        <viewControllerLayoutGuide type="bottom" id="r9X-dy-LTc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vis-kk-d1c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-IX-Z7B">
+                                <rect key="frame" x="40" y="233" width="240" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MV5-KB-hht"/>
+                                    <constraint firstAttribute="height" constant="280" id="xKI-nW-w2Y"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="wifiCell" id="fol-4c-c6P" customClass="WifiTableViewCell" customModule="pi_cam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fol-4c-c6P" id="fSD-EQ-R36">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MakeSchoolStudent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-7J-Rw8">
+                                                    <rect key="frame" x="15" y="14" width="168" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVH-UD-XbG">
+                                                    <rect key="frame" x="203" y="8" width="29" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="strengthLabel" destination="BVH-UD-XbG" id="IcR-B0-dI2"/>
+                                            <outlet property="wifiName" destination="dcP-7J-Rw8" id="PF7-hB-uYL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-Ep-ggQ">
+                                <rect key="frame" x="0.0" y="460" width="110" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="aS9-uZ-PFc"/>
+                                    <constraint firstAttribute="width" constant="110" id="gAG-A4-uG3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backButton:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="tsK-xc-SiH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pi.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyg-g2-xfC">
+                                <rect key="frame" x="110" y="58" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PXe-Cq-QtP"/>
+                                    <constraint firstAttribute="width" constant="100" id="mtf-5M-4tw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Wifi for Pi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT8-AX-Ub1">
+                                <rect key="frame" x="77" y="181" width="167" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AhI-w8-61V"/>
+                                    <constraint firstAttribute="width" constant="167" id="BVZ-As-PTe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fMe-IX-Z7B" firstAttribute="centerX" secondItem="vis-kk-d1c" secondAttribute="centerX" id="5ff-r6-XyQ"/>
+                            <constraint firstItem="fMe-IX-Z7B" firstAttribute="top" secondItem="hyg-g2-xfC" secondAttribute="bottom" constant="75" id="BeW-Ry-J4L"/>
+                            <constraint firstItem="TT8-AX-Ub1" firstAttribute="centerX" secondItem="vis-kk-d1c" secondAttribute="centerX" id="DtC-vx-SWJ"/>
+                            <constraint firstItem="RI8-Ep-ggQ" firstAttribute="leading" secondItem="vis-kk-d1c" secondAttribute="leading" id="YSR-sM-fcs"/>
+                            <constraint firstItem="hyg-g2-xfC" firstAttribute="centerX" secondItem="vis-kk-d1c" secondAttribute="centerX" id="ZHJ-hw-MuT"/>
+                            <constraint firstItem="r9X-dy-LTc" firstAttribute="top" secondItem="RI8-Ep-ggQ" secondAttribute="bottom" id="ibN-LX-CnP"/>
+                            <constraint firstItem="fMe-IX-Z7B" firstAttribute="top" secondItem="TT8-AX-Ub1" secondAttribute="bottom" constant="31" id="lfe-Mx-Kht"/>
+                            <constraint firstItem="fMe-IX-Z7B" firstAttribute="centerY" secondItem="vis-kk-d1c" secondAttribute="centerY" constant="89" id="zAt-ci-PhA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="RI8-Ep-ggQ" id="EHx-3H-Cqr"/>
+                        <outlet property="tableView" destination="fMe-IX-Z7B" id="lLq-QG-Nqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8G-zN-9Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4473.75" y="-511.26760563380282"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Pi.png" width="270" height="344"/>
+    </resources>
 </document>

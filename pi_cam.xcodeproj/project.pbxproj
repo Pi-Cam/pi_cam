@@ -11,7 +11,10 @@
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
-		C0CF05141DECC38E0092D270 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* MainScreenViewController.swift */; };
+		C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADC1DF0D95B00136B3E /* WifiView.swift */; };
+		C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */; };
+		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
+		C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */; };
 		C0D2EC111DEE5490003C712F /* Pi.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D2EC101DEE5490003C712F /* Pi.png */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +25,10 @@
 		C06ACA441DEB7C320080048D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0CF05111DECC38E0092D270 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		C0B77ADC1DF0D95B00136B3E /* WifiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiView.swift; sourceTree = "<group>"; };
+		C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiViewController.swift; sourceTree = "<group>"; };
+		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
+		C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
 		C0D2EC101DEE5490003C712F /* Pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +83,10 @@
 		C0D6096F1DEE2FE8001DB029 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C0CF05111DECC38E0092D270 /* MainScreenViewController.swift */,
+				C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */,
+				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
+				C0B77ADC1DF0D95B00136B3E /* WifiView.swift */,
+				C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -165,7 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0CF05141DECC38E0092D270 /* MainScreenViewController.swift in Sources */,
+				C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */,
+				C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */,
+				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
+				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
