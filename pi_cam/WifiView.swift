@@ -22,8 +22,7 @@ class WifiView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         print(view.centerXAnchor)
         
-        
-        
+        tableView.isUserInteractionEnabled = true
     }
     
     let tableView: UITableView = {
@@ -32,10 +31,6 @@ class WifiView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         return tableView
     }()
-    
-    
-    
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

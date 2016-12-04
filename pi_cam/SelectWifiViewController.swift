@@ -11,12 +11,11 @@ import UIKit
 class SelectWifiViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
-    
+    @IBOutlet weak var callToActionLabel: UILabel!
+    @IBOutlet weak var piImage: UIImageView!
     @IBAction func backButton(_ sender: Any) {
         let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
-    
         self.present(viewController, animated: true, completion: nil)
-
     }
     
     override func viewDidLoad() {
@@ -33,6 +32,15 @@ class SelectWifiViewController: UIViewController, UITableViewDataSource, UITable
         view.addSubview(whiteView)
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.isHidden = true
+        callToActionLabel.isHidden = true
+        
+        
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
