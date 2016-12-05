@@ -40,6 +40,13 @@ class SelectWifiViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
+    @IBAction func showNextScreen(_ sender: Any) {
+        
+        let viewController: SelectStreamViewController = self.storyboard?.instantiateViewController(withIdentifier: "selectStreaming") as! SelectStreamViewController
+        self.present(viewController, animated: true, completion: nil)
+        
+        
+    }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

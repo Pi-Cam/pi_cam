@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0549B331DF50A07003F57AE /* SelectStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0549B321DF50A07003F57AE /* SelectStreamViewController.swift */; };
+		C0549B351DF50C51003F57AE /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0549B341DF50C51003F57AE /* StreamCell.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0549B321DF50A07003F57AE /* SelectStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStreamViewController.swift; sourceTree = "<group>"; };
+		C0549B341DF50C51003F57AE /* StreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA421DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
 				C0B77ADC1DF0D95B00136B3E /* WifiView.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */,
+				C0549B341DF50C51003F57AE /* StreamCell.swift */,
+				C0549B321DF50A07003F57AE /* SelectStreamViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */,
+				C0549B351DF50C51003F57AE /* StreamCell.swift in Sources */,
 				C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */,
+				C0549B331DF50A07003F57AE /* SelectStreamViewController.swift in Sources */,
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
