@@ -8,13 +8,6 @@
 
 import UIKit
 
-class StreamCell: UICollectionViewCell {
-    
-//    required init?(coder aDecoder: NSCoder){
-//        super.init(coder: aDecoder)
-//        
-//        layer.cornerRadius = 10
-//    }
-//    
-//    
+class StreamCell: UITableViewCell {
+  
 }
