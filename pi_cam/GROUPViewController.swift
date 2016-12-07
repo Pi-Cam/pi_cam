@@ -10,54 +10,43 @@ import UIKit
 
 class GROUPViewController: UIViewController {
     
+    @IBOutlet weak var viewFour: UIImageView!
+    @IBOutlet weak var viewOne: UIImageView!
+    @IBOutlet weak var viewTwo: UIImageView!
+    @IBOutlet weak var viewThree: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(imageOnUIView)
-        view.addSubview(buttonView)
-        setUpButtonView()
-        setUpImageView()
+        let a = CGFloat(70)
         
+        let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
+        yee.image = UIImage(named: "TWITCH")
+//        yee.backgroundColor = UIColor.blue
+        yee.contentMode = .scaleAspectFit
+        
+        
+        let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
+        yee2.image = UIImage(named: "YTICON")
+        //        yee.backgroundColor = UIColor.blue
+        yee2.contentMode = .scaleAspectFit
+        
+        
+        let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
+        yee3.image = UIImage(named: "U")
+        //        yee.backgroundColor = UIColor.blue
+        yee3.contentMode = .scaleAspectFit
+        
+        let yee4 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
+        yee4.image = UIImage(named: "Group 62x")
+        yee4.alpha = 0.9
+        //        yee.backgroundColor = UIColor.blue
+        yee4.contentMode = .center
+        
+        
+        viewOne.addSubview(yee)
+        viewTwo.addSubview(yee2)
+        viewThree.addSubview(yee3)
+        viewFour.addSubview(yee4)
     }
-    
-    let buttonView: UIView = {
-        var buttonView = UIView()
-        buttonView.translatesAutoresizingMaskIntoConstraints = true
-        buttonView.backgroundColor = .black
-        buttonView.alpha = 0.5
-        return buttonView
-    }()
-    
-    func setUpButtonView(){
-        buttonView.frame = CGRect(x: view.bounds.size.width/2, y: view.bounds.size.width/2, width: 115, height: 115)
-        buttonView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        buttonView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    
-    
-    let imageOnUIView: UIImageView = {
-        var image = UIImageView()
-        image.backgroundColor = .blue
-        image.image = UIImage(named: "pi")
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-    //
-    func setUpImageView(){
-        imageOnUIView.frame = CGRect(x: 0, y: 0, width: 95, height: 95)
-        imageOnUIView.backgroundColor = UIColor.red
-        let cx = NSLayoutConstraint(item: imageOnUIView, attribute: .centerX, relatedBy: .equal, toItem: buttonView, attribute: .centerX, multiplier: 1, constant: 0)
-        
-        let cy = NSLayoutConstraint(item: imageOnUIView, attribute: .centerY, relatedBy: .equal, toItem: buttonView, attribute: .centerY, multiplier: 1, constant: 0)
-        
-        
-        imageOnUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageOnUIView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        // add constraints...
-        
-        buttonView.addSubview(imageOnUIView)
-        NSLayoutConstraint.activate([cx,cy])
-    }
-    //
+
 }

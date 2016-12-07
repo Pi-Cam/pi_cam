@@ -15,6 +15,7 @@
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
 		C0A75DF21DF772A2003A8002 /* GROUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A75DF11DF772A2003A8002 /* GROUPViewController.swift */; };
+		C0A75DF41DF7BC25003A8002 /* AddButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A75DF31DF7BC25003A8002 /* AddButtonClass.swift */; };
 		C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADC1DF0D95B00136B3E /* WifiView.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
@@ -33,6 +34,7 @@
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A75DF11DF772A2003A8002 /* GROUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GROUPViewController.swift; sourceTree = "<group>"; };
+		C0A75DF31DF7BC25003A8002 /* AddButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButtonClass.swift; sourceTree = "<group>"; };
 		C0B77ADC1DF0D95B00136B3E /* WifiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiView.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiViewController.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C0549B341DF50C51003F57AE /* StreamCell.swift */,
 				C0549B321DF50A07003F57AE /* SelectStreamViewController.swift */,
 				C0091CF91DF73E9D0077000E /* StreamSquare.swift */,
+				C0A75DF31DF7BC25003A8002 /* AddButtonClass.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */,
 				C0549B351DF50C51003F57AE /* StreamCell.swift in Sources */,
+				C0A75DF41DF7BC25003A8002 /* AddButtonClass.swift in Sources */,
 				C0091CFA1DF73E9D0077000E /* StreamSquare.swift in Sources */,
 				C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */,
 				C0549B331DF50A07003F57AE /* SelectStreamViewController.swift in Sources */,
