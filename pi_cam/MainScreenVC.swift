@@ -15,6 +15,8 @@ class MainScreenVC: UIViewController {
     var IndexCounter = 0
     var startCount = true
     var coolWords = ["Last Stream: Dec 7, 9:00pm","Number of streams: 3","Default streamer: Youtube"]
+    var yees = [UIImageView]()
+
     
     @IBOutlet weak var transformingTextLabel: UILabel!
     @IBOutlet weak var viewFour: UIImageView!
@@ -45,6 +47,7 @@ class MainScreenVC: UIViewController {
         yee.isUserInteractionEnabled = true
         yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("lit")))
         viewOne.addSubview(yee)
+        yees.append(yee)
         
         
         let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
@@ -55,6 +58,7 @@ class MainScreenVC: UIViewController {
         
         yee2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("lit")))
         viewTwo.addSubview(yee2)
+        yees.append(yee2)
         
         
         let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
@@ -65,6 +69,7 @@ class MainScreenVC: UIViewController {
         
         yee3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("lit")))
         viewThree.addSubview(yee3)
+        yees.append(yee3)
         
         let yee4 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
         yee4.image = UIImage(named: "Group 62x")
@@ -75,11 +80,24 @@ class MainScreenVC: UIViewController {
         
         yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("lit")))
         viewFour.addSubview(yee4)
+        yees.append(yee4)
+        
+        
+        
     }
     
     func lit(){
         print("its fucking lit")
+        viewOne.alpha = 0
+        viewTwo.alpha = 0
+        viewThree.alpha = 0
+        viewFour.alpha = 0
+        for i in yees{
+            i.alpha = 0
+        }
+        
     }
+    
     @IBAction func rightButtonPressed(_ sender: Any) {
         print("View not implemented yet..")
     }
