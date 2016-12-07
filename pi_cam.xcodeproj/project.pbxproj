@@ -19,6 +19,7 @@
 		C0B77ADD1DF0D95B00136B3E /* WifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADC1DF0D95B00136B3E /* WifiView.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
+		C0B9C0071DF7E825004426F9 /* TestVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C0061DF7E825004426F9 /* TestVCViewController.swift */; };
 		C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */; };
 		C0D2EC111DEE5490003C712F /* Pi.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D2EC101DEE5490003C712F /* Pi.png */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		C0B77ADC1DF0D95B00136B3E /* WifiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiView.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiViewController.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
+		C0B9C0061DF7E825004426F9 /* TestVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVCViewController.swift; sourceTree = "<group>"; };
 		C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
 		C0D2EC101DEE5490003C712F /* Pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				C0549B321DF50A07003F57AE /* SelectStreamViewController.swift */,
 				C0091CF91DF73E9D0077000E /* StreamSquare.swift */,
 				C0A75DF31DF7BC25003A8002 /* AddButtonClass.swift */,
+				C0B9C0061DF7E825004426F9 /* TestVCViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 				C0A75DF21DF772A2003A8002 /* GROUPViewController.swift in Sources */,
+				C0B9C0071DF7E825004426F9 /* TestVCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

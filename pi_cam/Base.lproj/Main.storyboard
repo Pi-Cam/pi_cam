@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fol-4c-c6P" id="fSD-EQ-R36">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MakeSchoolStudent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-7J-Rw8">
@@ -133,118 +133,6 @@
             </objects>
             <point key="canvasLocation" x="4472.8000000000002" y="-511.39430284857576"/>
         </scene>
-        <!--Select Stream View Controller-->
-        <scene sceneID="bsb-cI-TO4">
-            <objects>
-                <viewController storyboardIdentifier="selectStreaming" id="njM-Qb-nZX" customClass="SelectStreamViewController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0MH-cH-ua4"/>
-                        <viewControllerLayoutGuide type="bottom" id="mxY-l6-d6A"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ibp-f0-Geo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqs-wM-T0N">
-                                <rect key="frame" x="0.0" y="28" width="130" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="backButtonPresssed:" destination="njM-Qb-nZX" eventType="touchUpInside" id="89c-2y-hTA"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-j0-nBh">
-                                <rect key="frame" x="28" y="187" width="319" height="425"/>
-                                <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="QYE-Pn-8Js">
-                                    <rect key="frame" x="0.0" y="0.0" width="319" height="8"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </view>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="6uu-ev-a9R">
-                                    <rect key="frame" x="0.0" y="136" width="319" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlW-8K-k8x">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="28"/>
-                                            <color key="backgroundColor" red="0.83137254900000002" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                            <state key="normal" title="+ Add service">
-                                                <color key="titleColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="jlW-8K-k8x" firstAttribute="top" secondItem="6uu-ev-a9R" secondAttribute="top" id="1Tf-h5-ubo"/>
-                                        <constraint firstAttribute="bottom" secondItem="jlW-8K-k8x" secondAttribute="bottom" id="Qg4-sV-0Eh"/>
-                                        <constraint firstAttribute="trailing" secondItem="jlW-8K-k8x" secondAttribute="trailing" id="VzV-As-JdV"/>
-                                        <constraint firstItem="jlW-8K-k8x" firstAttribute="leading" secondItem="6uu-ev-a9R" secondAttribute="leading" id="frq-i3-dw8"/>
-                                    </constraints>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="streamCell" rowHeight="100" id="AXV-MK-NE0" customClass="StreamCell" customModule="pi_cam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="36" width="319" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXV-MK-NE0" id="jc1-Jd-G1u">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube-logo-full_color" translatesAutoresizingMaskIntoConstraints="NO" id="MOV-0X-x2f">
-                                                    <rect key="frame" x="19" y="15" width="281" height="70"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-Yl-n6t">
-                                                    <rect key="frame" x="0.0" y="96" width="319" height="4"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.83137254901960778" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="MOV-0X-x2f" firstAttribute="top" secondItem="jc1-Jd-G1u" secondAttribute="topMargin" constant="7" id="2Dr-X0-dgB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MOV-0X-x2f" secondAttribute="bottom" constant="7" id="HzR-Bl-nsk"/>
-                                                <constraint firstItem="MOV-0X-x2f" firstAttribute="leading" secondItem="jc1-Jd-G1u" secondAttribute="leadingMargin" constant="11" id="UXN-bn-he6"/>
-                                                <constraint firstItem="MOV-0X-x2f" firstAttribute="centerX" secondItem="jc1-Jd-G1u" secondAttribute="centerX" id="iBi-3A-nN7"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="MOV-0X-x2f" secondAttribute="trailing" constant="11" id="k84-LO-wop"/>
-                                                <constraint firstItem="MOV-0X-x2f" firstAttribute="centerY" secondItem="jc1-Jd-G1u" secondAttribute="centerY" id="tup-Cf-VUL"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Pi.png" translatesAutoresizingMaskIntoConstraints="NO" id="rbh-S3-gJz">
-                                <rect key="frame" x="27" y="48" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8mO-xe-MiO"/>
-                                    <constraint firstAttribute="width" constant="100" id="Pss-Ae-iZw"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pi Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l8-I3-pjK">
-                                <rect key="frame" x="135" y="97" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oval" translatesAutoresizingMaskIntoConstraints="NO" id="xR8-zt-uLL">
-                                <rect key="frame" x="173" y="135" width="12" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Yac-j0-nBh" firstAttribute="leading" secondItem="Ibp-f0-Geo" secondAttribute="leadingMargin" constant="12" id="YUd-zV-IH0"/>
-                            <constraint firstItem="mxY-l6-d6A" firstAttribute="top" secondItem="Yac-j0-nBh" secondAttribute="bottom" constant="55" id="lay-94-Gk8"/>
-                            <constraint firstItem="Yac-j0-nBh" firstAttribute="top" secondItem="0MH-cH-ua4" secondAttribute="bottom" constant="167" id="o5c-eT-ToK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yac-j0-nBh" secondAttribute="trailing" constant="12" id="zga-q5-6Hd"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="Yac-j0-nBh" id="yYt-ez-9bs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PuE-EV-4vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5122.3999999999996" y="-511.39430284857576"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="m07-Hw-7ti">
             <objects>
@@ -263,10 +151,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LAW-Rq-zeM">
                                         <rect key="frame" x="0.0" y="0.0" width="263" height="121.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="TdZ-23-eq1">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="TdZ-23-eq1">
                                                 <rect key="frame" x="0.0" y="0.0" width="121.5" height="121.5"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-19-46y">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-19-46y">
                                                 <rect key="frame" x="141.5" y="0.0" width="121.5" height="121.5"/>
                                             </imageView>
                                         </subviews>
@@ -274,10 +162,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-i9-U3R">
                                         <rect key="frame" x="0.0" y="141.5" width="263" height="121.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-PF-VVO">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-PF-VVO">
                                                 <rect key="frame" x="0.0" y="0.0" width="121.5" height="121.5"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-e3-5re">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-e3-5re">
                                                 <rect key="frame" x="141.5" y="0.0" width="121.5" height="121.5"/>
                                             </imageView>
                                         </subviews>
@@ -366,14 +254,69 @@
                     </subviews>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="6206" y="-552"/>
+            <point key="canvasLocation" x="5166" y="-502"/>
+        </scene>
+        <!--TestVC-->
+        <scene sceneID="Y4l-8R-mRh">
+            <objects>
+                <viewController id="tHV-Pa-eEJ" customClass="TestVC" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ogr-Mv-3Gk"/>
+                        <viewControllerLayoutGuide type="bottom" id="gNG-vs-6lQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BuH-hw-QRO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lTC-JI-jp3">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBK-fA-bxp">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsy-2H-PaP">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.63959683599999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6xV-eX-otP"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SE4-7k-KeZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fC6-c8-Sbe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lTC-JI-jp3" secondAttribute="trailing" id="K7q-lz-ANI"/>
+                            <constraint firstItem="gNG-vs-6lQ" firstAttribute="top" secondItem="lTC-JI-jp3" secondAttribute="bottom" id="Ori-dj-A3c"/>
+                            <constraint firstItem="lTC-JI-jp3" firstAttribute="leading" secondItem="BuH-hw-QRO" secondAttribute="leading" id="Urq-TA-7o6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-Rv-MQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5997.6000000000004" y="-511.39430284857576"/>
         </scene>
     </scenes>
     <resources>
         <image name="Group" width="184" height="184"/>
         <image name="Pi.png" width="270" height="344"/>
         <image name="Rectangle" width="184" height="184"/>
-        <image name="YouTube-logo-full_color" width="773" height="481"/>
         <image name="oval" width="18" height="18"/>
     </resources>
 </document>
