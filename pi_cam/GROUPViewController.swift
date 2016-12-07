@@ -9,7 +9,7 @@
 import UIKit
 
 class GROUPViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +19,7 @@ class GROUPViewController: UIViewController {
         setUpImageView()
         
     }
- 
+    
     let buttonView: UIView = {
         var buttonView = UIView()
         buttonView.translatesAutoresizingMaskIntoConstraints = true
@@ -42,18 +42,22 @@ class GROUPViewController: UIViewController {
         image.contentMode = .scaleAspectFit
         return image
     }()
-//
+    //
     func setUpImageView(){
         imageOnUIView.frame = CGRect(x: 0, y: 0, width: 95, height: 95)
         imageOnUIView.backgroundColor = UIColor.red
         let cx = NSLayoutConstraint(item: imageOnUIView, attribute: .centerX, relatedBy: .equal, toItem: buttonView, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        let cy = NSLayoutConstraint(item: imageOnUIView, attribute: .centerY, relatedBy: .equal, toItem: buttonView, attribute: .centerY, multiplier: 1, constant: 0)
+        
+        
         imageOnUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         imageOnUIView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         // add constraints...
         
         buttonView.addSubview(imageOnUIView)
-        
+        NSLayoutConstraint.activate([cx,cy])
     }
-//
+    //
 }
