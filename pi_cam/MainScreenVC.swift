@@ -1,5 +1,5 @@
 //
-//  GROUPViewController.swift
+//  MainScreenVC.swift
 //  pi_cam
 //
 //  Created by Marquavious on 12/6/16.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class GROUPViewController: UIViewController {
+class MainScreenVC: UIViewController {
     
+
     @IBOutlet weak var viewFour: UIImageView!
     @IBOutlet weak var viewOne: UIImageView!
     @IBOutlet weak var viewTwo: UIImageView!
@@ -64,17 +65,13 @@ class GROUPViewController: UIViewController {
     func lit(){
         print("its fucking lit")
     }
-    
-//    override func shouldAutorotate() -> Bool {
-//        if (UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft ||
-//            UIDevice.current.orientation == UIDeviceOrientation.landscapeRight ||
-//            UIDevice.current.orientation == UIDeviceOrientation.unknown) {
-//            return false;
-//        }
-//        else {
-//            return true;
-//        }
-//    }
+    @IBAction func rightButtonPressed(_ sender: Any) {
+        print("View not implemented yet..")
+    }
+    @IBAction func leftButtonPressed(_ sender: Any) {
+        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
+        self.present(viewController, animated: true, completion: nil)
+    }
 
 }
 
