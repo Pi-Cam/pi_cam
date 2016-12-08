@@ -9,9 +9,6 @@
 import UIKit
 
 class WifiTableViewCell: UITableViewCell {
-
     @IBOutlet weak var wifiName: UILabel!
-
     @IBOutlet weak var strengthLabel: UIImageView!
-
 }

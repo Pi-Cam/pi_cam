@@ -8,31 +8,42 @@
 
 import UIKit
 
-class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NRFManagerDelegate {
+    
+    //MARK:Bluetooth managers
+    var nrfManager:NRFManager!
+    
+    //MARK: IBOutlers
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var callToActionLabel: UILabel!
     @IBOutlet weak var piImage: UIImageView!
-    @IBAction func backButton(_ sender: Any) {
-        let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
-        self.present(viewController, animated: true, completion: nil)
-    }
     
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         tableView.delegate = self
         tableView.dataSource = self
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
-    }
     
+        //This is for the bluetooth connection
+        nrfManager = NRFManager(
+        onConnect: {print("C: ★ Connected")},
+        onDisconnect: {print("C: ★ Disconnected")},
+        onData: {(data:Data?, string:String?)->() in print("C: ⬇ Received data - String: \(string) - Data: \(data)")},
+        autoConnect: false)
+            nrfManager.verbose = true
+            nrfManager.delegate = self
+        }
+ 
+    //MARK: TableView Functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.isHidden = true
         callToActionLabel.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "wifiCell",  for: indexPath) as! WifiTableViewCell
-        
         return cell
     }
     
@@ -40,21 +51,28 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         return 1
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    //MARK: Bluetooth Functions
+    func sendData() {
+        let string = "Wifi,MakeSchool,applynow"
+        let result = self.nrfManager.writeString(string)
+        print("⬆ Sent string: \(string) - Result: \(result)")
     }
     
-    let whiteView: UIView = {
-        var whiteView = UIView()
-        whiteView.backgroundColor = UIColor.white
-        whiteView.alpha = 1
-        return whiteView
-    }()
-    
-    func setUpWhiteView() {
-        whiteView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
+    //MARK: IBOutlet Funtions
+    @IBAction func backButton(_ sender: Any) {
+        let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
+        self.present(viewController, animated: true, completion: nil)
     }
+    
+    @IBAction func connect(_ sender: Any) {
+        nrfManager.connect()
+    }
+    
+    @IBAction func sendData(_ sender: Any) {
+        sendData()
+    }
+    
+    //MARK: Directional Buttons
     @IBAction func rightButtonPressed(_ sender: Any) {
         let viewController: MainScreenVC = self.storyboard?.instantiateViewController(withIdentifier: "MainScreenVC") as! MainScreenVC
         self.present(viewController, animated: true, completion: nil)

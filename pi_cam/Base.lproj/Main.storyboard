@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w0M-16-Gjl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -116,6 +116,22 @@
                                 </constraints>
                                 <connections>
                                     <action selector="rightButtonPressed:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="aDK-AL-aZg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoF-f1-2ap">
+                                <rect key="frame" x="88" y="41" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendData:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="I9j-d5-ytE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIc-mQ-Hvp">
+                                <rect key="frame" x="213" y="41" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="connect:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="kOz-uU-4bC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -237,7 +253,7 @@
                                     <action selector="rightButtonPressed:" destination="w0M-16-Gjl" eventType="touchUpInside" id="PlR-h4-jRx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Stream: Dec 7, 9:00pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d56-nh-z4X">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Stream: Dec 7, 9:00pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d56-nh-z4X">
                                 <rect key="frame" x="61" y="527" width="252" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="hDY-f2-17v"/>
@@ -379,12 +395,12 @@
                             <mask key="constraints">
                                 <exclude reference="Gx7-px-oVx"/>
                                 <exclude reference="zcM-RQ-B0h"/>
-                                <exclude reference="IJq-su-ZXV"/>
-                                <exclude reference="oWx-gH-RyL"/>
                                 <exclude reference="2kl-nV-8di"/>
                                 <exclude reference="5vL-eD-ItF"/>
                                 <exclude reference="VRN-tA-9Zp"/>
                                 <exclude reference="tBG-b3-TUU"/>
+                                <exclude reference="IJq-su-ZXV"/>
+                                <exclude reference="oWx-gH-RyL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -395,15 +411,15 @@
                                 <exclude reference="aA8-hx-8cj"/>
                                 <exclude reference="spQ-m9-sx5"/>
                                 <include reference="zcM-RQ-B0h"/>
-                                <exclude reference="Hud-eq-zl9"/>
-                                <include reference="IJq-su-ZXV"/>
-                                <include reference="oWx-gH-RyL"/>
                                 <exclude reference="2kl-nV-8di"/>
                                 <include reference="5vL-eD-ItF"/>
                                 <include reference="VRN-tA-9Zp"/>
                                 <exclude reference="f9t-SJ-RHd"/>
                                 <exclude reference="fs4-oe-vwX"/>
                                 <include reference="tBG-b3-TUU"/>
+                                <exclude reference="Hud-eq-zl9"/>
+                                <include reference="IJq-su-ZXV"/>
+                                <include reference="oWx-gH-RyL"/>
                             </mask>
                         </variation>
                     </view>

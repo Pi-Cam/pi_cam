@@ -10,16 +10,12 @@ import UIKit
 
 class InitialScreenVC: UIViewController {
     
-    var timer = Timer()
+    //MARK: Variables for counters
     var counter = 0
-    var startCount = false
-
-    // MARK: ViewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var timer = Timer()
     
-    override func viewDidAppear(_ animated: Bool) {
+    //MARK: ViewDidLoad
+    override func viewDidLoad(){
         view.addSubview(piImage)
         setUpPiImage()
         
@@ -40,27 +36,25 @@ class InitialScreenVC: UIViewController {
         
         view.addSubview(rightButton)
         setUpRightButton()
-
+        
+        startingAnimation()
+    }
+    
+    //MARK: Animation functions
+    func startingAnimation(){
         UIView.animate(withDuration: 0.7, delay: 1, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.piImage.alpha = 1.0
         }, completion: nil)
         
         UIView.animate(withDuration: 1, delay: 3, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.piImage.center.y -= 50
-            self.startCount = true
         }, completion: nil)
         
-        
-        if startCount == true {
-            timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: "countUp", userInfo: nil, repeats: true)
-        }
-        
-//        displayAlert("Connection error", message: "Make sure your blutooth conntectinos is connected")
+        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
     }
     
     func countUp(){
         counter += 1
-    
         if (counter > 1 && counter % 2 == 0) {
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.dotViewOne.alpha = 1
@@ -79,7 +73,6 @@ class InitialScreenVC: UIViewController {
             }, completion: nil)
             
         } else {
-            
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                 self.dotViewOne.alpha = 0
             }, completion: nil)
@@ -98,6 +91,7 @@ class InitialScreenVC: UIViewController {
         }
     }
     
+    //MARK: ProromaticViews
     lazy var piImage: UIImageView = {
         var imageView = UIImageView()
         imageView.alpha = 0 //chage to 0 later
@@ -117,7 +111,7 @@ class InitialScreenVC: UIViewController {
     lazy var dotViewTwo: UIImageView = {
         var dotViewTwo = UIImageView()
         dotViewTwo.alpha = 0
-
+        
         dotViewTwo.image = UIImage(named: "oval")
         return dotViewTwo
     }()
@@ -125,7 +119,7 @@ class InitialScreenVC: UIViewController {
     lazy var dotViewThree: UIImageView = {
         var dotViewThree = UIImageView()
         dotViewThree.alpha = 0
-
+        
         dotViewThree.image = UIImage(named: "oval")
         return dotViewThree
     }()
@@ -133,7 +127,7 @@ class InitialScreenVC: UIViewController {
     lazy var dotViewFour: UIImageView = {
         var dotViewFour = UIImageView()
         dotViewFour.alpha = 0
-
+        
         dotViewFour.image = UIImage(named: "oval")
         return dotViewFour
     }()
@@ -141,8 +135,8 @@ class InitialScreenVC: UIViewController {
     lazy var leftButton:UIButton = {
         var leftButton = UIButton()
         leftButton.translatesAutoresizingMaskIntoConstraints = false
-
-        leftButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("goToNextScreen")))
+        
+        leftButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(InitialScreenVC.goToNextScreen)))
         leftButton.isUserInteractionEnabled = true
         return leftButton
     }()
@@ -151,16 +145,16 @@ class InitialScreenVC: UIViewController {
         var rightButton = UIButton()
         rightButton.translatesAutoresizingMaskIntoConstraints = false
         
-        rightButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("goToNextScreen")))
+        rightButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(InitialScreenVC.goToNextScreen)))
         rightButton.isUserInteractionEnabled = true
         return rightButton
     }()
     
+    //MARK: Set constraints
     var a = 17
     var outer = 30
     
     func setUpLeftButton(){
-        
         let margins = view.layoutMarginsGuide
         leftButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         leftButton.topAnchor.constraint(equalTo: margins.topAnchor, constant: 25).isActive = true
@@ -209,12 +203,6 @@ class InitialScreenVC: UIViewController {
     func goToNextScreen(){
         let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
         self.present(viewController, animated: true, completion: nil)
-    }
-    
-    func displayAlert(_ title: String, message: String){
-        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle:UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in}))
-        self.present(alert, animated: true, completion: nil)
     }
 }
 

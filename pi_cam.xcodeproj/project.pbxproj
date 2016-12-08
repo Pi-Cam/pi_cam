@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0549B351DF50C51003F57AE /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0549B341DF50C51003F57AE /* StreamCell.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
@@ -16,10 +15,10 @@
 		C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
 		C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */; };
+		C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D632611DF8D71E0040C62C /* NRFManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0549B341DF50C51003F57AE /* StreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA421DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiVC.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
 		C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
+		C0D632611DF8D71E0040C62C /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,6 @@
 		C0009D431DF85D5C005B6E47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C0549B341DF50C51003F57AE /* StreamCell.swift */,
 				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
 			);
 			name = Models;
@@ -71,7 +70,6 @@
 		C06ACA3C1DEB7C320080048D /* pi_cam */ = {
 			isa = PBXGroup;
 			children = (
-				C0009D431DF85D5C005B6E47 /* Models */,
 				C0D609701DEE3008001DB029 /* Views */,
 				C0D6096F1DEE2FE8001DB029 /* Controllers */,
 				C0D6096D1DEE2E81001DB029 /* Helpers */,
@@ -82,6 +80,7 @@
 		C0D6096D1DEE2E81001DB029 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C0D632611DF8D71E0040C62C /* NRFManager.swift */,
 				C06ACA3B1DEB7C320080048D /* Products */,
 				C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
@@ -104,6 +103,7 @@
 		C0D609701DEE3008001DB029 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C0009D431DF85D5C005B6E47 /* Models */,
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
 			);
 			name = Views;
@@ -183,10 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */,
-				C0549B351DF50C51003F57AE /* StreamCell.swift in Sources */,
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
+				C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */,
 				C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
