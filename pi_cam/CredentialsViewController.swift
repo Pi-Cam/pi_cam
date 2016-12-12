@@ -9,9 +9,13 @@
 import UIKit
 
 class CredentialsViewController: UIViewController {
+ 
+    @IBOutlet weak var backButton: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        backButton.isUserInteractionEnabled = true
+        backButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dissmissView)))
 
         // Do any additional setup after loading the view.
     }
@@ -22,14 +26,8 @@ class CredentialsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dissmissView(){
+        presentingViewController?.dismiss(animated: true)
     }
-    */
 
 }

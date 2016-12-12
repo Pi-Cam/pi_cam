@@ -63,6 +63,7 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
     func checkForConnection(){
         if counter < 10 {
             if raspiFound == false {
+                performSegue(withIdentifier: "setUpConnection", sender: self)
                 if (counter > 1 && counter % 2 == 0) {
                     nrfManager.connect()
                 } else{

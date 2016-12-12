@@ -8,9 +8,7 @@
 
 import UIKit
 
-class MainScreenVC: UIViewController {
-    @IBOutlet weak var popOverView: UIView!
-    @IBOutlet weak var blackOverlay: UIView!
+class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     //MARK: Vars
     var counter = 0
     var IndexCounter = 0
@@ -19,19 +17,58 @@ class MainScreenVC: UIViewController {
     var coolWords = ["Last Stream: Dec 7, 9:00pm","Number of streams: 3","Default streamer: Youtube"]
     var yees = [UIImageView]()
     
+    @IBAction func goLivePressed(_ sender: Any) {
+        performSegue(withIdentifier: "showStream", sender: self)
+    }
+    @IBAction func deleteServicePressed(_ sender: Any) {
+    }
     //MARK: IBOutlets
     @IBOutlet weak var transformingTextLabel: UILabel!
+    @IBAction func editCredentailspressed(_ sender: Any) {
+    performSegue(withIdentifier: "editStreamingService", sender: self)
+    }
+    @IBAction func exitPopupMenu(_ sender: Any) {
+        self.timer.fire()
+        print("botton pressed")
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            print("animating")
+            self.popOverView.center.y += self.popOverView.frame.height
+            self.blackOverlay.alpha = 0
+            
+        }, completion: {(true) in
+            print("done")
+
+        })
+    }
+    @IBOutlet weak var menuStackView: UIStackView!
     @IBOutlet weak var viewFour: UIImageView!
     @IBOutlet weak var viewOne: UIImageView!
     @IBOutlet weak var viewTwo: UIImageView!
     @IBOutlet weak var viewThree: UIImageView!
+    @IBOutlet weak var popOverView: UIView!
+    
     
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        blackOverlay.isHidden = true
+        view.addSubview(blackOverlay)
         view.addSubview(popOverView)
+        
+        popOverView.translatesAutoresizingMaskIntoConstraints = false
+        
+        blackOverlay.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        blackOverlay.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        blackOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        blackOverlay.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
         NSLayoutConstraint(item: popOverView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: popOverView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
+        popOverView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
+        popOverView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4).isActive = true
+        
+//            menuStackView.
+        
+        
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(MainScreenVC.startTextAnimations), userInfo: nil, repeats: true)
         
         //MARK: Set up images in view
@@ -49,7 +86,7 @@ class MainScreenVC: UIViewController {
         yee2.image = UIImage(named: "YTICON")
         yee2.contentMode = .scaleAspectFit
         yee2.isUserInteractionEnabled = true
-
+        
         viewTwo.addSubview(yee2)
         yees.append(yee2)
         
@@ -69,6 +106,14 @@ class MainScreenVC: UIViewController {
         yees.append(yee4)
     }
     
+    let blackOverlay: UIView = {
+        let blackOverlay = UIView()
+        blackOverlay.backgroundColor = .black
+        blackOverlay.translatesAutoresizingMaskIntoConstraints = false
+        blackOverlay.alpha = 0
+        return blackOverlay
+    }()
+    
     //MARK: IBOutlets
     @IBAction func rightButtonPressed(_ sender: Any) {
         print("View not implemented yet..")
@@ -81,12 +126,17 @@ class MainScreenVC: UIViewController {
     
     
     func showPopUp(){
-           NSLayoutConstraint(item: popOverView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
-         NSLayoutConstraint(item: popOverView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        
-        blackOverlay.isHidden = false
-        blackOverlay.alpha = 0.5
-        
+        self.timer.invalidate()
+        print("botton pressed")
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            print("animating")
+            self.popOverView.center.y -= self.popOverView.frame.height
+            self.blackOverlay.alpha = 0.5
+            
+        }, completion: {(true) in
+            print("done")
+
+        })
     }
     
     //MARK: TextAnimation

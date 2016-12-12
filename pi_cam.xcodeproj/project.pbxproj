@@ -104,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */,
-				C0DB48B31DFF076900D84652 /* PopOverViewController.swift */,
 				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
 				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */,
 				C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */,
+				C0DB48B31DFF076900D84652 /* PopOverViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
