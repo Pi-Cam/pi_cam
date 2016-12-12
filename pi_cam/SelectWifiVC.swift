@@ -25,6 +25,11 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
     }
     
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     //MARK: TableView Functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wifiCell",  for: indexPath) as! WifiTableViewCell

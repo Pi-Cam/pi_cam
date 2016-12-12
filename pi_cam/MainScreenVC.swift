@@ -9,7 +9,8 @@
 import UIKit
 
 class MainScreenVC: UIViewController {
-    
+    @IBOutlet weak var popOverView: UIView!
+    @IBOutlet weak var blackOverlay: UIView!
     //MARK: Vars
     var counter = 0
     var IndexCounter = 0
@@ -28,7 +29,9 @@ class MainScreenVC: UIViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        blackOverlay.isHidden = true
+        view.addSubview(popOverView)
+        NSLayoutConstraint(item: popOverView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(MainScreenVC.startTextAnimations), userInfo: nil, repeats: true)
         
         //MARK: Set up images in view
@@ -38,6 +41,7 @@ class MainScreenVC: UIViewController {
         yee.image = UIImage(named: "TWITCH")
         yee.contentMode = .scaleAspectFit
         yee.isUserInteractionEnabled = true
+        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
         viewOne.addSubview(yee)
         yees.append(yee)
         
@@ -73,6 +77,16 @@ class MainScreenVC: UIViewController {
     @IBAction func leftButtonPressed(_ sender: Any) {
         let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
+    func showPopUp(){
+           NSLayoutConstraint(item: popOverView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
+         NSLayoutConstraint(item: popOverView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+        
+        blackOverlay.isHidden = false
+        blackOverlay.alpha = 0.5
+        
     }
     
     //MARK: TextAnimation
