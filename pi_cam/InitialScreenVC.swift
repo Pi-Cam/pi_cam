@@ -8,11 +8,13 @@
 
 import UIKit
 
-class InitialScreenVC: UIViewController {
+class InitialScreenVC: UIViewController, NRFManagerDelegate {
     
     //MARK: Variables for counters
     var counter = 0
     var timer = Timer()
+    var nrfManager:NRFManager!
+    var raspiFound = false
     
     //MARK: ViewDidLoad
     override func viewDidLoad(){
@@ -38,6 +40,41 @@ class InitialScreenVC: UIViewController {
         setUpRightButton()
         
         startingAnimation()
+        
+        nrfManager = NRFManager(
+            onConnect: {
+                print("C: ★ Connected")
+                self.raspiFound = true
+        },
+            onDisconnect: {
+                print("C: ★ Disconnected")
+        },
+            onData: {
+                (data:Data?, string:String?)->() in
+                print("C: ⬇ Received data - String: \(string) - Data: \(data)")
+        },
+            autoConnect: false
+        )
+        
+        nrfManager.verbose = true
+        nrfManager.delegate = self
+    }
+    
+    func checkForConnection(){
+        if counter < 10 {
+            if raspiFound == false {
+                if (counter > 1 && counter % 2 == 0) {
+                    nrfManager.connect()
+                } else{
+                    print("nvm")
+                }
+            }else{
+                performSegue(withIdentifier: "setUpConnection", sender: self)
+            }
+        } else {
+            displayAlert("Unable to Connect", message: "Please make sure you pi cam is on and make sure your devices bluetooth is on")
+            counter = 0
+        }
     }
     
     //MARK: Animation functions
@@ -55,6 +92,7 @@ class InitialScreenVC: UIViewController {
     
     func countUp(){
         counter += 1
+        checkForConnection()
         if (counter > 1 && counter % 2 == 0) {
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.dotViewOne.alpha = 1
@@ -151,8 +189,8 @@ class InitialScreenVC: UIViewController {
     }()
     
     //MARK: Set constraints
-    var a = 17
-    var outer = 30
+    var a = 19
+    var outer = 35
     
     func setUpLeftButton(){
         let margins = view.layoutMarginsGuide
@@ -179,30 +217,43 @@ class InitialScreenVC: UIViewController {
     func setUpdotViewOne(){
         dotViewOne.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewOne.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        dotViewOne.frame = CGRect(x:((view.bounds.size.width/2) - CGFloat(outer)) - 12, y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+        dotViewOne.frame = CGRect(x:((view.bounds.size.width/2) - CGFloat(outer)) - 12, y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
     func setUpdotViewTwo(){
         dotViewTwo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewTwo.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        dotViewTwo.frame = CGRect(x:(view.bounds.size.width/2) - CGFloat(a), y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+        dotViewTwo.frame = CGRect(x:(view.bounds.size.width/2) - CGFloat(a), y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
     func setUpdotViewThree(){
         dotViewThree.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewThree.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        dotViewThree.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(a)) - 12, y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+        dotViewThree.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(a)) - 12, y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
     func setUpdotViewFour(){
         dotViewFour.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         dotViewFour.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 60, width: 12, height: 12)
+        dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
     func goToNextScreen(){
         let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func displayAlert(_ title: String, message: String){
+        
+        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle:UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            self.counter = 0
+            print(self.counter)
+        }))
+        
+        self.present(alert, animated: true, completion:{
+            
+        })
     }
 }
 

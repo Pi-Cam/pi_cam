@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MNo-MJ-gYQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="Uue-Pg-RMz" kind="show" id="ScB-FJ-CLv"/>
+                        <segue destination="Uue-Pg-RMz" kind="presentation" identifier="setUpConnection" id="ScB-FJ-CLv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,28 +121,6 @@
                                     <action selector="rightButtonPressed:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="aDK-AL-aZg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoF-f1-2ap">
-                                <rect key="frame" x="154" y="56" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send Data"/>
-                                <connections>
-                                    <action selector="sendData:" destination="Uue-Pg-RMz" eventType="touchUpInside" id="I9j-d5-ytE"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="wifiname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvc-c3-iqV">
-                                <rect key="frame" x="74" y="20" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="wifipassword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kK-Af-Ion">
-                                <rect key="frame" x="210" y="20" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -164,9 +142,7 @@
                         <outlet property="callToActionLabel" destination="TT8-AX-Ub1" id="Mx1-wm-rRc"/>
                         <outlet property="piImage" destination="hyg-g2-xfC" id="a3H-co-CIT"/>
                         <outlet property="tableView" destination="fMe-IX-Z7B" id="lLq-QG-Nqy"/>
-                        <outlet property="wifiName" destination="jvc-c3-iqV" id="uch-U1-joS"/>
-                        <outlet property="wifiPassword" destination="2kK-Af-Ion" id="XZz-hG-KyQ"/>
-                        <segue destination="MNo-MJ-gYQ" kind="show" id="a6K-oE-Zzg"/>
+                        <segue destination="MNo-MJ-gYQ" kind="show" identifier="setUpPi" id="a6K-oE-Zzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8G-zN-9Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +185,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="boy-59-thm">
                                                         <rect key="frame" x="0.0" y="54" width="295" height="61.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Up Pi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-DP-gLo">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Pi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-DP-gLo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="45"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,6 +333,8 @@
                         <outlet property="backButton" destination="gHL-ke-daK" id="col-nP-MHe"/>
                         <outlet property="connectButton" destination="66g-5d-NOO" id="FPT-XK-CzL"/>
                         <outlet property="mainStackView" destination="jWZ-GA-T8C" id="i1i-Ln-ZRi"/>
+                        <outlet property="passwordTextField" destination="PAo-vv-ryz" id="OBg-uc-pRV"/>
+                        <outlet property="wifiTextField" destination="4Bu-Ym-dvk" id="DlK-no-iKQ"/>
                         <segue destination="w0M-16-Gjl" kind="show" id="z7P-Q1-sJH"/>
                     </connections>
                 </viewController>
@@ -629,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-Rv-MQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6778" y="-490"/>
+            <point key="canvasLocation" x="7180" y="-492"/>
         </scene>
     </scenes>
     <resources>
