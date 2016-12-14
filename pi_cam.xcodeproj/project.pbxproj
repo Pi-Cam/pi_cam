@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */; };
 		C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610D1E01105600B83922 /* StreamerTableViewCell.swift */; };
+		C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610F1E019DAF00B83922 /* AddServiceViewController.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectPiViewController.swift; sourceTree = "<group>"; };
 		C028610D1E01105600B83922 /* StreamerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerTableViewCell.swift; sourceTree = "<group>"; };
+		C028610F1E019DAF00B83922 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA421DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */,
+				C028610F1E019DAF00B83922 /* AddServiceViewController.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */,
 				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
 				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
@@ -212,6 +215,7 @@
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 				C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */,
 				C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */,
+				C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */,
 				C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */,
 				C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */,
 				C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */,

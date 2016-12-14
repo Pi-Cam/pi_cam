@@ -35,7 +35,7 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
             
         })
         
-        performSegue(withIdentifier: "editStreamingService", sender: self)
+        performSegue(withIdentifier: "addStreamingService", sender: self)
     }
     
     @IBAction func exitPopupMenu(_ sender: Any) {
@@ -167,13 +167,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
                 self.transformingTextLabel.alpha = 0
                 self.IndexCounter += 1
             }, completion: nil)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addStreamingService"{
-            let destination = segue.destination as! EditCredentialsViewController
-            //            destination.callToActionLabel = "Create"
         }
     }
 }
