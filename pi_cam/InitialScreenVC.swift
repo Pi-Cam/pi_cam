@@ -60,10 +60,10 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         nrfManager.delegate = self
     }
     
-    func checkForConnection(){
+    func checkForConnection() {
+    
         if counter < 10 {
             if raspiFound == false {
-                performSegue(withIdentifier: "setUpConnection", sender: self)
                 if (counter > 1 && counter % 2 == 0) {
                     nrfManager.connect()
                 } else{
@@ -241,8 +241,11 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
     
     func goToNextScreen(){
         let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
-        self.present(viewController, animated: true, completion: nil)
+        // self.present(viewController, animated: true, completion: nil)
+        performSegue(withIdentifier: "setUpConnection", sender: self)
     }
+    
+    
     
     func displayAlert(_ title: String, message: String){
         
@@ -255,6 +258,10 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         self.present(alert, animated: true, completion:{
             
         })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
     }
 }
 

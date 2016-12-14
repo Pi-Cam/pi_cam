@@ -23,11 +23,7 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
         
         backButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBack)))
         backButton.isUserInteractionEnabled = true
-        connectButton.layer.borderColor = UIColor(red: 188/255, green: 17/255, blue: 66/255, alpha: 0.80).cgColor
-        
-        connectButton.layer.cornerRadius = 10
-        connectButton.layer.borderWidth = 1.3
-        
+
         nrfManager = NRFManager(
             onConnect: {
                 print("C: ★ Connected")
@@ -44,7 +40,7 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
         
         nrfManager.verbose = true
         //        nrfManager.delegate = self
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,8 +54,7 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
     }
     
     func goBack(){
-        print("uuu")
-        presentingViewController?.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     func sendData() {
@@ -80,32 +75,32 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
     
     @IBAction func connectButtonPressed(_ sender: Any) {
         
-//                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations:{
-//                    self.mainStackView.alpha = 0
-//                }, completion: nil)
-//        
-//                let loader: UIImageView = {
-//                    let loader = UIImageView()
-//                    loader.frame = CGRect(x: 0, y: 0, width: 64, height: 64)
-//                    loader.backgroundColor = .red
-//                    loader.image = UIImage(named: "ovalLoad")
-//                    loader.translatesAutoresizingMaskIntoConstraints = false
-//                    loader.contentMode = .scaleAspectFit
-//                    return loader
-//                }()
-//        
-//        
-//        
-//                view.addSubview(loader)
-//        
-//                loader.topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
-//                loader.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
-//                loader.leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
-//                loader.trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
-//                loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//                loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//                loader.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//                loader.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        //                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations:{
+        //                    self.mainStackView.alpha = 0
+        //                }, completion: nil)
+        //
+        //                let loader: UIImageView = {
+        //                    let loader = UIImageView()
+        //                    loader.frame = CGRect(x: 0, y: 0, width: 64, height: 64)
+        //                    loader.backgroundColor = .red
+        //                    loader.image = UIImage(named: "ovalLoad")
+        //                    loader.translatesAutoresizingMaskIntoConstraints = false
+        //                    loader.contentMode = .scaleAspectFit
+        //                    return loader
+        //                }()
+        //
+        //
+        //
+        //                view.addSubview(loader)
+        //
+        //                loader.topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+        //                loader.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+        //                loader.leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
+        //                loader.trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
+        //                loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //                loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //                loader.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        //                loader.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         
         performSegue(withIdentifier: "show", sender: self)

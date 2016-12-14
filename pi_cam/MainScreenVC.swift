@@ -74,28 +74,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         //MARK: Set up images in view
         //I know this is bad coding practice,but I dont know how to add these to the views I connected in the storyboard.
         let a = CGFloat(70)
-        let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
-        yee.image = UIImage(named: "TWITCH")
-        yee.contentMode = .scaleAspectFit
-        yee.isUserInteractionEnabled = true
-        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
-        viewOne.addSubview(yee)
-        yees.append(yee)
-        
-        let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
-        yee2.image = UIImage(named: "YTICON")
-        yee2.contentMode = .scaleAspectFit
-        yee2.isUserInteractionEnabled = true
-        
-        viewTwo.addSubview(yee2)
-        yees.append(yee2)
-        
-        let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
-        yee3.image = UIImage(named: "U")
-        yee3.contentMode = .scaleAspectFit
-        yee3.isUserInteractionEnabled = true
-        viewThree.addSubview(yee3)
-        yees.append(yee3)
         
         let yee4 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
         yee4.image = UIImage(named: "Group 62x")
@@ -104,6 +82,33 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         yee4.isUserInteractionEnabled = true
         viewFour.addSubview(yee4)
         yees.append(yee4)
+        
+        let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
+        yee2.image = UIImage(named: "YTICON")
+        yee2.contentMode = .scaleAspectFit
+        yee2.isUserInteractionEnabled = true
+        
+        viewTwo.addSubview(yee4)
+        yees.append(yee2)
+        
+        let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
+        yee.image = UIImage(named: "TWITCH")
+        yee.contentMode = .scaleAspectFit
+        yee.isUserInteractionEnabled = true
+        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+        viewOne.addSubview(yee4)
+        yees.append(yee)
+        
+  
+        
+        let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
+        yee3.image = UIImage(named: "U")
+        yee3.contentMode = .scaleAspectFit
+        yee3.isUserInteractionEnabled = true
+        viewThree.addSubview(yee4)
+        yees.append(yee3)
+        
+      
     }
     
     let blackOverlay: UIView = {
@@ -120,8 +125,9 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
-        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
-        self.present(viewController, animated: true, completion: nil)
+//        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
+//        self.present(viewController, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     

@@ -14,12 +14,15 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     var nrfManager:NRFManager!
     
     //MARK: IBOutlers
+    @IBOutlet weak var backButtonImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var callToActionLabel: UILabel!
     @IBOutlet weak var piImage: UIImageView!
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        backButtonImage.isUserInteractionEnabled = true
+        backButtonImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonPressed)))
         tableView.delegate = self
         tableView.dataSource = self
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
@@ -46,23 +49,12 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     
     //MARK: IBOutlet Funtions
-    @IBAction func backButton(_ sender: Any) {
-        let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
-        self.present(viewController, animated: true, completion: nil)
-    }
-
-    @IBAction func sendData(_ sender: Any) {
-    }
+func backButtonPressed() {
+//        let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
+//        self.present(viewController, animated: true, completion: nil)
     
-    //MARK: Directional Buttons
-    @IBAction func rightButtonPressed(_ sender: Any) {
-        let viewController: MainScreenVC = self.storyboard?.instantiateViewController(withIdentifier: "MainScreenVC") as! MainScreenVC
-        self.present(viewController, animated: true, completion: nil)
-    }
-    
-    @IBAction func leftButtonPressed(_ sender: Any) {
-        let viewController: InitialScreenVC = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
-        self.present(viewController, animated: true, completion: nil)
+    navigationController?.popViewController(animated: true)
+//    
     }
 }
 
