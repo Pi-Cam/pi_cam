@@ -60,24 +60,6 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         nrfManager.delegate = self
     }
     
-    func checkForConnection() {
-    
-        if counter < 10 {
-            if raspiFound == false {
-                if (counter > 1 && counter % 2 == 0) {
-                    nrfManager.connect()
-                } else{
-                    print("nvm")
-                }
-            }else{
-                performSegue(withIdentifier: "setUpConnection", sender: self)
-            }
-        } else {
-            displayAlert("Unable to Connect", message: "Please make sure you pi cam is on and make sure your devices bluetooth is on")
-            counter = 0
-        }
-    }
-    
     //MARK: Animation functions
     func startingAnimation(){
         UIView.animate(withDuration: 0.7, delay: 1, options: UIViewAnimationOptions.curveEaseIn, animations: {
@@ -239,14 +221,6 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
-    func goToNextScreen(){
-        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
-        // self.present(viewController, animated: true, completion: nil)
-        performSegue(withIdentifier: "setUpConnection", sender: self)
-    }
-    
-    
-    
     func displayAlert(_ title: String, message: String){
         
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle:UIAlertControllerStyle.alert)
@@ -258,6 +232,27 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         self.present(alert, animated: true, completion:{
             
         })
+    }
+    
+    func goToNextScreen(){
+        performSegue(withIdentifier: "setUpConnection", sender: self)
+    }
+    
+    func checkForConnection() {
+        if counter < 10 {
+            if raspiFound == false {
+                if (counter > 1 && counter % 2 == 0) {
+                    nrfManager.connect()
+                } else{
+                    print("nvm")
+                }
+            }else{
+                performSegue(withIdentifier: "setUpConnection", sender: self)
+            }
+        } else {
+            displayAlert("Unable to Connect", message: "Please make sure you pi cam is on and make sure your devices bluetooth is on")
+            counter = 0
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

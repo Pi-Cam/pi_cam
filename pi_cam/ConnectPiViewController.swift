@@ -12,12 +12,12 @@ import UIKit
 class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerDelegate {
     
     var nrfManager:NRFManager!
-    
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var wifiTextField: UITextField!
     @IBOutlet weak var backButton: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,15 +39,8 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
         )
         
         nrfManager.verbose = true
-        //        nrfManager.delegate = self
-        
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        backButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBack)))
-        backButton.isUserInteractionEnabled = true
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -101,12 +94,7 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
         //                loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         //                loader.widthAnchor.constraint(equalToConstant: 100).isActive = true
         //                loader.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        
         performSegue(withIdentifier: "show", sender: self)
         sendData()
-        
-        
-        
     }
 }

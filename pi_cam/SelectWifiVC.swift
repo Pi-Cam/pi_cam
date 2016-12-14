@@ -16,8 +16,7 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     //MARK: IBOutlers
     @IBOutlet weak var backButtonImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var callToActionLabel: UILabel!
-    @IBOutlet weak var piImage: UIImageView!
+    
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +25,6 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
-    }
-    
-    
-    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-        
     }
     
     //MARK: TableView Functions
@@ -47,14 +41,9 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         performSegue(withIdentifier: "setUpPi", sender: self)
     }
     
-    
     //MARK: IBOutlet Funtions
-func backButtonPressed() {
-//        let viewController: InitialScreenVC  = self.storyboard?.instantiateViewController(withIdentifier: "InitialScreenVC") as! InitialScreenVC
-//        self.present(viewController, animated: true, completion: nil)
-    
-    navigationController?.popViewController(animated: true)
-//    
+    func backButtonPressed() {
+        navigationController?.popViewController(animated: true)
     }
 }
 

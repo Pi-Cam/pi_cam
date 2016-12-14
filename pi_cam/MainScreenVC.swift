@@ -25,8 +25,19 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     //MARK: IBOutlets
     @IBOutlet weak var transformingTextLabel: UILabel!
     @IBAction func editCredentailspressed(_ sender: Any) {
-    performSegue(withIdentifier: "editStreamingService", sender: self)
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            print("animating")
+            self.popOverView.center.y += self.popOverView.frame.height
+            self.blackOverlay.alpha = 0
+            
+        }, completion: {(true) in
+            print("done")
+            
+        })
+        
+        performSegue(withIdentifier: "editStreamingService", sender: self)
     }
+    
     @IBAction func exitPopupMenu(_ sender: Any) {
         self.timer.fire()
         print("botton pressed")
@@ -37,7 +48,7 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
             
         }, completion: {(true) in
             print("done")
-
+            
         })
     }
     @IBOutlet weak var menuStackView: UIStackView!
@@ -55,7 +66,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         view.addSubview(popOverView)
         
         popOverView.translatesAutoresizingMaskIntoConstraints = false
-        
         blackOverlay.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         blackOverlay.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         blackOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -65,9 +75,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         NSLayoutConstraint(item: popOverView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
         popOverView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
         popOverView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4).isActive = true
-        
-//            menuStackView.
-        
         
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(MainScreenVC.startTextAnimations), userInfo: nil, repeats: true)
         
@@ -91,16 +98,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         viewTwo.addSubview(yee4)
         yees.append(yee2)
         
-        let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
-        yee.image = UIImage(named: "TWITCH")
-        yee.contentMode = .scaleAspectFit
-        yee.isUserInteractionEnabled = true
-        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
-        viewOne.addSubview(yee4)
-        yees.append(yee)
-        
-  
-        
         let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
         yee3.image = UIImage(named: "U")
         yee3.contentMode = .scaleAspectFit
@@ -108,7 +105,15 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         viewThree.addSubview(yee4)
         yees.append(yee3)
         
-      
+        let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
+        yee.image = UIImage(named: "TWITCH")
+        yee.contentMode = .scaleAspectFit
+        yee.isUserInteractionEnabled = true
+        yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+        viewOne.addSubview(yee4)
+        yees.append(yee)
+        
+        
     }
     
     let blackOverlay: UIView = {
@@ -125,8 +130,8 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
-//        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
-//        self.present(viewController, animated: true, completion: nil)
+        //        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
+        //        self.present(viewController, animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     
@@ -141,7 +146,7 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
             
         }, completion: {(true) in
             print("done")
-
+            
         })
     }
     
@@ -162,6 +167,13 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
                 self.transformingTextLabel.alpha = 0
                 self.IndexCounter += 1
             }, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addStreamingService"{
+            let destination = segue.destination as! EditCredentialsViewController
+            //            destination.callToActionLabel = "Create"
         }
     }
 }

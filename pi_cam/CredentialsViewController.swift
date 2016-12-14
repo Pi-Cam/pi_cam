@@ -8,26 +8,25 @@
 
 import UIKit
 
-class CredentialsViewController: UIViewController {
- 
+class EditCredentialsViewController: UIViewController {
+    
+    @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var callToActionLabel: UILabel!
     @IBOutlet weak var backButton: UIImageView!
-
+    @IBOutlet weak var streamerLink: UITextField!
+    @IBOutlet weak var streamerKey: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.isUserInteractionEnabled = true
         backButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dissmissView)))
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func updateButtonPressed(_ sender: Any) {
+        
+    }
+    
     func dissmissView(){
         presentingViewController?.dismiss(animated: true)
     }
-
 }

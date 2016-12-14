@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */; };
+		C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610D1E01105600B83922 /* StreamerTableViewCell.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
@@ -20,10 +21,13 @@
 		C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D632611DF8D71E0040C62C /* NRFManager.swift */; };
 		C0DB48B41DFF076900D84652 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B31DFF076900D84652 /* PopOverViewController.swift */; };
 		C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */; };
+		C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */; };
+		C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B91E00FEA800D84652 /* Streamer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectPiViewController.swift; sourceTree = "<group>"; };
+		C028610D1E01105600B83922 /* StreamerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerTableViewCell.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA421DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		C0D632611DF8D71E0040C62C /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
 		C0DB48B31DFF076900D84652 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
+		C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStreamer.swift; sourceTree = "<group>"; };
+		C0DB48B91E00FEA800D84652 /* Streamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streamer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
+				C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */,
+				C0DB48B91E00FEA800D84652 /* Streamer.swift */,
+				C028610D1E01105600B83922 /* StreamerTableViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -104,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */,
-				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
-				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */,
+				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
+				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
 				C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */,
 				C0DB48B31DFF076900D84652 /* PopOverViewController.swift */,
 			);
@@ -197,12 +206,15 @@
 			files = (
 				C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */,
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
+				C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */,
 				C0DB48B41DFF076900D84652 /* PopOverViewController.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 				C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */,
 				C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */,
 				C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */,
+				C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */,
+				C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */,
 				C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */,
 				C0A024FA1DFE10280060EC6C /* idk.swift in Sources */,
 			);
