@@ -15,6 +15,7 @@
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
 		C0A024FA1DFE10280060EC6C /* idk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A024F91DFE10280060EC6C /* idk.swift */; };
+		C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A36E3E1E01E1B100B91360 /* DotLoder.swift */; };
 		C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
@@ -37,6 +38,7 @@
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A024F91DFE10280060EC6C /* idk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idk.swift; sourceTree = "<group>"; };
+		C0A36E3E1E01E1B100B91360 /* DotLoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotLoder.swift; sourceTree = "<group>"; };
 		C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiVC.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */,
 				C0DB48B91E00FEA800D84652 /* Streamer.swift */,
 				C028610D1E01105600B83922 /* StreamerTableViewCell.swift */,
+				C0A36E3E1E01E1B100B91360 /* DotLoder.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */,
 				C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */,
 				C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */,
+				C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */,
 				C0A024FA1DFE10280060EC6C /* idk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

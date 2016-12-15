@@ -16,6 +16,7 @@ class AddServiceViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var chooseStreamerCredentialsStackView: UIStackView!
     @IBOutlet weak var addCredentialsStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -45,11 +46,9 @@ class AddServiceViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func showSecondScreen(){
-        
         UIView.animateKeyframes(withDuration: 0.7, delay: 0, animations:{
             self.chooseStreamerTableView.center.y -= self.chooseStreamerTableView.frame.height*2
             self.tableView.center.y -= self.tableView.frame.height*2
-            
             self.addCredentialsStackView.center.y = self.view.center.y - self.addCredentialsStackView.frame.height/3
             self.addCredentialsStackView.center.x = self.view.center.x
             self.backButtonFromAddCredentialsSV.alpha = 1
@@ -73,7 +72,6 @@ class AddServiceViewController: UIViewController, UITableViewDelegate, UITableVi
         }, completion: {(true) in
             
         })
-        
     }
     
     func goBackFromFirstAppearance(){

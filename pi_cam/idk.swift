@@ -38,3 +38,34 @@
 //            nrfManager.verbose = true
 //            nrfManager.delegate = self
 //
+
+
+
+
+
+
+
+//    func setUpdotViewOne(){
+//        dotViewOne.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        dotViewOne.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        dotViewOne.frame = CGRect(x:((view.bounds.size.width/2) - CGFloat(outer)) - 12, y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
+//    }
+//
+//    func setUpdotViewTwo(){
+//        dotViewTwo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        dotViewTwo.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        dotViewTwo.frame = CGRect(x:(view.bounds.size.width/2) - CGFloat(a), y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
+//    }
+//
+//    func setUpdotViewThree(){
+//        dotViewThree.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        dotViewThree.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        dotViewThree.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(a)) - 12, y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
+//    }
+//
+//    func setUpdotViewFour(){
+//        dotViewFour.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        dotViewFour.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        dotViewFour.frame = CGRect(x:((view.bounds.size.width/2) + CGFloat(outer)), y: (view.bounds.size.height/2) + 55, width: 12, height: 12)
+//    }
+//
