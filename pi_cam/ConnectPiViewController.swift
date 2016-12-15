@@ -42,10 +42,6 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
         //
         //        nrfManager.verbose = true
     }
-    //
-    //    func startingAnimation(){
-    //        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
-    //    }
     
     func setUpButtons(){
         
@@ -68,13 +64,21 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
     }
     
     @IBAction func connectButtonPressed(_ sender: Any) {
-        
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations:{
             self.mainStackView.alpha = 0
         }, completion:{(true) in
-            var a = DotLoder(frame: CGRect.zero, masterView: self.view, counter: 3, height: nil)
-
+            var a = DotLoder(frame: CGRect.zero, masterView: self.view, counter: 2, height: nil)
         })
+        dismissKeyboard()
+    }
+    
+    override func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        connectButton.addGestureRecognizer(tap)
+    }
+    
+    override func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NRFManagerDelegate {
+class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NRFManagerDelegate,UITextFieldDelegate {
     
     //MARK:BLUETOOTHMANAGER
     var nrfManager:NRFManager!

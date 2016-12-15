@@ -52,30 +52,36 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         yee4.alpha = 0.9
         yee4.contentMode = .center
         yee4.isUserInteractionEnabled = true
+        yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+
         viewFour.addSubview(yee4)
         yees.append(yee4)
         
         let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
         yee2.image = UIImage(named: "YTICON")
         yee2.contentMode = .scaleAspectFit
+        yee2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+
         yee2.isUserInteractionEnabled = true
         
-        viewTwo.addSubview(yee4)
+        viewTwo.addSubview(yee2)
         yees.append(yee2)
         
         let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
         yee3.image = UIImage(named: "U")
         yee3.contentMode = .scaleAspectFit
         yee3.isUserInteractionEnabled = true
-        viewThree.addSubview(yee4)
+        yee3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+
+        viewThree.addSubview(yee3)
         yees.append(yee3)
         
         let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
         yee.image = UIImage(named: "TWITCH")
         yee.contentMode = .scaleAspectFit
         yee.isUserInteractionEnabled = true
-        yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
-        viewOne.addSubview(yee4)
+        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
+        viewOne.addSubview(yee)
         yees.append(yee)
         
         
@@ -98,7 +104,21 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     }
     //MARK: IBOutlets
     @IBOutlet weak var transformingTextLabel: UILabel!
-    @IBAction func editCredentailspressed(_ sender: Any) {
+//    @IBAction func addCredentailspressed(_ sender: Any) {
+//        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+//            print("animating")
+//            self.popOverView.center.y += self.popOverView.frame.height
+//            self.blackOverlay.alpha = 0
+//            
+//        }, completion: {(true) in
+//            print("done")
+//            
+//        })
+//        
+//        performSegue(withIdentifier: "addStreamingService", sender: self)
+//    }
+    @IBAction func addServicePressed(_ sender: Any) {
+        
         UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             print("animating")
             self.popOverView.center.y += self.popOverView.frame.height
@@ -110,6 +130,19 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
         })
         
         performSegue(withIdentifier: "addStreamingService", sender: self)
+    }
+    @IBAction func editCredentialsPressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            print("animating")
+            self.popOverView.center.y += self.popOverView.frame.height
+            self.blackOverlay.alpha = 0
+            
+        }, completion: {(true) in
+            print("done")
+            
+        })
+        
+        performSegue(withIdentifier: "editStreamingService", sender: self)
     }
     
     @IBAction func exitPopupMenu(_ sender: Any) {

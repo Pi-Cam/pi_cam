@@ -23,6 +23,7 @@ class AddServiceViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        setUpButtons()
     }
     
     //MARK: TABLEVIEW FUNCTIONS

@@ -20,6 +20,7 @@ class EditCredentialsViewController: UIViewController {
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpButtons()
     }
     
     //MARK: IBFUNCTIONS
