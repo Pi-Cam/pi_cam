@@ -16,11 +16,17 @@ class DotLoder: UIView {
     var a = 19
     var outer = 35
     var dots = [UIImageView]()
+    var height: CGFloat = 0
     
-    init(frame: CGRect, masterView: UIView, counter: Int){
+    init(frame: CGRect, masterView: UIView, counter: Int, height: CGFloat?){
         super.init(frame:frame)
         self.masterView = masterView
         self.counter = counter
+        if let height = height{
+         self.height = height
+        } else {
+            self.height = 0
+        }
         dots += [dotViewOne,dotViewTwo,dotViewThree,dotViewFour]
         for i in dots {
             masterView.addSubview(i)
@@ -66,7 +72,7 @@ class DotLoder: UIView {
     }()
     
     func animateDots(){
-        if (counter > 1 && counter % 2 == 0) {
+        if (counter > 1 && counter % 2 == 1) {
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.dotViewOne.alpha = 1
             }, completion: nil)
@@ -105,25 +111,25 @@ class DotLoder: UIView {
     func setUpdotViewOne(){
         dotViewOne.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
         dotViewOne.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
-        dotViewOne.frame = CGRect(x:((masterView.bounds.size.width/2) - CGFloat(outer)) - 12, y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+        dotViewOne.frame = CGRect(x:((masterView.bounds.size.width/2) - CGFloat(outer)) - 12, y: (masterView.bounds.size.height/2) + height, width: 12, height: 12)
     }
     
     func setUpdotViewTwo(){
         dotViewTwo.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
         dotViewTwo.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
-        dotViewTwo.frame = CGRect(x:(masterView.bounds.size.width/2) - CGFloat(a), y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+        dotViewTwo.frame = CGRect(x:(masterView.bounds.size.width/2) - CGFloat(a), y: (masterView.bounds.size.height/2) + height, width: 12, height: 12)
     }
     
     func setUpdotViewThree(){
         dotViewThree.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
         dotViewThree.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
-        dotViewThree.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(a)) - 12, y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+        dotViewThree.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(a)) - 12, y: (masterView.bounds.size.height/2) + height, width: 12, height: 12)
     }
     
     func setUpdotViewFour(){
         dotViewFour.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
         dotViewFour.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
-        dotViewFour.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(outer)), y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+        dotViewFour.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(outer)), y: (masterView.bounds.size.height/2) + height, width: 12, height: 12)
     }
     
     func countUp(){

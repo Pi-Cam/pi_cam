@@ -19,7 +19,7 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
     //MARK: VIEWDIDLOAD
     override func viewDidLoad(){
         _ = PiImage(frame: CGRect.zero, masterView: view)
-        _ = DotLoder(frame: CGRect.zero, masterView: view, counter: counter)
+        _ = DotLoder(frame: CGRect.zero, masterView: view, counter: counter, height: 55)
         startBlutoothManager()
         nrfManager.verbose = true
         nrfManager.delegate = self
@@ -54,13 +54,13 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
                 if (counter > 1 && counter % 2 == 0) {
                     nrfManager.connect()
                 } else{
-                    print("nvm")
+                    print("Could not connect")
                 }
             }else{
                 performSegue(withIdentifier: "setUpConnection", sender: self)
             }
         } else {
-            displayAlert("Unable to Connect", message: "Please make sure you pi cam is on and make sure your devices bluetooth is on")
+            displayAlert("Unable to Connect", message: "Please make sure you pi cam and your iPhones bluetooth is powered on")
             counter = 0
         }
     }

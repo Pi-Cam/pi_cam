@@ -131,8 +131,6 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
-        //        let viewController: SelectWifiVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectWifiVC") as! SelectWifiVC
-        //        self.present(viewController, animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     

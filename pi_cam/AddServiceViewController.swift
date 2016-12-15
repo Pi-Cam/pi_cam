@@ -9,25 +9,23 @@
 import UIKit
 
 class AddServiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var chooseStreamerTableView: UIStackView!
     
+    //MARK: IBOUTLETS
+    @IBOutlet weak var chooseStreamerTableView: UIStackView!
     @IBOutlet weak var backButtonFromChooseStreamerSV: UIImageView!
     @IBOutlet weak var backButtonFromAddCredentialsSV: UIImageView!
     @IBOutlet weak var chooseStreamerCredentialsStackView: UIStackView!
     @IBOutlet weak var addCredentialsStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        backButtonFromAddCredentialsSV.isUserInteractionEnabled = true
-        backButtonFromChooseStreamerSV.isUserInteractionEnabled = true
-        backButtonFromAddCredentialsSV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBackFromSecondAppearance)))
-        
-        backButtonFromChooseStreamerSV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBackFromFirstAppearance)))
     }
     
+    //MARK: TABLEVIEW FUNCTIONS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showSecondScreen()
     }
@@ -43,6 +41,14 @@ class AddServiceViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    //MARK: OTHER FUNCTIONS
+    func setUpButtons(){
+        backButtonFromAddCredentialsSV.isUserInteractionEnabled = true
+        backButtonFromChooseStreamerSV.isUserInteractionEnabled = true
+        backButtonFromAddCredentialsSV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBackFromSecondAppearance)))
+        backButtonFromChooseStreamerSV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBackFromFirstAppearance)))
     }
     
     func showSecondScreen(){

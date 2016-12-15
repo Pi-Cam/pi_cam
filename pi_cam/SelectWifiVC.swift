@@ -10,24 +10,27 @@ import UIKit
 
 class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NRFManagerDelegate {
     
-    //MARK:Bluetooth managers
+    //MARK:BLUETOOTHMANAGER
     var nrfManager:NRFManager!
     
-    //MARK: IBOutlers
+    //MARK: IBOUTLETS
     @IBOutlet weak var backButtonImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: ViewDidLoad
+    //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        backButtonImage.isUserInteractionEnabled = true
-        backButtonImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonPressed)))
         tableView.delegate = self
         tableView.dataSource = self
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
     }
     
-    //MARK: TableView Functions
+    func setUpButtons(){
+        backButtonImage.isUserInteractionEnabled = true
+        backButtonImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonPressed)))
+    }
+    
+    //MARK: TABLEVIEW FUNCTIONS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wifiCell",  for: indexPath) as! WifiTableViewCell
         return cell
@@ -41,7 +44,7 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         performSegue(withIdentifier: "setUpPi", sender: self)
     }
     
-    //MARK: IBOutlet Funtions
+    //MARK: OTHER FUNCTIONS
     func backButtonPressed() {
         navigationController?.popViewController(animated: true)
     }
