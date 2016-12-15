@@ -10,15 +10,16 @@ import UIKit
 
 class InitialScreenVC: UIViewController, NRFManagerDelegate {
     
-    //MARK: Variables for counters
+    //MARK: VARIABLES
     var counter = 0
     var timer = Timer()
     var nrfManager:NRFManager!
     var raspiFound = false
     
-    //MARK: ViewDidLoad
+    //MARK: VIEWDIDLOAD
     override func viewDidLoad(){
         _ = PiImage(frame: CGRect.zero, masterView: view)
+        _ = DotLoder(frame: CGRect.zero, masterView: view, counter: counter)
         startBlutoothManager()
         nrfManager.verbose = true
         nrfManager.delegate = self
@@ -26,15 +27,17 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
         countUp()
     }
     
+    //MARK: VIEWDIDAPPEAR
     override func viewDidAppear(_ animated: Bool) {
         timer.fire()
-        print(counter)
     }
     
+    //MARK: VIEWDIDDISSAPEAR
     override func viewDidDisappear(_ animated: Bool) {
         timer.invalidate()
     }
     
+    //MARK: OTHER FUNCTIONS
     func countUp(){
         counter += 1
         print(counter)
@@ -43,10 +46,6 @@ class InitialScreenVC: UIViewController, NRFManagerDelegate {
     
     func setUpTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
-    }
-    
-    func goToNextScreen(){
-        performSegue(withIdentifier: "setUpConnection", sender: self)
     }
     
     func checkForConnection() {

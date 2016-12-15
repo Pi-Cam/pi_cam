@@ -9,20 +9,27 @@
 import UIKit
 
 class DotLoder: UIView {
-    
-    
-    //        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
-    
+
     var counter = 0
     var timer = Timer()
     var masterView: UIView!
     var a = 19
     var outer = 35
+    var dots = [UIImageView]()
     
-    init(frame: CGRect, masterView: UIView){
+    init(frame: CGRect, masterView: UIView, counter: Int){
         super.init(frame:frame)
         self.masterView = masterView
-        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
+        self.counter = counter
+        dots += [dotViewOne,dotViewTwo,dotViewThree,dotViewFour]
+        for i in dots {
+            masterView.addSubview(i)
+        }
+        setUpdotViewOne()
+        setUpdotViewTwo()
+        setUpdotViewThree()
+        setUpdotViewFour()
+        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(countUp), userInfo: nil, repeats: true)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,7 +66,6 @@ class DotLoder: UIView {
     }()
     
     func animateDots(){
-        counter += 1
         if (counter > 1 && counter % 2 == 0) {
             UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self.dotViewOne.alpha = 1
@@ -95,7 +101,7 @@ class DotLoder: UIView {
             }, completion: nil)
         }
     }
-
+    
     func setUpdotViewOne(){
         dotViewOne.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
         dotViewOne.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
@@ -120,4 +126,8 @@ class DotLoder: UIView {
         dotViewFour.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(outer)), y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
     }
     
+    func countUp(){
+        counter += 1
+        animateDots()
+    }
 }
