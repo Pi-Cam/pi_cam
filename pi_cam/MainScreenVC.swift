@@ -17,47 +17,12 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     var coolWords = ["Last Stream: Dec 7, 9:00pm","Number of streams: 3","Default streamer: Youtube"]
     var yees = [UIImageView]()
     
-    @IBAction func goLivePressed(_ sender: Any) {
-        performSegue(withIdentifier: "showStream", sender: self)
-    }
-    @IBAction func deleteServicePressed(_ sender: Any) {
-    }
-    //MARK: IBOutlets
-    @IBOutlet weak var transformingTextLabel: UILabel!
-    @IBAction func editCredentailspressed(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            print("animating")
-            self.popOverView.center.y += self.popOverView.frame.height
-            self.blackOverlay.alpha = 0
-            
-        }, completion: {(true) in
-            print("done")
-            
-        })
-        
-        performSegue(withIdentifier: "addStreamingService", sender: self)
-    }
-    
-    @IBAction func exitPopupMenu(_ sender: Any) {
-        self.timer.fire()
-        print("botton pressed")
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            print("animating")
-            self.popOverView.center.y += self.popOverView.frame.height
-            self.blackOverlay.alpha = 0
-            
-        }, completion: {(true) in
-            print("done")
-            
-        })
-    }
     @IBOutlet weak var menuStackView: UIStackView!
     @IBOutlet weak var viewFour: UIImageView!
     @IBOutlet weak var viewOne: UIImageView!
     @IBOutlet weak var viewTwo: UIImageView!
     @IBOutlet weak var viewThree: UIImageView!
     @IBOutlet weak var popOverView: UIView!
-    
     
     //MARK: ViewDidLoad
     override func viewDidLoad() {
@@ -125,6 +90,42 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
     }()
     
     //MARK: IBOutlets
+    
+    @IBAction func goLivePressed(_ sender: Any) {
+        performSegue(withIdentifier: "showStream", sender: self)
+    }
+    @IBAction func deleteServicePressed(_ sender: Any) {
+    }
+    //MARK: IBOutlets
+    @IBOutlet weak var transformingTextLabel: UILabel!
+    @IBAction func editCredentailspressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            print("animating")
+            self.popOverView.center.y += self.popOverView.frame.height
+            self.blackOverlay.alpha = 0
+            
+        }, completion: {(true) in
+            print("done")
+            
+        })
+        
+        performSegue(withIdentifier: "addStreamingService", sender: self)
+    }
+    
+    @IBAction func exitPopupMenu(_ sender: Any) {
+        self.timer.fire()
+        print("botton pressed")
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            print("animating")
+            self.popOverView.center.y += self.popOverView.frame.height
+            self.blackOverlay.alpha = 0
+            
+        }, completion: {(true) in
+            print("done")
+            
+        })
+    }
+    
     @IBAction func rightButtonPressed(_ sender: Any) {
         print("View not implemented yet..")
     }
@@ -143,10 +144,8 @@ class MainScreenVC: UIViewController, UIGestureRecognizerDelegate {
             print("animating")
             self.popOverView.center.y -= self.popOverView.frame.height
             self.blackOverlay.alpha = 0.5
-            
         }, completion: {(true) in
             print("done")
-            
         })
     }
     

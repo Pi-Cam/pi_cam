@@ -46,10 +46,10 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
 //        
 //        nrfManager.verbose = true
     }
-    
-    func startingAnimation(){
-        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
-    }
+//    
+//    func startingAnimation(){
+//        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
+//    }
     
     func goBack(){
         navigationController?.popViewController(animated: true)
@@ -98,7 +98,7 @@ class ConnectPiViewController: UIViewController, UITextFieldDelegate,NRFManagerD
 
         }, completion: nil)        
         
-        startingAnimation()
+//        startingAnimation()
         
         
 //        sendData()

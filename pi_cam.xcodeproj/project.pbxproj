@@ -10,6 +10,8 @@
 		C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */; };
 		C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610D1E01105600B83922 /* StreamerTableViewCell.swift */; };
 		C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610F1E019DAF00B83922 /* AddServiceViewController.swift */; };
+		C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05ECA3C1E023BE50099B4F2 /* PiImage.swift */; };
+		C05ECA3F1E0242FA0099B4F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05ECA3E1E0242FA0099B4F2 /* BluetoothManager.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
@@ -25,12 +27,15 @@
 		C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */; };
 		C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */; };
 		C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B91E00FEA800D84652 /* Streamer.swift */; };
+		C0FBFF371E0233F70045F5FC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FBFF361E0233F70045F5FC /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectPiViewController.swift; sourceTree = "<group>"; };
 		C028610D1E01105600B83922 /* StreamerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerTableViewCell.swift; sourceTree = "<group>"; };
 		C028610F1E019DAF00B83922 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		C05ECA3C1E023BE50099B4F2 /* PiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiImage.swift; sourceTree = "<group>"; };
+		C05ECA3E1E0242FA0099B4F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06ACA3D1DEB7C320080048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06ACA421DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStreamer.swift; sourceTree = "<group>"; };
 		C0DB48B91E00FEA800D84652 /* Streamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streamer.swift; sourceTree = "<group>"; };
+		C0FBFF361E0233F70045F5FC /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +70,22 @@
 		C0009D431DF85D5C005B6E47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C05ECA3B1E023BCA0099B4F2 /* VIews */,
 				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
 				C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */,
 				C0DB48B91E00FEA800D84652 /* Streamer.swift */,
 				C028610D1E01105600B83922 /* StreamerTableViewCell.swift */,
-				C0A36E3E1E01E1B100B91360 /* DotLoder.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C05ECA3B1E023BCA0099B4F2 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				C0A36E3E1E01E1B100B91360 /* DotLoder.swift */,
+				C05ECA3C1E023BE50099B4F2 /* PiImage.swift */,
+			);
+			name = VIews;
 			sourceTree = "<group>";
 		};
 		C06ACA311DEB7C320080048D = {
@@ -106,6 +121,7 @@
 				C0D632611DF8D71E0040C62C /* NRFManager.swift */,
 				C06ACA3B1DEB7C320080048D /* Products */,
 				C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */,
+				C0FBFF361E0233F70045F5FC /* Extentions.swift */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
 				C0A024F91DFE10280060EC6C /* idk.swift */,
 				C06ACA441DEB7C320080048D /* Assets.xcassets */,
@@ -124,6 +140,7 @@
 				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
 				C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */,
 				C0DB48B31DFF076900D84652 /* PopOverViewController.swift */,
+				C05ECA3E1E0242FA0099B4F2 /* BluetoothManager.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -222,8 +239,11 @@
 				C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */,
 				C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */,
 				C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */,
+				C0FBFF371E0233F70045F5FC /* Extentions.swift in Sources */,
 				C01072941DFE32C0007FBA0B /* ConnectPiViewController.swift in Sources */,
 				C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */,
+				C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */,
+				C05ECA3F1E0242FA0099B4F2 /* BluetoothManager.swift in Sources */,
 				C0A024FA1DFE10280060EC6C /* idk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

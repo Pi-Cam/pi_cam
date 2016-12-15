@@ -10,11 +10,18 @@ import UIKit
 
 class DotLoder: UIView {
     
+    
+    //        timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
+    
     var counter = 0
     var timer = Timer()
+    var masterView: UIView!
+    var a = 19
+    var outer = 35
     
-    override init(frame: CGRect){
+    init(frame: CGRect, masterView: UIView){
         super.init(frame:frame)
+        self.masterView = masterView
         timer = Timer.scheduledTimer(timeInterval: 1.7, target: self, selector: #selector(InitialScreenVC.countUp), userInfo: nil, repeats: true)
     }
     
@@ -88,4 +95,29 @@ class DotLoder: UIView {
             }, completion: nil)
         }
     }
+
+    func setUpdotViewOne(){
+        dotViewOne.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
+        dotViewOne.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
+        dotViewOne.frame = CGRect(x:((masterView.bounds.size.width/2) - CGFloat(outer)) - 12, y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+    }
+    
+    func setUpdotViewTwo(){
+        dotViewTwo.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
+        dotViewTwo.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
+        dotViewTwo.frame = CGRect(x:(masterView.bounds.size.width/2) - CGFloat(a), y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+    }
+    
+    func setUpdotViewThree(){
+        dotViewThree.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
+        dotViewThree.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
+        dotViewThree.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(a)) - 12, y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+    }
+    
+    func setUpdotViewFour(){
+        dotViewFour.centerXAnchor.constraint(equalTo: masterView.centerXAnchor).isActive = true
+        dotViewFour.centerYAnchor.constraint(equalTo: masterView.centerYAnchor).isActive = true
+        dotViewFour.frame = CGRect(x:((masterView.bounds.size.width/2) + CGFloat(outer)), y: (masterView.bounds.size.height/2) + 55, width: 12, height: 12)
+    }
+    
 }
