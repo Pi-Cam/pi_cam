@@ -15,6 +15,8 @@
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
+		C07AE94F1E03A7FF00246F92 /* StreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AE94E1E03A7FF00246F92 /* StreamVC.swift */; };
+		C07AE9531E03B1F500246F92 /* CamFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AE9521E03B1F500246F92 /* CamFile.swift */; };
 		C0A024FA1DFE10280060EC6C /* idk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A024F91DFE10280060EC6C /* idk.swift */; };
 		C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A36E3E1E01E1B100B91360 /* DotLoder.swift */; };
 		C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */; };
@@ -39,6 +41,8 @@
 		C06ACA441DEB7C320080048D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07AE94E1E03A7FF00246F92 /* StreamVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamVC.swift; sourceTree = "<group>"; };
+		C07AE9521E03B1F500246F92 /* CamFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamFile.swift; sourceTree = "<group>"; };
 		C0A024F91DFE10280060EC6C /* idk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idk.swift; sourceTree = "<group>"; };
 		C0A36E3E1E01E1B100B91360 /* DotLoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotLoder.swift; sourceTree = "<group>"; };
 		C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */,
 				C0FBFF361E0233F70045F5FC /* Extentions.swift */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
+				C07AE9521E03B1F500246F92 /* CamFile.swift */,
 				C0A024F91DFE10280060EC6C /* idk.swift */,
 				C06ACA441DEB7C320080048D /* Assets.xcassets */,
 				C06ACA491DEB7C320080048D /* Info.plist */,
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */,
+				C07AE94E1E03A7FF00246F92 /* StreamVC.swift */,
 				C028610F1E019DAF00B83922 /* AddServiceViewController.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */,
 				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
@@ -222,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */,
+				C07AE9531E03B1F500246F92 /* CamFile.swift in Sources */,
+				C07AE94F1E03A7FF00246F92 /* StreamVC.swift in Sources */,
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
 				C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
