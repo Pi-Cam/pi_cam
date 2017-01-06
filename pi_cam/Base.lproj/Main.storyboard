@@ -30,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2518" y="2273"/>
+            <point key="canvasLocation" x="-2790" y="2263"/>
         </scene>
         <!--Connect Pi View Controller-->
         <scene sceneID="yA0-YA-vcl">
@@ -941,7 +941,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zyg-Dq-ZU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3153" y="2273"/>
+            <point key="canvasLocation" x="-3369" y="2284"/>
         </scene>
         <!--Main ScreenVC-->
         <scene sceneID="EHW-HP-0S3">
