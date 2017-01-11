@@ -97,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA3C1DEB7C320080048D /* pi_cam */,
+				C0E0F4541E25DDD50068A6C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +161,13 @@
 				C0E0F4421E25C3440068A6C0 /* StreamView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C0E0F4541E25DDD50068A6C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +386,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HGS8K6RYR7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pi_cam",
+				);
 				INFOPLIST_FILE = pi_cam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marquavious.pi-cam";
@@ -391,6 +403,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HGS8K6RYR7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pi_cam",
+				);
 				INFOPLIST_FILE = pi_cam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marquavious.pi-cam";

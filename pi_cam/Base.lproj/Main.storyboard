@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTF-VL-RUG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tHV-Pa-eEJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -220,7 +220,7 @@
                         <outlet property="passwordTextField" destination="PAo-vv-ryz" id="OBg-uc-pRV"/>
                         <outlet property="wifiTextField" destination="4Bu-Ym-dvk" id="DlK-no-iKQ"/>
                         <segue destination="K3T-M6-HK1" kind="unwind" unwindAction="unwindSegue:" id="RFf-sA-U42"/>
-                        <segue destination="qTF-VL-RUG" kind="show" id="iIL-0I-JVi"/>
+                        <segue destination="qTF-VL-RUG" kind="show" identifier="show" id="iIL-0I-JVi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7d-NP-grO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,20 +248,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ync-31-nFD">
-                                <rect key="frame" x="194" y="558" width="165" height="43"/>
+                                <rect key="frame" x="16" y="558" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="GO LIVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB9-JT-hMB">
-                                <rect key="frame" x="16" y="558" width="165" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="EDIT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <connections>
+                                    <segue destination="tHV-Pa-eEJ" kind="show" id="HJ9-KL-Jx6"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ham" translatesAutoresizingMaskIntoConstraints="NO" id="wh0-f4-B10">
                                 <rect key="frame" x="16" y="37" width="17" height="13"/>
@@ -269,7 +264,6 @@
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
                                 <rect key="frame" x="16" y="72" width="343" height="478"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="478" id="3dV-cj-t5w"/>
                                     <constraint firstAttribute="width" constant="343" id="xyg-5V-9BY"/>
@@ -1308,7 +1302,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqS-Yw-aRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="2263"/>
+            <point key="canvasLocation" x="-428" y="2263"/>
         </scene>
         <!--Item-->
         <scene sceneID="rlr-69-bjt">
@@ -1344,4 +1338,7 @@
         <image name="oval" width="18" height="18"/>
         <image name="pi" width="270" height="344"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aIn-CO-0yU"/>
+    </inferredMetricsTieBreakers>
 </document>
