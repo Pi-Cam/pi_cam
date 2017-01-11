@@ -231,7 +231,7 @@
         <!--HOME-->
         <scene sceneID="jmL-W2-yyA">
             <objects>
-                <viewController id="eHz-XL-1yO" sceneMemberID="viewController">
+                <viewController id="eHz-XL-1yO" customClass="SUPERMain" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fK9-ZK-ps0"/>
                         <viewControllerLayoutGuide type="bottom" id="EpF-jq-BZR"/>
@@ -240,15 +240,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="16" y="197" width="343" height="353"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dg-Pd-Fbg">
-                                <rect key="frame" x="0.0" y="65" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxX-N5-nwn">
                                 <rect key="frame" x="162" y="33" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,15 +267,28 @@
                                 <rect key="frame" x="16" y="37" width="17" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
+                                <rect key="frame" x="16" y="72" width="343" height="478"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="478" id="3dV-cj-t5w"/>
+                                    <constraint firstAttribute="width" constant="343" id="xyg-5V-9BY"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="0Qv-Oj-2vz"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="centerY" secondItem="Wfb-1w-qGV" secondAttribute="centerY" constant="-22.5" id="CbZ-No-h8C"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK">
-                        <barButtonItem key="leftBarButtonItem" image="Ham" id="qWO-AO-qhe">
+                        <barButtonItem key="leftBarButtonItem" image="Ham" style="plain" id="qWO-AO-qhe">
                             <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mainScrollView" destination="7uN-wH-fQh" id="NEh-Nh-xfo"/>
                         <segue destination="EW0-He-hgQ" kind="show" id="SLc-VU-j5a"/>
                         <segue destination="x25-Mu-5l3" kind="show" id="4VJ-Tr-L47"/>
                         <segue destination="tHV-Pa-eEJ" kind="show" id="aIn-CO-0yU"/>
@@ -292,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-65-eNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="2263"/>
+            <point key="canvasLocation" x="637.60000000000002" y="2262.8185907046477"/>
         </scene>
         <!--StreamVC-->
         <scene sceneID="Y4l-8R-mRh">
@@ -1315,6 +1319,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kcr-3T-7ZJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>

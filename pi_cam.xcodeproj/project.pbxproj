@@ -27,6 +27,9 @@
 		C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */; };
 		C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */; };
 		C0DB48BA1E00FEA800D84652 /* Streamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B91E00FEA800D84652 /* Streamer.swift */; };
+		C0E0F43F1E25BDB90068A6C0 /* SUPERMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0F43E1E25BDB90068A6C0 /* SUPERMain.swift */; };
+		C0E0F4411E25C32C0068A6C0 /* StreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E0F4401E25C32C0068A6C0 /* StreamView.xib */; };
+		C0E0F4431E25C3440068A6C0 /* StreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0F4421E25C3440068A6C0 /* StreamView.swift */; };
 		C0FBFF371E0233F70045F5FC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FBFF361E0233F70045F5FC /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStreamer.swift; sourceTree = "<group>"; };
 		C0DB48B91E00FEA800D84652 /* Streamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streamer.swift; sourceTree = "<group>"; };
+		C0E0F43E1E25BDB90068A6C0 /* SUPERMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUPERMain.swift; sourceTree = "<group>"; };
+		C0E0F4401E25C32C0068A6C0 /* StreamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamView.xib; sourceTree = "<group>"; };
+		C0E0F4421E25C3440068A6C0 /* StreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamView.swift; sourceTree = "<group>"; };
 		C0FBFF361E0233F70045F5FC /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,7 @@
 				C07AE94E1E03A7FF00246F92 /* StreamVC.swift */,
 				C028610F1E019DAF00B83922 /* AddServiceViewController.swift */,
 				C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */,
+				C0E0F43E1E25BDB90068A6C0 /* SUPERMain.swift */,
 				C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */,
 				C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */,
 				C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */,
@@ -149,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
+				C0E0F4401E25C32C0068A6C0 /* StreamView.xib */,
+				C0E0F4421E25C3440068A6C0 /* StreamView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 			files = (
 				C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */,
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
+				C0E0F4411E25C32C0068A6C0 /* StreamView.xib in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +255,8 @@
 				C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */,
 				C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */,
 				C0A024FA1DFE10280060EC6C /* idk.swift in Sources */,
+				C0E0F4431E25C3440068A6C0 /* StreamView.swift in Sources */,
+				C0E0F43F1E25BDB90068A6C0 /* SUPERMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
