@@ -252,7 +252,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="16" y="84" width="343" height="508"/>
+                                <rect key="frame" x="16" y="137" width="343" height="415"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-jW-dPR">
                                 <rect key="frame" x="142" y="600" width="90" height="10"/>
@@ -263,15 +263,34 @@
                                 <color key="pageIndicatorTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km8-8s-ECM">
+                                <rect key="frame" x="16" y="89" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-qj-jg6">
+                                <rect key="frame" x="0.0" y="118" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wifi: Makeschool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-F2-TWM">
+                                <rect key="frame" x="228" y="89" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="fzy-jW-dPR" secondAttribute="bottom" constant="8" id="8WU-0W-ARH"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="20" id="IlI-66-rSF"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="73" id="IlI-66-rSF"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" id="Ir1-yY-C0D"/>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="Jls-vH-qHd"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" id="P1L-v6-B4H"/>
-                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="8" id="pFw-MT-nxQ"/>
+                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="48" id="pFw-MT-nxQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK">
