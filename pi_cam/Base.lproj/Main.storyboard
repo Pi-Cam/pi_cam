@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="-1287" y="2263"/>
         </scene>
-        <!--HOME-->
+        <!--Main-->
         <scene sceneID="jmL-W2-yyA">
             <objects>
                 <viewController id="eHz-XL-1yO" customClass="SUPERMain" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
@@ -293,10 +293,11 @@
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="48" id="pFw-MT-nxQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK">
+                    <navigationItem key="navigationItem" id="oaE-LZ-dMK">
                         <barButtonItem key="leftBarButtonItem" image="Ham" style="plain" id="qWO-AO-qhe">
                             <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Wi-Fi" id="VvX-tR-SWM"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mainScrollView" destination="7uN-wH-fQh" id="NEh-Nh-xfo"/>
