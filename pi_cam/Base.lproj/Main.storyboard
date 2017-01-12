@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTF-VL-RUG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L4g-Af-0AR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -220,7 +220,7 @@
                         <outlet property="passwordTextField" destination="PAo-vv-ryz" id="OBg-uc-pRV"/>
                         <outlet property="wifiTextField" destination="4Bu-Ym-dvk" id="DlK-no-iKQ"/>
                         <segue destination="K3T-M6-HK1" kind="unwind" unwindAction="unwindSegue:" id="RFf-sA-U42"/>
-                        <segue destination="qTF-VL-RUG" kind="show" identifier="show" id="iIL-0I-JVi"/>
+                        <segue destination="dyr-6x-1P0" kind="show" identifier="show" id="h1s-MP-C6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7d-NP-grO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="-1287" y="2263"/>
         </scene>
-        <!--Main-->
+        <!--PiCam-->
         <scene sceneID="jmL-W2-yyA">
             <objects>
                 <viewController id="eHz-XL-1yO" customClass="SUPERMain" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
@@ -252,52 +252,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="16" y="137" width="343" height="415"/>
+                                <rect key="frame" x="16" y="69" width="343" height="529"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-jW-dPR">
-                                <rect key="frame" x="142" y="600" width="90" height="10"/>
+                                <rect key="frame" x="142" y="606" width="90" height="10"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="CKE-V1-1rw"/>
-                                    <constraint firstAttribute="height" constant="10" id="dom-Ad-aFw"/>
+                                    <constraint firstAttribute="height" constant="10" id="PhK-0y-KuZ"/>
+                                    <constraint firstAttribute="width" constant="90" id="e1m-O7-TSk"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km8-8s-ECM">
-                                <rect key="frame" x="16" y="89" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-qj-jg6">
-                                <rect key="frame" x="0.0" y="118" width="375" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wifi: Makeschool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-F2-TWM">
-                                <rect key="frame" x="228" y="89" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="fzy-jW-dPR" secondAttribute="bottom" constant="8" id="8WU-0W-ARH"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="73" id="IlI-66-rSF"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" id="Ir1-yY-C0D"/>
-                            <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="Jls-vH-qHd"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" id="P1L-v6-B4H"/>
-                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="48" id="pFw-MT-nxQ"/>
+                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="8" id="0WH-Ag-aBa"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" id="3Yp-Z2-t26"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" id="XPF-YM-IXq"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="5" id="g7q-dc-HMi"/>
+                            <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="j7b-gc-Z9b"/>
+                            <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="69" id="sTa-rV-0yE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oaE-LZ-dMK">
-                        <barButtonItem key="leftBarButtonItem" image="Ham" style="plain" id="qWO-AO-qhe">
-                            <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Wi-Fi" id="VvX-tR-SWM"/>
+                    <navigationItem key="navigationItem" title="PiCam" id="oaE-LZ-dMK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="TCu-eS-u4m"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zws-xf-Js0"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mainScrollView" destination="7uN-wH-fQh" id="NEh-Nh-xfo"/>
@@ -309,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-65-eNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637.60000000000002" y="2262.8185907046477"/>
+            <point key="canvasLocation" x="-22" y="2263"/>
         </scene>
         <!--StreamVC-->
         <scene sceneID="Y4l-8R-mRh">
@@ -394,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-Rv-MQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="2262.8185907046477"/>
+            <point key="canvasLocation" x="822" y="2263"/>
         </scene>
         <!--Item-->
         <scene sceneID="EJJ-D5-u6x">
@@ -1305,25 +1284,6 @@
             </objects>
             <point key="canvasLocation" x="956" y="3023"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="MgQ-tq-UdV">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qTF-VL-RUG" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="f2Z-h4-Hvz">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="dyr-6x-1P0" kind="relationship" relationship="viewControllers" id="jzt-tH-eHh"/>
-                        <segue destination="OTI-4u-3p0" kind="relationship" relationship="viewControllers" id="Fk9-UN-30y"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mqS-Yw-aRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-537" y="2225"/>
-        </scene>
         <!--Item-->
         <scene sceneID="rlr-69-bjt">
             <objects>
@@ -1345,7 +1305,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3P-wW-HKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.4" y="2262.8185907046477"/>
+            <point key="canvasLocation" x="-673" y="2263"/>
         </scene>
     </scenes>
     <resources>

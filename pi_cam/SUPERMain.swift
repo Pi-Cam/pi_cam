@@ -27,6 +27,16 @@ class SUPERMain: UIViewController,UIScrollViewDelegate {
         mainScrollView.delegate = self
         mainScrollView.contentInset.top = 0
         
+//        navigationController.ba
+//        navigationBarAppearace.barTintColor =
+        
+
+//        navigationController?.navigationBa
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.alpha = 1
+        self.navigationController?.navigationBar.clipsToBounds = true
+//        self.navigationController?.navigationBar.isTranslucent = true
+        
         loadFeatures()
         
         
