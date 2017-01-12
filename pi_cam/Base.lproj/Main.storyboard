@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L4g-Af-0AR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dyr-6x-1P0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -252,7 +252,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="16" y="69" width="343" height="529"/>
+                                <rect key="frame" x="16" y="141" width="343" height="457"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-jW-dPR">
                                 <rect key="frame" x="142" y="606" width="90" height="10"/>
@@ -263,15 +263,35 @@
                                 <color key="pageIndicatorTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3in-vJ-ioO">
+                                <rect key="frame" x="112" y="105" width="150" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pi Connection" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-0u-YQH">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval" translatesAutoresizingMaskIntoConstraints="NO" id="Yuv-m6-8ns">
+                                        <rect key="frame" x="137.5" y="8" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="qOq-8f-vId"/>
+                                            <constraint firstAttribute="height" constant="12" id="rIQ-YK-I7j"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="8" id="0WH-Ag-aBa"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" id="3Yp-Z2-t26"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="3in-vJ-ioO" secondAttribute="bottom" constant="8" id="WO7-nE-fQK"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" id="XPF-YM-IXq"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="5" id="g7q-dc-HMi"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="77" id="g7q-dc-HMi"/>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="j7b-gc-Z9b"/>
                             <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="69" id="sTa-rV-0yE"/>
+                            <constraint firstItem="3in-vJ-ioO" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="vRU-ot-Z9p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PiCam" id="oaE-LZ-dMK">
@@ -288,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-65-eNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="2263"/>
+            <point key="canvasLocation" x="-23.199999999999999" y="2262.8185907046477"/>
         </scene>
         <!--StreamVC-->
         <scene sceneID="Y4l-8R-mRh">
@@ -374,25 +394,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-Rv-MQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="2263"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="EJJ-D5-u6x">
-            <objects>
-                <viewController id="OTI-4u-3p0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4WR-jJ-Fxq"/>
-                        <viewControllerLayoutGuide type="bottom" id="CUJ-1w-tJf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x2p-j1-z3X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ULs-6g-uHO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xd-Rt-abj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-966" y="3019"/>
         </scene>
         <!--Add Service View Controller-->
         <scene sceneID="lN7-A2-x1N">

@@ -25,16 +25,16 @@ public enum ConnectionStatus {
 
 
 /*!
-*  @class NRFManager
-*
-*  @discussion The manager for nRF8001 connections.
-*
-*/
+ *  @class NRFManager
+ *
+ *  @discussion The manager for nRF8001 connections.
+ *
+ */
 
 // Mark: NRFManager Initialization
 open class NRFManager:NSObject, CBCentralManagerDelegate, UARTPeripheralDelegate {
     
-
+    var counterToChangePie = 0
     fileprivate var arduinoToConnect: String?
     //Private Properties
     fileprivate var bluetoothManager:CBCentralManager!
@@ -50,7 +50,7 @@ open class NRFManager:NSObject, CBCentralManagerDelegate, UARTPeripheralDelegate
     open var verbose = false
     open var autoConnect = true
     open var delegate:NRFManagerDelegate?
-
+    
     //callbacks
     open var connectionCallback:(()->())?
     open var disconnectionCallback:(()->())?
@@ -61,34 +61,34 @@ open class NRFManager:NSObject, CBCentralManagerDelegate, UARTPeripheralDelegate
         didSet {
             if connectionStatus != oldValue {
                 switch connectionStatus {
-                    case .connected:
-                        
-                        connectionCallback?()
-                        delegate?.nrfDidConnect?(self)
+                case .connected:
                     
-                    default:
-
-                        disconnectionCallback?()
-                        delegate?.nrfDidDisconnect?(self)
+                    connectionCallback?()
+                    delegate?.nrfDidConnect?(self)
+                    
+                default:
+                    
+                    disconnectionCallback?()
+                    delegate?.nrfDidDisconnect?(self)
                 }
             }
         }
     }
-
+    
     open func showName() -> String {
         return (currentPeripheral?.peripheral.name)!
     }
     
     
     
-
+    
     open class var sharedInstance : NRFManager {
         struct Static {
             static let instance : NRFManager = NRFManager()
         }
         return Static.instance
     }
- 
+    
     public init(delegate:NRFManagerDelegate? = nil, onConnect connectionCallback:(()->())? = nil, onDisconnect disconnectionCallback:(()->())? = nil, onData dataCallback:((_ data:Data?, _ string:String?)->())? = nil, autoConnect:Bool = true)
     {
         super.init()
@@ -99,7 +99,6 @@ open class NRFManager:NSObject, CBCentralManagerDelegate, UARTPeripheralDelegate
         self.disconnectionCallback = disconnectionCallback
         self.dataCallback = dataCallback
     }
-    
 }
 
 // MARK: - Private Methods
@@ -108,7 +107,7 @@ extension NRFManager {
     fileprivate func scanForPeripheral()
     {
         let connectedPeripherals = bluetoothManager.retrieveConnectedPeripherals(withServices: [UARTPeripheral.uartServiceUUID()])
-
+        
         if connectedPeripherals.count > 0 {
             log("Already connected ...")
             connectPeripheral(connectedPeripherals[0] as CBPeripheral)
@@ -136,7 +135,7 @@ extension NRFManager {
     fileprivate func alertFailedConnection() {
         log("Unable to connect");
     }
-
+    
     fileprivate func log(_ logMessage: String) {
         if (verbose) {
             print("NRFManager: \(logMessage)")
@@ -152,7 +151,17 @@ extension NRFManager {
             log("Asked to connect, but already connected!")
             return
         }
-        self.arduinoToConnect = "raspberrypi" //arduinoName
+        
+        // MARK: - TEMP CHANGE LATER
+        if counterToChangePie % 2 == 0 {
+            self.arduinoToConnect = "echo" //arduinoName
+            print("Trying --------> \(self.arduinoToConnect)")
+        } else {
+            self.arduinoToConnect = "raspberrypi" //arduinoName
+            print("Trying --------> \(self.arduinoToConnect)")
+            
+        }
+        counterToChangePie += 1
         scanForPeripheral()
     }
     
@@ -190,75 +199,75 @@ extension NRFManager {
         log("Can't send data. No connection!")
         return false
     }
-
+    
 }
 
 // MARK: - CBCentralManagerDelegate Methods
 extension NRFManager {
-
-        public func centralManagerDidUpdateState(_ central: CBCentralManager)
-        {
-            log("Central Manager Did UpdateState")
-            if central.state == .poweredOn {
-                //respond to powered on
-                log("Powered on!")
-                if (autoConnect) {
-                    connect()
-                }
-                
-            } else if central.state == .poweredOff {
-                log("Powered off!")
-                connectionStatus = ConnectionStatus.disconnected
-                connectionMode = ConnectionMode.none
-            }
-        }
     
-        @objc(centralManager:didDiscoverPeripheral:advertisementData:RSSI:) public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber)
-        {
-            log("Did discover peripheral: \(peripheral.name!)")
-            //bluetoothManager.stopScan()
-            
-            if peripheral.name == arduinoToConnect{
-                connectPeripheral(peripheral)
-            }
-            
-        }
-    
-        @objc(centralManager:didConnectPeripheral:) public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral)
-        {
-            log("Did Connect Peripheral")
-            if currentPeripheral?.peripheral == peripheral {
-                if (peripheral.services) != nil {
-                    log("Did connect to existing peripheral: \(peripheral.name)")
-                    currentPeripheral?.peripheral(peripheral, didDiscoverServices: nil)
-                } else {
-                    log("Did connect peripheral: \(peripheral.name!)")
-                    currentPeripheral?.didConnect()
-                }
-            }
-        }
-    
-        public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?)
-        {
-            log("Peripheral Disconnected: \(peripheral.name)")
-            
-            if currentPeripheral?.peripheral == peripheral {
-                connectionStatus = ConnectionStatus.disconnected
-                connectionMode = ConnectionMode.none
-                currentPeripheral = nil
-            }
-            
-            if autoConnect {
+    public func centralManagerDidUpdateState(_ central: CBCentralManager)
+    {
+        log("Central Manager Did UpdateState")
+        if central.state == .poweredOn {
+            //respond to powered on
+            log("Powered on!")
+            if (autoConnect) {
                 connect()
             }
+            
+        } else if central.state == .poweredOff {
+            log("Powered off!")
+            connectionStatus = ConnectionStatus.disconnected
+            connectionMode = ConnectionMode.none
         }
+    }
+    
+    @objc(centralManager:didDiscoverPeripheral:advertisementData:RSSI:) public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber)
+    {
+        log("Did discover peripheral: \(peripheral.name!)")
+        //bluetoothManager.stopScan()
+        
+        if peripheral.name == arduinoToConnect{
+            connectPeripheral(peripheral)
+        }
+        
+    }
+    
+    @objc(centralManager:didConnectPeripheral:) public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral)
+    {
+        log("Did Connect Peripheral")
+        if currentPeripheral?.peripheral == peripheral {
+            if (peripheral.services) != nil {
+                log("Did connect to existing peripheral: \(peripheral.name)")
+                currentPeripheral?.peripheral(peripheral, didDiscoverServices: nil)
+            } else {
+                log("Did connect peripheral: \(peripheral.name!)")
+                currentPeripheral?.didConnect()
+            }
+        }
+    }
+    
+    public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?)
+    {
+        log("Peripheral Disconnected: \(peripheral.name)")
+        
+        if currentPeripheral?.peripheral == peripheral {
+            connectionStatus = ConnectionStatus.disconnected
+            connectionMode = ConnectionMode.none
+            currentPeripheral = nil
+        }
+        
+        if autoConnect {
+            connect()
+        }
+    }
     
     
     
-        //optional func centralManager(central: CBCentralManager!, willRestoreState dict: [NSObject : AnyObject]!)
-        //optional func centralManager(central: CBCentralManager!, didRetrievePeripherals peripherals: [AnyObject]!)
-        //optional func centralManager(central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!)
-        //optional func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!)
+    //optional func centralManager(central: CBCentralManager!, willRestoreState dict: [NSObject : AnyObject]!)
+    //optional func centralManager(central: CBCentralManager!, didRetrievePeripherals peripherals: [AnyObject]!)
+    //optional func centralManager(central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!)
+    //optional func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!)
 }
 
 // MARK: - UARTPeripheralDelegate Methods
@@ -301,11 +310,11 @@ extension NRFManager {
 
 
 /*!
-*  @class UARTPeripheral
-*
-*  @discussion The peripheral object used by NRFManager.
-*
-*/
+ *  @class UARTPeripheral
+ *
+ *  @discussion The peripheral object used by NRFManager.
+ *
+ */
 
 // MARK: UARTPeripheral Initialization
 open class UARTPeripheral:NSObject, CBPeripheralDelegate {
@@ -345,18 +354,18 @@ extension UARTPeripheral {
             for service:CBService in services {
                 if let characteristics = service.characteristics {
                     for characteristic:CBCharacteristic in characteristics {
-                      
+                        
                         if compareID(characteristic.uuid, toID: UARTPeripheral.rxCharacteristicsUUID()) {
                             log("Found RX Characteristics")
                             rxCharacteristic = characteristic
                             peripheral.setNotifyValue(true, for: rxCharacteristic!)
                         }
-                      
+                        
                         if compareID(characteristic.uuid, toID: UARTPeripheral.txCharacteristicsUUID()) {
                             log("Found TX Characteristics")
                             txCharacteristic = characteristic
                         }
-                      
+                        
                         if compareID(characteristic.uuid, toID: UARTPeripheral.hardwareRevisionStringUUID()) {
                             log("Found Hardware Revision String characteristic")
                             //peripheral.readValue(for: characteristic)
@@ -373,7 +382,7 @@ extension UARTPeripheral {
             print("UARTPeripheral: \(logMessage)")
         }
     }
-
+    
     fileprivate func didConnect()
     {
         log("Did connect")
@@ -455,7 +464,7 @@ extension UARTPeripheral {
         }
     }
     
-   @objc(peripheral:didUpdateValueForCharacteristic:error:) public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?)
+    @objc(peripheral:didUpdateValueForCharacteristic:error:) public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?)
     {
         log("Did Update Value For Characteristic")
         if error == nil {
@@ -468,7 +477,7 @@ extension UARTPeripheral {
                 log("Did read hardware revision string")
                 // FIX ME: This is not how the original thing worked.
                 delegate.didReadHardwareRevisionString(NSString(cString:characteristic.description, encoding: String.Encoding.utf8.rawValue)! as String)
-
+                
             }
         } else {
             log("Error receiving notification for characteristic: \(error)")

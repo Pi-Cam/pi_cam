@@ -33,12 +33,18 @@ class StreamView: UIView {
     
     
     override func awakeFromNib() {
-        //let borderWidth: CGFloat = 0.5
-//        borderView.frame = self.frame.insetBy(dx: CGFloat(-borderWidth), dy: CGFloat(-borderWidth))
-//        borderView.layer.borderColor = UIColor.gray.cgColor
-//        borderView.layer.borderWidth = borderWidth;
+        let borderWidth: CGFloat = 0.5
+        borderView.frame = self.frame.insetBy(dx: CGFloat(-borderWidth), dy: CGFloat(-borderWidth))
+        borderView.layer.borderColor = UIColor.gray.cgColor
+        borderView.layer.borderWidth = borderWidth;
 //        borderView.backgroundColor = .green
         
+        
+        for view in self.subviews as [UIView] {
+            view.backgroundColor = UIColor.clear
+        }
     }
+    
+
     
 }
