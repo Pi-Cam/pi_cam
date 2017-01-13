@@ -23,6 +23,8 @@
 		C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
 		C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */; };
+		C0CF3D951E2972A000F6CCF7 /* MjpegStreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */; };
+		C0CF3D961E2972A000F6CCF7 /* MjpegStreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D632611DF8D71E0040C62C /* NRFManager.swift */; };
 		C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */; };
 		C0DB48B81E00FD4E00D84652 /* BaseStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */; };
@@ -40,8 +42,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C0CF3D961E2972A000F6CCF7 /* MjpegStreamingKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0CF3D931E29722D00F6CCF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -65,6 +77,7 @@
 		C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiVC.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
 		C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
+		C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MjpegStreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D632611DF8D71E0040C62C /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
 		C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		C0DB48B71E00FD4E00D84652 /* BaseStreamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStreamer.swift; sourceTree = "<group>"; };
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CF3D951E2972A000F6CCF7 /* MjpegStreamingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +123,7 @@
 		C06ACA311DEB7C320080048D = {
 			isa = PBXGroup;
 			children = (
+				C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */,
 				C06ACA3C1DEB7C320080048D /* pi_cam */,
 			);
 			sourceTree = "<group>";
@@ -186,6 +201,7 @@
 				C06ACA371DEB7C320080048D /* Frameworks */,
 				C06ACA381DEB7C320080048D /* Resources */,
 				C0CF3D901E296B5100F6CCF7 /* Embed Frameworks */,
+				C0CF3D931E29722D00F6CCF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);

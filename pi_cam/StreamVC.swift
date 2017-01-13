@@ -22,14 +22,10 @@ class StreamVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         streamingController = MjpegStreamingController(imageView: imageView)
-
-        
-        url = URL(string: "http://webcams.hotelcozumel.com.mx:6003/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1458771208837")
+        url = URL(string: "http://pistream.ngrok.io/stream/video.mjpeg")
+//        http://webcams.hotelcozumel.com.mx:6003/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1458771208837
         streamingController.contentURL = url!
-        
         streamingController.play()
-    
-
     }
     
     override func didReceiveMemoryWarning() {

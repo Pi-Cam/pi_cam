@@ -331,7 +331,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oI4-8e-UvY">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQd-cU-3XL">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQd-cU-3XL">
                                                         <rect key="frame" x="8" y="0.0" width="359" height="544"/>
                                                     </imageView>
                                                 </subviews>
