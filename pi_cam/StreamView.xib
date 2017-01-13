@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUL-Nw-0ht">
-                    <rect key="frame" x="15" y="25" width="393" height="437"/>
+                    <rect key="frame" x="15" y="0.0" width="393" height="462"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="761-SC-eog">
                             <rect key="frame" x="169" y="208" width="0.0" height="0.0"/>
@@ -26,7 +26,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-Rz-8UP">
-                            <rect key="frame" x="0.0" y="387" width="393" height="50"/>
+                            <rect key="frame" x="0.0" y="412" width="393" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyO-Ir-0Zh">
                                     <rect key="frame" x="0.0" y="0.0" width="195.5" height="50"/>
@@ -36,6 +36,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                     <state key="normal" title="Go Live"/>
+                                    <connections>
+                                        <action selector="goLiveButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="XTb-CU-tdF"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lf-p3-2fV">
                                     <rect key="frame" x="197.5" y="0.0" width="195.5" height="50"/>
@@ -49,16 +52,16 @@
                             </constraints>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Streams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn2-fD-EAo">
-                            <rect key="frame" x="88.5" y="216" width="217.5" height="34.5"/>
+                            <rect key="frame" x="88.5" y="241" width="217.5" height="34.5"/>
                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGROK" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-C8-ON4">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="181"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="206"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIp-dt-L3w">
-                            <rect key="frame" x="189.5" y="273" width="14.5" height="34.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIp-dt-L3w">
+                            <rect key="frame" x="175" y="298.5" width="43.5" height="34.5"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                             <color key="textColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -82,7 +85,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="UUL-Nw-0ht" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="O95-Vj-vwD"/>
+                <constraint firstItem="UUL-Nw-0ht" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O95-Vj-vwD"/>
                 <constraint firstAttribute="bottom" secondItem="UUL-Nw-0ht" secondAttribute="bottom" constant="25" id="d6I-eh-4LQ"/>
                 <constraint firstAttribute="trailing" secondItem="UUL-Nw-0ht" secondAttribute="trailing" constant="15" id="fJA-JV-O4C"/>
                 <constraint firstItem="UUL-Nw-0ht" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="vw0-An-OGB"/>

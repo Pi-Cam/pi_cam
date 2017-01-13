@@ -10,25 +10,11 @@ import UIKit
 
 class StreamView: UIView {
     
-    // @IBOutlet weak var streamerLabel: UILabel!
     @IBOutlet weak var borderView: UIView!
+    var mainViewController: SUPERMain!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
-        
-        //        let borderWidth: CGFloat = 2
-        //        borderView.frame = self.frame.insetBy(dx: CGFloat(-borderWidth), dy: CGFloat(-borderWidth))
-        //        borderView.layer.borderColor = UIColor.gray.cgColor
-        //        borderView.layer.borderWidth = borderWidth;
-        //        borderView.backgroundColor = .green
-        //
-        
-        
-        //        CGFloat borderWidth = 2.0f;
-        //
-        //        self.frame = CGRectInset(self.frame, -borderWidth, -borderWidth);
-        //        self.layer.borderColor = [UIColor yellowColor].CGColor;
-        //        self.layer.borderWidth = borderWidth;
     }
     
     
@@ -37,14 +23,11 @@ class StreamView: UIView {
         borderView.frame = self.frame.insetBy(dx: CGFloat(-borderWidth), dy: CGFloat(-borderWidth))
         borderView.layer.borderColor = UIColor.gray.cgColor
         borderView.layer.borderWidth = borderWidth;
-//        borderView.backgroundColor = .green
-        
-        
-        for view in self.subviews as [UIView] {
-            view.backgroundColor = UIColor.clear
-        }
+ 
     }
     
-
-    
+    @IBAction func goLiveButton(_ sender: Any) {
+        mainViewController.performSegue(withIdentifier: "goLive", sender: self)
+    }
+   
 }

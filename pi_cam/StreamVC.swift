@@ -8,52 +8,46 @@
 
 import UIKit
 //import MediaPlayer
+import MjpegStreamingKit
 
 
 class StreamVC: UIViewController {
-    @IBOutlet weak var webView: UIWebView!
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        webView.scalesPageToFit = false
-//        let url = NSURL(string: "https://pistream.ngrok.io/stream")
-//        let request = NSURLRequest(url: url! as URL)
-//        webView.loadRequest(request as URLRequest)
-//    }
+//    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        webView.scalesPageToFit = false
-        webView.isUserInteractionEnabled = false
-        let url = NSURL(string: "https://pistream.ngrok.io/stream/video.mjpeg")
-        let request = NSURLRequest(url: url! as URL)
-        webView.loadRequest(request as URLRequest)
-        
-        
-//        let imageView = UIImageView(frame: rect)
-//        let streamingController = MjpegStreamingController(imageView: imageView)
-//        // To play url do:
-//        let url = NSURL(string: "http://mjpeg.streaming.url/movie.mjpeg")
-//        streamingController.play(url: url!)
-
-        
-    }
+    var url: URL?
     
-//    var moviePlayer:MPMoviePlayerController!
+    var streamingController: MjpegStreamingController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        streamingController = MjpegStreamingController(imageView: imageView)
+
         
-        let url:NSURL = NSURL(string: "https://pistream.ngrok.io/stream/video.mjpeg")!
+        url = URL(string: "http://webcams.hotelcozumel.com.mx:6003/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1458771208837")
+        streamingController.contentURL = url!
         
-//        moviePlayer = MPMoviePlayerController(contentURL: url as URL!)
-//        moviePlayer.view.frame = CGRect(x: 20, y: 100, width: 200, height: 150)
-//        
-//        self.webView.addSubview(moviePlayer.view)
-//        moviePlayer.isFullscreen = true
-//        
-//        moviePlayer.controlStyle = MPMovieControlStyle.embedded
-        
+        streamingController.play()
+    
+
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+//    
+//    @IBAction func playAndStop(sender: AnyObject) {
+//        if playing {
+//            playButton.setTitle("Play", for: .normal)
+//            streamingController.stop()
+//            playing = false
+//        } else {
+//            
+//            streamingController.play()
+//            playing = true
+//            playButton.setTitle("Stop", for: .normal)
+//        }
+//    }
 
 }
+    
