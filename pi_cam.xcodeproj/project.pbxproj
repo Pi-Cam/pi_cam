@@ -22,7 +22,6 @@
 		C0A75DF21DF772A2003A8002 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
-		C0B7B7381E2850D2004A1A2B /* MjpegStreamingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7B7371E2850D2004A1A2B /* MjpegStreamingController.swift */; };
 		C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */; };
 		C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D632611DF8D71E0040C62C /* NRFManager.swift */; };
 		C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */; };
@@ -33,6 +32,19 @@
 		C0E0F4431E25C3440068A6C0 /* StreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0F4421E25C3440068A6C0 /* StreamView.swift */; };
 		C0FBFF371E0233F70045F5FC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FBFF361E0233F70045F5FC /* Extentions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0CF3D901E296B5100F6CCF7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C01072931DFE32C0007FBA0B /* ConnectPiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectPiViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +64,6 @@
 		C0A75DF11DF772A2003A8002 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiVC.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
-		C0B7B7371E2850D2004A1A2B /* MjpegStreamingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MjpegStreamingController.swift; sourceTree = "<group>"; };
 		C0CF05111DECC38E0092D270 /* InitialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenVC.swift; sourceTree = "<group>"; };
 		C0D632611DF8D71E0040C62C /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
 		C0DB48B51DFF078300D84652 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA3C1DEB7C320080048D /* pi_cam */,
-				C0E0F4541E25DDD50068A6C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +137,6 @@
 		C0D6096D1DEE2E81001DB029 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C0B7B7371E2850D2004A1A2B /* MjpegStreamingController.swift */,
 				C0D632611DF8D71E0040C62C /* NRFManager.swift */,
 				C06ACA3B1DEB7C320080048D /* Products */,
 				C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */,
@@ -166,13 +175,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		C0E0F4541E25DDD50068A6C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +185,7 @@
 				C06ACA361DEB7C320080048D /* Sources */,
 				C06ACA371DEB7C320080048D /* Frameworks */,
 				C06ACA381DEB7C320080048D /* Resources */,
+				C0CF3D901E296B5100F6CCF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,7 +258,6 @@
 				C028610E1E01105600B83922 /* StreamerTableViewCell.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* InitialScreenVC.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
-				C0B7B7381E2850D2004A1A2B /* MjpegStreamingController.swift in Sources */,
 				C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */,
 				C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */,
 				C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */,
