@@ -1,5 +1,5 @@
 //
-//  StreamView.swift
+//  StreamInformationView.swift
 //  pi_cam
 //
 //  Created by Marquavious on 1/10/17.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class StreamView: UIView {
+class StreamInformationView: UIView {
     
     @IBOutlet weak var borderView: UIView!
-    var mainViewController: SUPERMain!
+    var mainViewController: HomeScreenController!
     
+    @IBOutlet weak var streamingService: UIImageView!
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
     }
-    
     
     override func awakeFromNib() {
         let borderWidth: CGFloat = 0.5
@@ -26,8 +26,8 @@ class StreamView: UIView {
  
     }
     
-    @IBAction func goLiveButton(_ sender: Any) {
-        mainViewController.performSegue(withIdentifier: "goLive", sender: self)
-    }
+//    @IBAction func goLiveButton(_ sender: Any) {
+//        mainViewController.performSegue(withIdentifier: "goLive", sender: self)
+//    }
    
 }

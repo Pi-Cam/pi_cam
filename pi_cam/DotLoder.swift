@@ -21,6 +21,9 @@ class DotLoder: UIView {
     init(frame: CGRect, masterView: UIView, counter: Int, height: CGFloat?){
         super.init(frame:frame)
         self.masterView = masterView
+        if counter == 0 {
+            self.counter = counter
+        }
         self.counter = counter
         if let height = height{
          self.height = height

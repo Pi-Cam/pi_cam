@@ -1,5 +1,5 @@
 //
-//  SelectWifiVC.swift
+//  SelectWifiControllerSelectWifiController.swift
 //  pi_cam
 //
 //  Created by Marquavious on 12/1/16.
@@ -8,10 +8,7 @@
 
 import UIKit
 
-class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NRFManagerDelegate,UITextFieldDelegate {
-    
-    //MARK:BLUETOOTHMANAGER
-    var nrfManager:NRFManager!
+class SelectWifiController: UIViewController, UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
     
     //MARK: IBOUTLETS
     @IBOutlet weak var backButtonImage: UIImageView!
@@ -20,12 +17,16 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTableView()
+    }
+    
+    func setUpTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.autoresizingMask = UIViewAutoresizing.flexibleHeight
     }
     
-    func setUpButtons(){
+    func setUpBackButton(){
         backButtonImage.isUserInteractionEnabled = true
         backButtonImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonPressed)))
     }
@@ -44,9 +45,8 @@ class SelectWifiVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         performSegue(withIdentifier: "setUpPi", sender: self)
     }
     
-    //MARK: OTHER FUNCTIONS
     func backButtonPressed() {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
 }
 
