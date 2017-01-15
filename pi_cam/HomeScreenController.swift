@@ -10,6 +10,7 @@ import UIKit
 
 class HomeScreenController: UIViewController,UIScrollViewDelegate {
     
+    @IBOutlet weak var topScrollView: UIScrollView!
     @IBOutlet weak var pageIndicator: UIPageControl!
     @IBOutlet weak var mainScrollView: UIScrollView!
     var featureArray = [1,2,3]
@@ -19,12 +20,19 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
         setUpNavBar()
         setUpScrollView()
         loadStreamers()
+        setUpSecondScrollView()
+        loadCircleStreamers()
+        setUpTabBar()
     }
     
     func setUpNavBar(){
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
         self.navigationController?.navigationBar.alpha = 1
-        self.navigationController?.navigationBar.clipsToBounds = true
+//        self.navigationController?.navigationBar.clipsToBounds = true
+    }
+    
+    func setUpTabBar(){
+        UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
     }
     
     func setUpScrollView(){
@@ -46,6 +54,27 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
             }
         }
     }
+    
+    func setUpSecondScrollView(){
+        topScrollView.showsHorizontalScrollIndicator = false
+        topScrollView.delegate = self
+        topScrollView.contentInset.top = 0
+        
+    }
+    
+    func loadCircleStreamers() {
+        for (index, streamer) in featureArray.enumerated() {
+            if let streamView = Bundle.main.loadNibNamed("circleView", owner: self, options: nil)?.first as? circleView {
+                topScrollView.addSubview(streamView)
+                streamView.frame.size.height = self.topScrollView.bounds.size.height/2
+                streamView.frame.size.width = self.topScrollView.bounds.size.height
+                streamView.centerYAnchor.constraint(equalTo: topScrollView.centerYAnchor).isActive = true
+
+            }
+        }
+    }
+    
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width

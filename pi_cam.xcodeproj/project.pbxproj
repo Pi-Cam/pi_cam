@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C007B2A81E2AE12C008EC1FC /* circleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007B2A71E2AE12C008EC1FC /* circleView.swift */; };
 		C01072941DFE32C0007FBA0B /* TransferInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* TransferInformationController.swift */; };
 		C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610F1E019DAF00B83922 /* AddServiceViewController.swift */; };
 		C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05ECA3C1E023BE50099B4F2 /* PiImage.swift */; };
@@ -14,6 +15,7 @@
 		C06ACA431DEB7C320080048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA411DEB7C320080048D /* Main.storyboard */; };
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
+		C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0746B3D1E2AD5FD008DDE0C /* circleView.xib */; };
 		C07AE94F1E03A7FF00246F92 /* StreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AE94E1E03A7FF00246F92 /* StreamController.swift */; };
 		C07AE9531E03B1F500246F92 /* CamFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AE9521E03B1F500246F92 /* CamFile.swift */; };
 		C0A024FA1DFE10280060EC6C /* idk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A024F91DFE10280060EC6C /* idk.swift */; };
@@ -55,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C007B2A71E2AE12C008EC1FC /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
 		C01072931DFE32C0007FBA0B /* TransferInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferInformationController.swift; sourceTree = "<group>"; };
 		C028610F1E019DAF00B83922 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		C05ECA3C1E023BE50099B4F2 /* PiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiImage.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		C06ACA441DEB7C320080048D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0746B3D1E2AD5FD008DDE0C /* circleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circleView.xib; sourceTree = "<group>"; };
 		C07AE94E1E03A7FF00246F92 /* StreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamController.swift; sourceTree = "<group>"; };
 		C07AE9521E03B1F500246F92 /* CamFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamFile.swift; sourceTree = "<group>"; };
 		C0A024F91DFE10280060EC6C /* idk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idk.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 				C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C007B2A91E2AF3C3008EC1FC /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				C0746B3D1E2AD5FD008DDE0C /* circleView.xib */,
+				C007B2A71E2AE12C008EC1FC /* circleView.swift */,
+			);
+			name = CircleView;
 			sourceTree = "<group>";
 		};
 		C05ECA3B1E023BCA0099B4F2 /* ProgromaticViews */ = {
@@ -181,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
+				C007B2A91E2AF3C3008EC1FC /* CircleView */,
 				C0746B3B1E29C255008DDE0C /* StreamerInfoView */,
 			);
 			name = Views;
@@ -251,6 +265,7 @@
 			files = (
 				C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */,
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
+				C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */,
 				C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
 			);
@@ -278,6 +293,7 @@
 				C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */,
 				C0A024FA1DFE10280060EC6C /* idk.swift in Sources */,
 				C0E0F4431E25C3440068A6C0 /* StreamInformationView.swift in Sources */,
+				C007B2A81E2AE12C008EC1FC /* circleView.swift in Sources */,
 				C0E0F43F1E25BDB90068A6C0 /* HomeScreenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
