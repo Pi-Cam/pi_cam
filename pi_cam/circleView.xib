@@ -15,21 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="443"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
                     <rect key="frame" x="0.0" y="0.0" width="428" height="443"/>
                     <color key="backgroundColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                 </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="9Su-h1-6Mf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5nv-Np-yUA"/>
-                <constraint firstAttribute="bottom" secondItem="9Su-h1-6Mf" secondAttribute="bottom" id="7mr-hF-1c0"/>
                 <constraint firstAttribute="trailing" secondItem="9Su-h1-6Mf" secondAttribute="trailing" id="MCs-Y4-rPR"/>
                 <constraint firstItem="9Su-h1-6Mf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N7y-Di-gwg"/>
+                <constraint firstAttribute="bottom" secondItem="9Su-h1-6Mf" secondAttribute="bottom" id="T2a-z1-C16"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="streamerImageView" destination="9Su-h1-6Mf" id="daf-8a-r6S"/>
+                <outlet property="streamerImageView" destination="9Su-h1-6Mf" id="P1T-5F-LRI"/>
             </connections>
             <point key="canvasLocation" x="240" y="40.5"/>
         </view>

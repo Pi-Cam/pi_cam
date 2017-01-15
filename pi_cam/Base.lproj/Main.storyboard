@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -239,15 +240,8 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-bB-9Zx">
-                                <rect key="frame" x="0.0" y="8" width="375" height="75"/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="SU1-x3-irp"/>
-                                </constraints>
-                            </scrollView>
                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="0.0" y="91" width="375" height="437"/>
+                                <rect key="frame" x="0.0" y="104.5" width="375" height="423.5"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-jW-dPR">
@@ -259,17 +253,43 @@
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.79569920568561869" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aun-Mk-viw">
+                                <rect key="frame" x="0.0" y="10" width="375" height="84.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="owa-Tu-zAz">
+                                    <size key="itemSize" width="91" height="87"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rw0-aH-Lfo" customClass="circleView" customModule="pi_cam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-1" width="91" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eHz-XL-1yO" id="g9Y-UB-S9t"/>
+                                    <outlet property="delegate" destination="eHz-XL-1yO" id="z5M-mZ-ce9"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.074509803921568626" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="weJ-bB-9Zx" secondAttribute="bottom" constant="8" id="0BO-jL-1LT"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="aun-Mk-viw" secondAttribute="bottom" constant="10" id="0NZ-qy-8Mh"/>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="8" id="0WH-Ag-aBa"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" constant="16" id="3Yp-Z2-t26"/>
-                            <constraint firstItem="weJ-bB-9Zx" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="8" id="BNp-3b-avY"/>
-                            <constraint firstItem="weJ-bB-9Zx" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leading" id="IcS-Ee-1Xk"/>
-                            <constraint firstAttribute="trailing" secondItem="weJ-bB-9Zx" secondAttribute="trailing" id="LYk-jh-iNo"/>
+                            <constraint firstAttribute="trailing" secondItem="aun-Mk-viw" secondAttribute="trailing" id="F9q-QL-ixU"/>
+                            <constraint firstItem="aun-Mk-viw" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="10" id="S74-ba-reJ"/>
+                            <constraint firstItem="aun-Mk-viw" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leading" id="VUD-x6-QDW"/>
                             <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" constant="-16" id="XPF-YM-IXq"/>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="j7b-gc-Z9b"/>
+                            <constraint firstItem="aun-Mk-viw" firstAttribute="height" secondItem="7uN-wH-fQh" secondAttribute="height" multiplier="1/5" id="lKj-Fx-ccr"/>
                             <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="26" id="sTa-rV-0yE"/>
                         </constraints>
                     </view>
@@ -278,9 +298,9 @@
                         <barButtonItem key="rightBarButtonItem" image="Squares" id="Kjb-K5-NLL"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="aun-Mk-viw" id="2E0-cC-UFC"/>
                         <outlet property="mainScrollView" destination="7uN-wH-fQh" id="NEh-Nh-xfo"/>
                         <outlet property="pageIndicator" destination="fzy-jW-dPR" id="aH2-Sb-aUc"/>
-                        <outlet property="topScrollView" destination="weJ-bB-9Zx" id="DXE-7x-5y3"/>
                         <segue destination="EW0-He-hgQ" kind="show" id="SLc-VU-j5a"/>
                         <segue destination="x25-Mu-5l3" kind="show" id="4VJ-Tr-L47"/>
                         <segue destination="tHV-Pa-eEJ" kind="show" identifier="goLive" id="aIn-CO-0yU"/>
@@ -288,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-65-eNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="2263"/>
+            <point key="canvasLocation" x="792.79999999999995" y="2262.8185907046477"/>
         </scene>
         <!--Stream Controller-->
         <scene sceneID="Y4l-8R-mRh">
@@ -415,7 +435,7 @@
                                         <rect key="frame" x="0.0" y="28" width="295" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zK4-e1-h16" id="0Wr-hC-lUW">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube-logo-full_color" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-d9-mEz">
@@ -439,7 +459,7 @@
                                         <rect key="frame" x="0.0" y="116" width="295" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5K-NH-34N" id="GNj-EL-Rkg">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitch_logo_(wordmark_only).svg" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-pz-RO9">
@@ -868,7 +888,7 @@
                                         <rect key="frame" x="0.0" y="28" width="327" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqh-pp-Bg5" id="uqG-I7-N1s">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-P6-a82">

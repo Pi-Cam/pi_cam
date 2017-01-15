@@ -8,7 +8,8 @@
 
 import UIKit
 
-class circleView: UIView {
+class circleView: UICollectionViewCell {
     
     @IBOutlet weak var streamerImageView: UIImageView!
+    
 }
