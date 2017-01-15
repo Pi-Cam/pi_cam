@@ -33,6 +33,9 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
     
     func setUpTabBar(){
         UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
+//        
+//        navigationController?.navigationItem.leftBarButtonItem?.image = UIImage(named: "HAMM")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+
     }
     
     func setUpScrollView(){
@@ -56,7 +59,9 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
     }
     
     func setUpSecondScrollView(){
+        topScrollView.isPagingEnabled = true
         topScrollView.showsHorizontalScrollIndicator = false
+             topScrollView.contentSize = CGSize(width: self.topScrollView.bounds.width * CGFloat(featureArray.count), height: 1.0)
         topScrollView.delegate = self
         topScrollView.contentInset.top = 0
         
@@ -66,14 +71,17 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
         for (index, streamer) in featureArray.enumerated() {
             if let streamView = Bundle.main.loadNibNamed("circleView", owner: self, options: nil)?.first as? circleView {
                 topScrollView.addSubview(streamView)
-                streamView.frame.size.height = self.topScrollView.bounds.size.height/2
-                streamView.frame.size.width = self.topScrollView.bounds.size.height
-                streamView.centerYAnchor.constraint(equalTo: topScrollView.centerYAnchor).isActive = true
+                if index == 1{
+                    streamView.streamerImageView.backgroundColor = .green
+                }
+                
+                streamView.frame.size.height = self.topScrollView.bounds.size.height
+                streamView.frame.size.width = self.topScrollView.bounds.size.width
+                streamView.frame.origin.x = CGFloat(index) * streamView.bounds.width
 
             }
         }
     }
-    
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -81,3 +89,4 @@ class HomeScreenController: UIViewController,UIScrollViewDelegate {
         pageIndicator.currentPage = Int(page)
     }
 }
+

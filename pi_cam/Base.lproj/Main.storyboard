@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aMV-Zg-VY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aWJ-Ur-GEl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,13 +45,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="jWZ-GA-T8C">
-                                <rect key="frame" x="24" y="43" width="327" height="330"/>
+                                <rect key="frame" x="24" y="43" width="327" height="330.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HK2-he-ZBa">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="330"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="330.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GQV-ZG-JAL">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="115.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-Zj-4ci">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="24"/>
@@ -66,10 +66,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="boy-59-thm">
-                                                        <rect key="frame" x="0.0" y="54" width="327" height="62"/>
+                                                        <rect key="frame" x="0.0" y="54" width="327" height="61.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Pi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-DP-gLo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="45"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cJs-8C-UCp">
-                                                <rect key="frame" x="0.0" y="131" width="327" height="199"/>
+                                                <rect key="frame" x="0.0" y="130.5" width="327" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="whE-ao-Fnc" userLabel="WifinameStack">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="59"/>
@@ -134,10 +134,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-fS-c4X" userLabel="PasswordStack">
-                                                        <rect key="frame" x="0.0" y="79" width="327" height="120"/>
+                                                        <rect key="frame" x="0.0" y="79" width="327" height="121"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WAl-zo-6Zr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="58"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-do-28k">
                                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="18"/>
@@ -149,7 +149,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-GD-QiW">
-                                                                        <rect key="frame" x="0.0" y="28" width="327" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="28" width="327" height="31"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAo-vv-ryz">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
@@ -161,7 +161,7 @@
                                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                             </textField>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDg-e0-fxw">
-                                                                                <rect key="frame" x="0.0" y="30" width="327" height="0.0"/>
+                                                                                <rect key="frame" x="0.0" y="30" width="327" height="1"/>
                                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="1" id="gew-lf-dkr"/>
@@ -176,7 +176,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Esf-U9-WZd">
-                                                                <rect key="frame" x="0.0" y="83" width="327" height="37"/>
+                                                                <rect key="frame" x="0.0" y="84" width="327" height="37"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-5d-NOO">
                                                                         <rect key="frame" x="252" y="0.0" width="75" height="37"/>
@@ -246,7 +246,7 @@
                                     <constraint firstAttribute="height" constant="75" id="SU1-x3-irp"/>
                                 </constraints>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
                                 <rect key="frame" x="0.0" y="91" width="375" height="437"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
@@ -273,9 +273,9 @@
                             <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="26" id="sTa-rV-0yE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="C6a-2f-nnY"/>
                     <navigationItem key="navigationItem" title="LivePi" id="oaE-LZ-dMK">
-                        <barButtonItem key="leftBarButtonItem" image="Ham" id="0w2-tp-FRy"/>
+                        <barButtonItem key="leftBarButtonItem" image="itsHam" id="0w2-tp-FRy"/>
+                        <barButtonItem key="rightBarButtonItem" image="Squares" id="Kjb-K5-NLL"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mainScrollView" destination="7uN-wH-fQh" id="NEh-Nh-xfo"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-65-eNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592.79999999999995" y="2262.8185907046477"/>
+            <point key="canvasLocation" x="793" y="2263"/>
         </scene>
         <!--Stream Controller-->
         <scene sceneID="Y4l-8R-mRh">
@@ -322,25 +322,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-Rv-MQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="2263"/>
+            <point key="canvasLocation" x="1607" y="2263"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="axJ-NF-Thw">
+        <!--Item-->
+        <scene sceneID="sAS-sj-fMW">
             <objects>
-                <viewController id="jKS-Ed-eW6" sceneMemberID="viewController">
+                <viewController id="8aa-CW-YVs" customClass="MultipleStreamController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oK1-MS-idd"/>
-                        <viewControllerLayoutGuide type="bottom" id="OlC-5e-lgz"/>
+                        <viewControllerLayoutGuide type="top" id="O6b-56-Cw2"/>
+                        <viewControllerLayoutGuide type="bottom" id="btj-lx-p7j"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NIG-Mc-Qfj">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                    <view key="view" contentMode="scaleToFill" id="tfl-ku-NXp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-Zm-7BQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="btj-lx-p7j" firstAttribute="top" secondItem="IWm-Zm-7BQ" secondAttribute="bottom" constant="-50" id="3jj-eH-e9o"/>
+                            <constraint firstItem="IWm-Zm-7BQ" firstAttribute="top" secondItem="tfl-ku-NXp" secondAttribute="top" id="Vnc-oK-F52"/>
+                            <constraint firstAttribute="trailing" secondItem="IWm-Zm-7BQ" secondAttribute="trailing" id="k77-JC-UMP"/>
+                            <constraint firstItem="IWm-Zm-7BQ" firstAttribute="leading" secondItem="tfl-ku-NXp" secondAttribute="leading" id="loO-lr-WZd"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="h62-Lz-6pG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pK4-Cc-Jru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMP-Cx-Xzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="3026"/>
+            <point key="canvasLocation" x="-615.20000000000005" y="3025.6371814092954"/>
         </scene>
         <!--Add Service View Controller-->
         <scene sceneID="lN7-A2-x1N">
@@ -402,7 +415,7 @@
                                         <rect key="frame" x="0.0" y="28" width="295" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zK4-e1-h16" id="0Wr-hC-lUW">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube-logo-full_color" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-d9-mEz">
@@ -426,7 +439,7 @@
                                         <rect key="frame" x="0.0" y="116" width="295" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5K-NH-34N" id="GNj-EL-Rkg">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitch_logo_(wordmark_only).svg" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-pz-RO9">
@@ -636,7 +649,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJj-Md-BiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="3029"/>
+            <point key="canvasLocation" x="602" y="3026"/>
         </scene>
         <!--Edit Credentials View Controller-->
         <scene sceneID="tna-ta-1GF">
@@ -651,10 +664,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="PSr-5y-VqB">
-                                <rect key="frame" x="40" y="43" width="295" height="343"/>
+                                <rect key="frame" x="40" y="43" width="295" height="344"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="s6s-Ac-xFs">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="344"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-sC-UiR">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="102"/>
@@ -689,7 +702,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pp5-Wu-jUv">
-                                                <rect key="frame" x="0.0" y="144" width="295" height="199"/>
+                                                <rect key="frame" x="0.0" y="144" width="295" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="daS-bh-NFc" userLabel="WifinameStack">
                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="59"/>
@@ -740,10 +753,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WST-LL-0fb" userLabel="PasswordStack">
-                                                        <rect key="frame" x="0.0" y="79" width="295" height="120"/>
+                                                        <rect key="frame" x="0.0" y="79" width="295" height="121"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ldF-ig-K8M">
-                                                                <rect key="frame" x="0.0" y="0.0" width="295" height="58"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="295" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streaming Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igl-p7-vvP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="18"/>
@@ -755,7 +768,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jCO-mb-cXz">
-                                                                        <rect key="frame" x="0.0" y="28" width="295" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="28" width="295" height="31"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yr6-tl4-5kfe-uf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heC-Pz-ecG">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
@@ -767,7 +780,7 @@
                                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                                             </textField>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-o4-SOC">
-                                                                                <rect key="frame" x="0.0" y="30" width="295" height="0.0"/>
+                                                                                <rect key="frame" x="0.0" y="30" width="295" height="1"/>
                                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="1" id="wpa-Eg-OfG"/>
@@ -782,7 +795,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="lSp-Vk-kdx">
-                                                                <rect key="frame" x="0.0" y="83" width="295" height="37"/>
+                                                                <rect key="frame" x="0.0" y="84" width="295" height="37"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUv-6A-AK8">
                                                                         <rect key="frame" x="220" y="0.0" width="75" height="37"/>
@@ -832,7 +845,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqc-xA-97r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302" y="3026"/>
+            <point key="canvasLocation" x="1250" y="3026"/>
         </scene>
         <!--Select Wifi Controller-->
         <scene sceneID="jAn-df-ppZ">
@@ -847,7 +860,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UC1-CY-baO">
-                                <rect key="frame" x="24" y="206" width="327" height="453"/>
+                                <rect key="frame" x="24" y="205" width="327" height="454"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -855,7 +868,7 @@
                                         <rect key="frame" x="0.0" y="28" width="327" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqh-pp-Bg5" id="uqG-I7-N1s">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-P6-a82">
@@ -863,13 +876,13 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MakeSchoolStudent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twp-IW-FxY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Wi-Fi" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-hi-MeW">
-                                                            <rect key="frame" x="258" y="5" width="15" height="15"/>
+                                                            <rect key="frame" x="257.5" y="4.5" width="15" height="15"/>
                                                             <color key="backgroundColor" red="1" green="0.22939872110000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="5bO-iT-iqX"/>
@@ -889,10 +902,10 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMp-7s-RL1">
-                                <rect key="frame" x="24" y="43" width="327" height="148"/>
+                                <rect key="frame" x="24" y="43" width="327" height="147"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rnO-3L-g1P">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="116"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="115.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ahx-r3-edb">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="24"/>
@@ -907,10 +920,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ugt-5E-Jnd">
-                                                <rect key="frame" x="0.0" y="54" width="327" height="62"/>
+                                                <rect key="frame" x="0.0" y="54" width="327" height="61.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-aw-UI8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="61.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="45"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -924,13 +937,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-IY-no6">
-                                        <rect key="frame" x="0.0" y="124" width="327" height="24"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="327" height="23.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DKK-AG-ah4">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="23.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select wifi network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naE-zs-y4N">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                         <color key="textColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -981,36 +994,13 @@
             </objects>
             <point key="canvasLocation" x="-3164" y="2263"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="u7j-79-YAn">
+        <!--Tab Bar Controller-->
+        <scene sceneID="qJD-nI-L1m">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aMV-Zg-VY0" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aWJ-Ur-GEl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="0eB-2n-83N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5DX-da-JTc" kind="relationship" relationship="rootViewController" id="1Qh-k9-BvU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XNF-IT-ecv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-674" y="2263"/>
-        </scene>
-        <!--LivePi-->
-        <scene sceneID="oJb-Bf-6hP">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5DX-da-JTc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="LivePi" id="ZQp-pd-cxp"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="33V-Ag-xCy">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="9bg-Ze-A55">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -1018,20 +1008,45 @@
                         <color key="selectedImageTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eHz-XL-1yO" kind="relationship" relationship="viewControllers" id="9SU-cu-E2F"/>
-                        <segue destination="jKS-Ed-eW6" kind="show" id="REF-Wj-8wA"/>
+                        <segue destination="vaJ-Mm-sj7" kind="relationship" relationship="viewControllers" id="S0l-i9-Iq2"/>
+                        <segue destination="8aa-CW-YVs" kind="relationship" relationship="viewControllers" id="pyb-GE-sib"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJS-0x-yuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnk-Mh-CUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="2263"/>
+            <point key="canvasLocation" x="-615" y="2263"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Dag-Jz-EKn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vaJ-Mm-sj7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="C6a-2f-nnY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uqo-fS-OC2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eHz-XL-1yO" kind="relationship" relationship="rootViewController" id="wGN-b2-Bnw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaE-no-MCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="2263"/>
         </scene>
     </scenes>
     <resources>
         <image name="Back" width="26" height="44"/>
-        <image name="Ham" width="12" height="9"/>
+        <image name="Squares" width="20" height="20"/>
         <image name="Twitch_logo_(wordmark_only).svg" width="1000" height="332"/>
         <image name="Wi-Fi" width="28" height="20"/>
         <image name="YouTube-logo-full_color" width="773" height="481"/>
+        <image name="itsHam" width="20" height="17"/>
     </resources>
 </document>
