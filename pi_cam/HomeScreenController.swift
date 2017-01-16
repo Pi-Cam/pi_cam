@@ -24,6 +24,13 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         let nib = UINib(nibName: "circleView", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "circleView")
         
+        var flow = UICollectionViewFlowLayout()
+        flow.itemSize = CGSize(width: CGFloat(91), height: CGFloat(87))
+        flow.scrollDirection = .horizontal
+        flow.minimumInteritemSpacing = -20
+        flow.minimumLineSpacing = -20
+        collectionView.collectionViewLayout = flow
+        
         setUpNavBar()
 //        setUpScrollView()
 //        loadStreamers()
@@ -41,26 +48,25 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
     }
     
-//    func setUpScrollView(){
-//        mainScrollView.isPagingEnabled = true
-//        mainScrollView.contentSize = CGSize(width: self.mainScrollView.bounds.width * CGFloat(featureArray.count), height: 1.0)
-//        mainScrollView.showsHorizontalScrollIndicator = false
-//        mainScrollView.delegate = self
-//        mainScrollView.contentInset.top = 0
-//    }
-//
-//    func loadStreamers() {
-//        for (index, streamer) in featureArray.enumerated() {
-//            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
-//                mainScrollView.addSubview(streamView)
-//                streamView.frame.size.height = self.mainScrollView.bounds.size.height
-//                streamView.frame.size.width = self.mainScrollView.bounds.size.width
-//                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
-//
-//            }
-//        }
-//    }
-//    
+    func setUpScrollView(){
+        mainScrollView.isPagingEnabled = true
+        mainScrollView.contentSize = CGSize(width: self.mainScrollView.bounds.width * CGFloat(featureArray.count), height: 1.0)
+        mainScrollView.showsHorizontalScrollIndicator = false
+        mainScrollView.delegate = self
+        mainScrollView.contentInset.top = 0
+    }
+
+    func loadStreamers() {
+        for (index, streamer) in featureArray.enumerated() {
+            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
+                mainScrollView.addSubview(streamView)
+                streamView.frame.size.height = self.mainScrollView.bounds.size.height
+                streamView.frame.size.width = self.mainScrollView.bounds.size.width
+                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+            }
+        }
+    }
+    
 //    func setUpSecondScrollView(){
 //        topScrollView.isPagingEnabled = true
 //        topScrollView.showsHorizontalScrollIndicator = false
@@ -95,15 +101,23 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "circleView", for: indexPath) as! circleView
-        cell.layer.cornerRadius = cell.frame.width / 2
-        cell.streamerImageView.image = #imageLiteral(resourceName: "logo")
-        cell.streamerImageView.contentMode = .scaleToFill
-        cell.clipsToBounds = true
+        
+        print("---------------------------> \(indexPath)")
+        
+//        if indexPath == [0,1]{
+//            cell.backgroundColor = .red
+//        } else {
+//             cell.backgroundColor = .green
+//        }
+        //cell.layer.cornerRadius = cell.frame.width / 2
+
+        cell.contentMode = .scaleAspectFit
+        //cell.clipsToBounds = true
         
         return cell
     }
@@ -112,9 +126,11 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         return 1
     }
     
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         pageIndicator.currentPage = Int(page)
     }
+    
 }
 
