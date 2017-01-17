@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -240,8 +239,8 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
-                                <rect key="frame" x="0.0" y="104.5" width="375" height="423.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uN-wH-fQh">
+                                <rect key="frame" x="0.0" y="78" width="375" height="451"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-jW-dPR">
@@ -254,7 +253,7 @@
                                 <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aun-Mk-viw">
-                                <rect key="frame" x="0.0" y="10" width="375" height="84.5"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="owa-Tu-zAz">
                                     <size key="itemSize" width="91" height="87"/>
@@ -264,7 +263,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="cell" id="rw0-aH-Lfo" customClass="circleView" customModule="pi_cam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-1" width="91" height="87"/>
+                                        <rect key="frame" x="0.0" y="-14" width="91" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="91" height="87"/>
@@ -281,16 +280,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.074509803921568626" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="aun-Mk-viw" secondAttribute="bottom" constant="10" id="0NZ-qy-8Mh"/>
-                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="8" id="0WH-Ag-aBa"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="Wfb-1w-qGV" secondAttribute="trailingMargin" constant="16" id="3Yp-Z2-t26"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="trailing" secondItem="aun-Mk-viw" secondAttribute="trailing" id="1WI-dG-Z7i"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="aun-Mk-viw" secondAttribute="bottom" constant="8" id="3pk-WV-bqR"/>
                             <constraint firstAttribute="trailing" secondItem="aun-Mk-viw" secondAttribute="trailing" id="F9q-QL-ixU"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="aun-Mk-viw" secondAttribute="leading" id="JKz-Sa-Obk"/>
+                            <constraint firstItem="7uN-wH-fQh" firstAttribute="top" secondItem="Wfb-1w-qGV" secondAttribute="top" constant="78" id="Msj-65-GFd"/>
+                            <constraint firstItem="fzy-jW-dPR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="7" id="Q9H-8f-lxU"/>
                             <constraint firstItem="aun-Mk-viw" firstAttribute="top" secondItem="fK9-ZK-ps0" secondAttribute="bottom" constant="10" id="S74-ba-reJ"/>
+                            <constraint firstAttribute="bottom" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="25" id="Tj6-dX-Rvf"/>
                             <constraint firstItem="aun-Mk-viw" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leading" id="VUD-x6-QDW"/>
-                            <constraint firstItem="7uN-wH-fQh" firstAttribute="leading" secondItem="Wfb-1w-qGV" secondAttribute="leadingMargin" constant="-16" id="XPF-YM-IXq"/>
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="j7b-gc-Z9b"/>
-                            <constraint firstItem="aun-Mk-viw" firstAttribute="height" secondItem="7uN-wH-fQh" secondAttribute="height" multiplier="1/5" id="lKj-Fx-ccr"/>
-                            <constraint firstItem="EpF-jq-BZR" firstAttribute="top" secondItem="7uN-wH-fQh" secondAttribute="bottom" constant="26" id="sTa-rV-0yE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LivePi" id="oaE-LZ-dMK">
@@ -370,6 +369,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="h62-Lz-6pG"/>
+                    <connections>
+                        <outlet property="multipleStreamScrollView" destination="IWm-Zm-7BQ" id="umv-Qh-DOn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMP-Cx-Xzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -669,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJj-Md-BiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="3026"/>
+            <point key="canvasLocation" x="482" y="3026"/>
         </scene>
         <!--Edit Credentials View Controller-->
         <scene sceneID="tna-ta-1GF">
@@ -865,7 +867,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqc-xA-97r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="3026"/>
+            <point key="canvasLocation" x="1148" y="3026"/>
         </scene>
         <!--Select Wifi Controller-->
         <scene sceneID="jAn-df-ppZ">

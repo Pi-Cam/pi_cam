@@ -17,6 +17,8 @@
 		C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA441DEB7C320080048D /* Assets.xcassets */; };
 		C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */; };
 		C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0746B3D1E2AD5FD008DDE0C /* circleView.xib */; };
+		C0758C021E2E7AC600F05AF4 /* NgrokStreamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0758C011E2E7AC600F05AF4 /* NgrokStreamerView.swift */; };
+		C07768701E2C653200FCB86C /* NgrokStreamerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C077686F1E2C653200FCB86C /* NgrokStreamerView.xib */; };
 		C07AE94F1E03A7FF00246F92 /* StreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AE94E1E03A7FF00246F92 /* StreamController.swift */; };
 		C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A36E3E1E01E1B100B91360 /* DotLoder.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiController.swift */; };
@@ -68,6 +70,8 @@
 		C06ACA471DEB7C320080048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C06ACA491DEB7C320080048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0746B3D1E2AD5FD008DDE0C /* circleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circleView.xib; sourceTree = "<group>"; };
+		C0758C011E2E7AC600F05AF4 /* NgrokStreamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NgrokStreamerView.swift; sourceTree = "<group>"; };
+		C077686F1E2C653200FCB86C /* NgrokStreamerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NgrokStreamerView.xib; sourceTree = "<group>"; };
 		C07AE94E1E03A7FF00246F92 /* StreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamController.swift; sourceTree = "<group>"; };
 		C0A36E3E1E01E1B100B91360 /* DotLoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotLoder.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,15 @@
 			name = StreamerInfoView;
 			sourceTree = "<group>";
 		};
+		C0758C031E2E7BCF00F05AF4 /* NgrokStreamerView */ = {
+			isa = PBXGroup;
+			children = (
+				C077686F1E2C653200FCB86C /* NgrokStreamerView.xib */,
+				C0758C011E2E7AC600F05AF4 /* NgrokStreamerView.swift */,
+			);
+			name = NgrokStreamerView;
+			sourceTree = "<group>";
+		};
 		C0D6096D1DEE2E81001DB029 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
+				C0758C031E2E7BCF00F05AF4 /* NgrokStreamerView */,
 				C007B2A91E2AF3C3008EC1FC /* CircleView */,
 				C0746B3B1E29C255008DDE0C /* StreamerInfoView */,
 			);
@@ -265,6 +279,7 @@
 				C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */,
 				C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
+				C07768701E2C653200FCB86C /* NgrokStreamerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +305,7 @@
 				C0E0F4431E25C3440068A6C0 /* StreamInformationView.swift in Sources */,
 				C007B2AB1E2B049A008EC1FC /* MultipleStreamController.swift in Sources */,
 				C007B2A81E2AE12C008EC1FC /* circleView.swift in Sources */,
+				C0758C021E2E7AC600F05AF4 /* NgrokStreamerView.swift in Sources */,
 				C0E0F43F1E25BDB90068A6C0 /* HomeScreenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

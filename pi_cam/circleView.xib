@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="209" height="217"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LIT" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TWITCH" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
                     <rect key="frame" x="0.0" y="15" width="209" height="187"/>
                 </imageView>
             </subviews>
@@ -34,6 +34,6 @@
         </view>
     </objects>
     <resources>
-        <image name="LIT" width="554" height="554"/>
+        <image name="TWITCH" width="2000" height="2278"/>
     </resources>
 </document>

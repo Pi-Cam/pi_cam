@@ -27,13 +27,13 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         var flow = UICollectionViewFlowLayout()
         flow.itemSize = CGSize(width: CGFloat(91), height: CGFloat(87))
         flow.scrollDirection = .horizontal
-        flow.minimumInteritemSpacing = -20
-        flow.minimumLineSpacing = -20
+        flow.minimumInteritemSpacing = -25
+        flow.minimumLineSpacing = -25
         collectionView.collectionViewLayout = flow
         
         setUpNavBar()
-//        setUpScrollView()
-//        loadStreamers()
+        setUpScrollView()
+        loadStreamers()
 //        setUpSecondScrollView()
 //        loadCircleStreamers()
         setUpTabBar()
@@ -55,7 +55,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         mainScrollView.delegate = self
         mainScrollView.contentInset.top = 0
     }
-
+    
     func loadStreamers() {
         for (index, streamer) in featureArray.enumerated() {
             if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
@@ -67,55 +67,55 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
     
-//    func setUpSecondScrollView(){
-//        topScrollView.isPagingEnabled = true
-//        topScrollView.showsHorizontalScrollIndicator = false
-//             topScrollView.contentSize = CGSize(width: self.topScrollView.bounds.width * CGFloat(featureArray.count), height: 1.0)
-//        topScrollView.delegate = self
-//        topScrollView.contentInset.top = 0
-//        
-//    }
+    func setUpSecondScrollView(){
+        topScrollView.isPagingEnabled = true
+        topScrollView.showsHorizontalScrollIndicator = false
+        topScrollView.contentSize = CGSize(width: self.topScrollView.bounds.width * CGFloat(featureArray.count), height: 1.0)
+        topScrollView.delegate = self
+        topScrollView.contentInset.top = 0
+        
+    }
     
-//    func loadCircleStreamers() {
-//        for (index, streamer) in featureArray.enumerated() {
-//            if let streamView = Bundle.main.loadNibNamed("circleView", owner: self, options: nil)?.first as? circleView {
-//                
-//                streamView.streamerImageView.image = #imageLiteral(resourceName: "logo")
-//                streamView.streamerImageView.contentMode = .scaleToFill
-//                topScrollView.addSubview(streamView)
-//        
-//            
-//                    streamView.backgroundColor = .green
-//                
-//                
-//                mainScrollView.layoutIfNeeded()
-//                streamView.frame.size.width = (self.mainScrollView.frame.size.width - (itemsOnScreen * padding)) /  itemsOnScreen
-//                streamView.frame.size.height = streamView.frame.size.width
-//                streamView.frame.origin.x = CGFloat(index) * (streamView.frame.width + padding)
-//                streamView.clipsToBounds = true
-//                streamView.layer.cornerRadius = streamView.frame.size.width / 2
-//
-//            }
-//        }
-//    }
+    func loadCircleStreamers() {
+        for (index, streamer) in featureArray.enumerated() {
+            if let streamView = Bundle.main.loadNibNamed("circleView", owner: self, options: nil)?.first as? circleView {
+                
+                streamView.streamerImageView.image = #imageLiteral(resourceName: "logo")
+                streamView.streamerImageView.contentMode = .scaleToFill
+                topScrollView.addSubview(streamView)
+                
+                
+                streamView.backgroundColor = .green
+                
+                
+                mainScrollView.layoutIfNeeded()
+                streamView.frame.size.width = (self.mainScrollView.frame.size.width - (itemsOnScreen * padding)) /  itemsOnScreen
+                streamView.frame.size.height = streamView.frame.size.width
+                streamView.frame.origin.x = CGFloat(index) * (streamView.frame.width + padding)
+                streamView.clipsToBounds = true
+                streamView.layer.cornerRadius = streamView.frame.size.width / 2
+                
+            }
+        }
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "circleView", for: indexPath) as! circleView
         
         print("---------------------------> \(indexPath)")
         
-//        if indexPath == [0,1]{
-//            cell.backgroundColor = .red
-//        } else {
-//             cell.backgroundColor = .green
-//        }
+        //        if indexPath == [0,1]{
+        //            cell.backgroundColor = .red
+        //        } else {
+        //             cell.backgroundColor = .green
+        //        }
         //cell.layer.cornerRadius = cell.frame.width / 2
-
+        
         cell.contentMode = .scaleAspectFit
         //cell.clipsToBounds = true
         
@@ -126,11 +126,16 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         return 1
     }
     
-
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         pageIndicator.currentPage = Int(page)
     }
     
+    //    override func viewDidLayoutSubviews() {
+    //        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //            return CGSize(width: -100, height: 95)
+    //        }
+    //    }
 }
 
