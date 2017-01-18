@@ -87,5 +87,11 @@ class LoadingScreen: UIViewController, NRFManagerDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         timerForPiConnection.invalidate()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
 }
 

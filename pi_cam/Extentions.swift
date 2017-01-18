@@ -42,6 +42,7 @@ extension UIViewController {
         // get a frame calculation ready
         let frame = self.tabBarController?.tabBar.frame
         let height = frame?.size.height
+        
         let offsetY = (visible ? +height! : height)
         
         // zero duration means no animation

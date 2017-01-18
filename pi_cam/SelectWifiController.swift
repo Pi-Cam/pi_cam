@@ -48,5 +48,11 @@ class SelectWifiController: UIViewController, UITableViewDataSource, UITableView
     func backButtonPressed() {
         _ = navigationController?.popViewController(animated: true)
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
 }
 

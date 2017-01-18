@@ -10,6 +10,8 @@
 		C007B2A81E2AE12C008EC1FC /* circleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007B2A71E2AE12C008EC1FC /* circleView.swift */; };
 		C007B2AB1E2B049A008EC1FC /* MultipleStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007B2AA1E2B049A008EC1FC /* MultipleStreamController.swift */; };
 		C01072941DFE32C0007FBA0B /* TransferInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* TransferInformationController.swift */; };
+		C015FD261E2EACD20076A8FC /* YoutubeStreamerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C015FD251E2EACD20076A8FC /* YoutubeStreamerView.xib */; };
+		C015FD281E2EACE50076A8FC /* YoutubeStreamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015FD271E2EACE50076A8FC /* YoutubeStreamerView.swift */; };
 		C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610F1E019DAF00B83922 /* AddServiceViewController.swift */; };
 		C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05ECA3C1E023BE50099B4F2 /* PiImage.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
@@ -31,6 +33,7 @@
 		C0E0F43F1E25BDB90068A6C0 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0F43E1E25BDB90068A6C0 /* HomeScreenController.swift */; };
 		C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E0F4401E25C32C0068A6C0 /* StreamInformationView.xib */; };
 		C0E0F4431E25C3440068A6C0 /* StreamInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0F4421E25C3440068A6C0 /* StreamInformationView.swift */; };
+		C0FAB2AF1E2ED1C8009252CF /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FAB2AE1E2ED1C8009252CF /* OpenSans-Light.ttf */; };
 		C0FBFF371E0233F70045F5FC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FBFF361E0233F70045F5FC /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,8 @@
 		C007B2A71E2AE12C008EC1FC /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
 		C007B2AA1E2B049A008EC1FC /* MultipleStreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleStreamController.swift; sourceTree = "<group>"; };
 		C01072931DFE32C0007FBA0B /* TransferInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferInformationController.swift; sourceTree = "<group>"; };
+		C015FD251E2EACD20076A8FC /* YoutubeStreamerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoutubeStreamerView.xib; sourceTree = "<group>"; };
+		C015FD271E2EACE50076A8FC /* YoutubeStreamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeStreamerView.swift; sourceTree = "<group>"; };
 		C028610F1E019DAF00B83922 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		C05ECA3C1E023BE50099B4F2 /* PiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiImage.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +88,7 @@
 		C0E0F43E1E25BDB90068A6C0 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		C0E0F4401E25C32C0068A6C0 /* StreamInformationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamInformationView.xib; sourceTree = "<group>"; };
 		C0E0F4421E25C3440068A6C0 /* StreamInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamInformationView.swift; sourceTree = "<group>"; };
+		C0FAB2AE1E2ED1C8009252CF /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		C0FBFF361E0233F70045F5FC /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,15 @@
 				C007B2A71E2AE12C008EC1FC /* circleView.swift */,
 			);
 			name = CircleView;
+			sourceTree = "<group>";
+		};
+		C015FD291E2EACEE0076A8FC /* YoutubeStreamerView */ = {
+			isa = PBXGroup;
+			children = (
+				C015FD251E2EACD20076A8FC /* YoutubeStreamerView.xib */,
+				C015FD271E2EACE50076A8FC /* YoutubeStreamerView.swift */,
+			);
+			name = YoutubeStreamerView;
 			sourceTree = "<group>";
 		};
 		C05ECA3B1E023BCA0099B4F2 /* ProgromaticViews */ = {
@@ -179,6 +194,7 @@
 				C06ACA461DEB7C320080048D /* LaunchScreen.storyboard */,
 				C0FBFF361E0233F70045F5FC /* Extentions.swift */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
+				C0FAB2AE1E2ED1C8009252CF /* OpenSans-Light.ttf */,
 				C06ACA441DEB7C320080048D /* Assets.xcassets */,
 				C06ACA491DEB7C320080048D /* Info.plist */,
 			);
@@ -204,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				C06ACA411DEB7C320080048D /* Main.storyboard */,
+				C015FD291E2EACEE0076A8FC /* YoutubeStreamerView */,
 				C0758C031E2E7BCF00F05AF4 /* NgrokStreamerView */,
 				C007B2A91E2AF3C3008EC1FC /* CircleView */,
 				C0746B3B1E29C255008DDE0C /* StreamerInfoView */,
@@ -275,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */,
+				C015FD261E2EACD20076A8FC /* YoutubeStreamerView.xib in Resources */,
+				C0FAB2AF1E2ED1C8009252CF /* OpenSans-Light.ttf in Resources */,
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
 				C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */,
 				C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */,
@@ -293,6 +312,7 @@
 				C0B77ADF1DF0E22200136B3E /* SelectWifiController.swift in Sources */,
 				C07AE94F1E03A7FF00246F92 /* StreamController.swift in Sources */,
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
+				C015FD281E2EACE50076A8FC /* YoutubeStreamerView.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* LoadingScreen.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 				C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */,

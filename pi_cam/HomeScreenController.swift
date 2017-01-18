@@ -31,11 +31,16 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         flow.minimumLineSpacing = -25
         collectionView.collectionViewLayout = flow
         
+//        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.clipsToBounds = true
+
+
+        
         setUpNavBar()
         setUpScrollView()
         loadStreamers()
-//        setUpSecondScrollView()
-//        loadCircleStreamers()
+        //        setUpSecondScrollView()
+        //        loadCircleStreamers()
         setUpTabBar()
     }
     
@@ -54,6 +59,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         mainScrollView.showsHorizontalScrollIndicator = false
         mainScrollView.delegate = self
         mainScrollView.contentInset.top = 0
+        
     }
     
     func loadStreamers() {
@@ -80,7 +86,11 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         for (index, streamer) in featureArray.enumerated() {
             if let streamView = Bundle.main.loadNibNamed("circleView", owner: self, options: nil)?.first as? circleView {
                 
-                streamView.streamerImageView.image = #imageLiteral(resourceName: "logo")
+                
+                streamView.streamerImageView.image = #imageLiteral(resourceName: "N")
+                
+                
+                
                 streamView.streamerImageView.contentMode = .scaleToFill
                 topScrollView.addSubview(streamView)
                 
@@ -106,18 +116,13 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "circleView", for: indexPath) as! circleView
+        cell.streamerImageView.image = #imageLiteral(resourceName: "N")
         
-        print("---------------------------> \(indexPath)")
-        
-        //        if indexPath == [0,1]{
-        //            cell.backgroundColor = .red
-        //        } else {
-        //             cell.backgroundColor = .green
-        //        }
-        //cell.layer.cornerRadius = cell.frame.width / 2
+        if indexPath[1] == 1{
+            cell.streamerImageView.image = #imageLiteral(resourceName: "LIT")
+        }
         
         cell.contentMode = .scaleAspectFit
-        //cell.clipsToBounds = true
         
         return cell
     }
@@ -131,11 +136,11 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         pageIndicator.currentPage = Int(page)
     }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     
-    //    override func viewDidLayoutSubviews() {
-    //        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //            return CGSize(width: -100, height: 95)
-    //        }
-    //    }
 }
 

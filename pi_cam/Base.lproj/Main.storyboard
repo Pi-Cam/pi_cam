@@ -227,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="-1287" y="2263"/>
         </scene>
-        <!--LivePi-->
+        <!--HOME-->
         <scene sceneID="jmL-W2-yyA">
             <objects>
                 <viewController storyboardIdentifier="SUPERMain" id="eHz-XL-1yO" customClass="HomeScreenController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,7 +250,7 @@
                                     <constraint firstAttribute="width" constant="90" id="e1m-O7-TSk"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" white="1" alpha="0.79569920568561869" colorSpace="calibratedWhite"/>
-                                <color key="currentPageIndicatorTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aun-Mk-viw">
                                 <rect key="frame" x="0.0" y="10" width="375" height="60"/>
@@ -292,7 +292,7 @@
                             <constraint firstItem="fzy-jW-dPR" firstAttribute="centerX" secondItem="Wfb-1w-qGV" secondAttribute="centerX" id="j7b-gc-Z9b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LivePi" id="oaE-LZ-dMK">
+                    <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK">
                         <barButtonItem key="leftBarButtonItem" image="itsHam" id="0w2-tp-FRy"/>
                         <barButtonItem key="rightBarButtonItem" image="Squares" id="Kjb-K5-NLL"/>
                     </navigationItem>
@@ -343,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="1607" y="2263"/>
         </scene>
-        <!--Item-->
+        <!--Multiple Stream Controller-->
         <scene sceneID="sAS-sj-fMW">
             <objects>
                 <viewController id="8aa-CW-YVs" customClass="MultipleStreamController" customModule="pi_cam" customModuleProvider="target" sceneMemberID="viewController">
@@ -358,19 +358,30 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-Zm-7BQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0tR-Tp-vOy">
+                                <rect key="frame" x="168" y="586" width="39" height="37"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="btj-lx-p7j" firstAttribute="top" secondItem="IWm-Zm-7BQ" secondAttribute="bottom" constant="-50" id="3jj-eH-e9o"/>
+                            <constraint firstItem="0tR-Tp-vOy" firstAttribute="leading" secondItem="tfl-ku-NXp" secondAttribute="leadingMargin" constant="152" id="4l7-Fs-cHz"/>
+                            <constraint firstItem="btj-lx-p7j" firstAttribute="top" secondItem="0tR-Tp-vOy" secondAttribute="bottom" constant="-5" id="PPP-6s-UsA"/>
                             <constraint firstItem="IWm-Zm-7BQ" firstAttribute="top" secondItem="tfl-ku-NXp" secondAttribute="top" id="Vnc-oK-F52"/>
                             <constraint firstAttribute="trailing" secondItem="IWm-Zm-7BQ" secondAttribute="trailing" id="k77-JC-UMP"/>
                             <constraint firstItem="IWm-Zm-7BQ" firstAttribute="leading" secondItem="tfl-ku-NXp" secondAttribute="leading" id="loO-lr-WZd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0tR-Tp-vOy" secondAttribute="trailing" constant="152" id="vlx-f4-Qa9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="h62-Lz-6pG"/>
+                    <tabBarItem key="tabBarItem" image="PLAY" id="h62-Lz-6pG">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5.5"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="multipleStreamScrollView" destination="IWm-Zm-7BQ" id="umv-Qh-DOn"/>
+                        <outlet property="pageIndindicator" destination="0tR-Tp-vOy" id="LsK-Vz-63h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMP-Cx-Xzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1003,7 +1014,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="L4g-Af-0AR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ppl-hO-sNB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ppl-hO-sNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1025,9 +1036,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.098039215690000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vaJ-Mm-sj7" kind="relationship" relationship="viewControllers" id="S0l-i9-Iq2"/>
@@ -1038,18 +1049,20 @@
             </objects>
             <point key="canvasLocation" x="-615" y="2263"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Dag-Jz-EKn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vaJ-Mm-sj7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="C6a-2f-nnY"/>
+                    <tabBarItem key="tabBarItem" title="" image="HOME" id="C6a-2f-nnY">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uqo-fS-OC2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="uqo-fS-OC2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.73725490199999999" green="0.066666666669999999" blue="0.25882352939999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -1065,6 +1078,8 @@
     </scenes>
     <resources>
         <image name="Back" width="26" height="44"/>
+        <image name="HOME" width="80" height="92"/>
+        <image name="PLAY" width="84" height="84"/>
         <image name="Squares" width="20" height="20"/>
         <image name="Twitch_logo_(wordmark_only).svg" width="1000" height="332"/>
         <image name="Wi-Fi" width="28" height="20"/>

@@ -15,25 +15,25 @@
             <rect key="frame" x="0.0" y="0.0" width="209" height="217"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TWITCH" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
-                    <rect key="frame" x="0.0" y="15" width="209" height="187"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LIT" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
+                    <rect key="frame" x="0.0" y="20" width="209" height="177"/>
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="9Su-h1-6Mf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="5nv-Np-yUA"/>
+                <constraint firstItem="9Su-h1-6Mf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="5nv-Np-yUA"/>
                 <constraint firstAttribute="trailing" secondItem="9Su-h1-6Mf" secondAttribute="trailing" id="MCs-Y4-rPR"/>
                 <constraint firstItem="9Su-h1-6Mf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N7y-Di-gwg"/>
-                <constraint firstAttribute="bottom" secondItem="9Su-h1-6Mf" secondAttribute="bottom" constant="15" id="T2a-z1-C16"/>
+                <constraint firstAttribute="bottom" secondItem="9Su-h1-6Mf" secondAttribute="bottom" constant="20" id="T2a-z1-C16"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="streamerImageView" destination="9Su-h1-6Mf" id="P1T-5F-LRI"/>
             </connections>
-            <point key="canvasLocation" x="130.5" y="153.5"/>
+            <point key="canvasLocation" x="-27" y="-25"/>
         </view>
     </objects>
     <resources>
-        <image name="TWITCH" width="2000" height="2278"/>
+        <image name="LIT" width="554" height="554"/>
     </resources>
 </document>
