@@ -15,9 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="829" height="1013"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-cv-ZAd">
+                <webView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-cv-ZAd">
                     <rect key="frame" x="0.0" y="0.0" width="829" height="1013"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <dataDetectorType key="dataDetectorTypes"/>
                 </webView>
             </subviews>
             <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

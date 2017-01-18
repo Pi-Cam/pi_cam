@@ -12,4 +12,5 @@ class circleView: UICollectionViewCell {
     
     @IBOutlet weak var streamerImageView: UIImageView!
     
+    @IBOutlet weak var statusIndicator: UIImageView!
 }

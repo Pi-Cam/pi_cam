@@ -31,26 +31,34 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         flow.minimumLineSpacing = -25
         collectionView.collectionViewLayout = flow
         
+//        collectionView.bordwe
+        
+        var borderWidth: CGFloat = 0.5
+        
+        collectionView.frame = collectionView.frame.insetBy(dx: -borderWidth, dy: -borderWidth);
+        collectionView.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        collectionView.layer.borderWidth = borderWidth;
+        
 //        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
-        self.navigationController?.navigationBar.clipsToBounds = true
+//        self.navigationController?.navigationBar.clipsToBounds = true
 
 
         
-        setUpNavBar()
+        //setUpNavBar()
         setUpScrollView()
         loadStreamers()
         //        setUpSecondScrollView()
         //        loadCircleStreamers()
-        setUpTabBar()
+        //setUpTabBar()
     }
     
     func setUpNavBar(){
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
-        self.navigationController?.navigationBar.alpha = 1
+//        self.navigationController?.navigationBar.barTintColor = UIColor.red
+//            self.navigationController?.navigationBar.alpha = 1
     }
     
     func setUpTabBar(){
-        UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
+//        UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
     }
     
     func setUpScrollView(){
@@ -64,12 +72,24 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     
     func loadStreamers() {
         for (index, streamer) in featureArray.enumerated() {
-            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
-                mainScrollView.addSubview(streamView)
-                streamView.frame.size.height = self.mainScrollView.bounds.size.height
-                streamView.frame.size.width = self.mainScrollView.bounds.size.width
-                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+            
+            if index == 0{
+                if let streamView = Bundle.main.loadNibNamed("MainView", owner: self, options: nil)?.first as? MainView {
+                    mainScrollView.addSubview(streamView)
+                    streamView.frame.size.height = self.mainScrollView.bounds.size.height
+                    streamView.frame.size.width = self.mainScrollView.bounds.size.width
+                    streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+                }
             }
+ 
+
+            
+//            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
+//                mainScrollView.addSubview(streamView)
+//                streamView.frame.size.height = self.mainScrollView.bounds.size.height
+//                streamView.frame.size.width = self.mainScrollView.bounds.size.width
+//                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+//            }
         }
     }
     
@@ -111,7 +131,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -120,6 +140,9 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         
         if indexPath[1] == 1{
             cell.streamerImageView.image = #imageLiteral(resourceName: "LIT")
+        } else if indexPath[1] == 2 {
+           cell.streamerImageView.image = UIImage(named: "TC")
+            cell.statusIndicator.isHidden = true
         }
         
         cell.contentMode = .scaleAspectFit

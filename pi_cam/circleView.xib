@@ -18,22 +18,33 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LIT" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-h1-6Mf">
                     <rect key="frame" x="0.0" y="20" width="209" height="177"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval" translatesAutoresizingMaskIntoConstraints="NO" id="BKA-wa-T70">
+                    <rect key="frame" x="182" y="188" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="17k-rP-XkO"/>
+                        <constraint firstAttribute="width" constant="12" id="nt6-ve-a2E"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="9Su-h1-6Mf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="5nv-Np-yUA"/>
                 <constraint firstAttribute="trailing" secondItem="9Su-h1-6Mf" secondAttribute="trailing" id="MCs-Y4-rPR"/>
                 <constraint firstItem="9Su-h1-6Mf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N7y-Di-gwg"/>
+                <constraint firstAttribute="trailing" secondItem="BKA-wa-T70" secondAttribute="trailing" constant="15" id="QN7-ib-opO"/>
                 <constraint firstAttribute="bottom" secondItem="9Su-h1-6Mf" secondAttribute="bottom" constant="20" id="T2a-z1-C16"/>
+                <constraint firstAttribute="bottom" secondItem="BKA-wa-T70" secondAttribute="bottom" constant="17" id="xPp-p7-F5D"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="statusIndicator" destination="BKA-wa-T70" id="Vg1-v7-qqd"/>
                 <outlet property="streamerImageView" destination="9Su-h1-6Mf" id="P1T-5F-LRI"/>
             </connections>
-            <point key="canvasLocation" x="-27" y="-25"/>
+            <point key="canvasLocation" x="-27.5" y="-25.5"/>
         </view>
     </objects>
     <resources>
         <image name="LIT" width="554" height="554"/>
+        <image name="oval" width="18" height="18"/>
     </resources>
 </document>

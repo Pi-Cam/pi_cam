@@ -25,6 +25,10 @@
 		C0A36E3F1E01E1B100B91360 /* DotLoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A36E3E1E01E1B100B91360 /* DotLoder.swift */; };
 		C0B77ADF1DF0E22200136B3E /* SelectWifiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77ADE1DF0E22200136B3E /* SelectWifiController.swift */; };
 		C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */; };
+		C0BB82921E2FF376009B6B83 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0BB82911E2FF376009B6B83 /* OpenSans-Bold.ttf */; };
+		C0BB82941E2FF3A3009B6B83 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0BB82931E2FF3A3009B6B83 /* OpenSans-Regular.ttf */; };
+		C0BB82961E3010DB009B6B83 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0BB82951E3010DB009B6B83 /* MainView.xib */; };
+		C0BB82981E3010F0009B6B83 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BB82971E3010F0009B6B83 /* MainView.swift */; };
 		C0CF05141DECC38E0092D270 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF05111DECC38E0092D270 /* LoadingScreen.swift */; };
 		C0CF3D951E2972A000F6CCF7 /* MjpegStreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */; };
 		C0CF3D961E2972A000F6CCF7 /* MjpegStreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,6 +85,10 @@
 		C0A36E3E1E01E1B100B91360 /* DotLoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotLoder.swift; sourceTree = "<group>"; };
 		C0B77ADE1DF0E22200136B3E /* SelectWifiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWifiController.swift; sourceTree = "<group>"; };
 		C0B77AE01DF0E86600136B3E /* WifiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiTableViewCell.swift; sourceTree = "<group>"; };
+		C0BB82911E2FF376009B6B83 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		C0BB82931E2FF3A3009B6B83 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		C0BB82951E3010DB009B6B83 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		C0BB82971E3010F0009B6B83 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C0CF05111DECC38E0092D270 /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		C0CF3D941E2972A000F6CCF7 /* MjpegStreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MjpegStreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D632611DF8D71E0040C62C /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
@@ -186,6 +194,15 @@
 			name = NgrokStreamerView;
 			sourceTree = "<group>";
 		};
+		C0BB82991E3010F7009B6B83 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				C0BB82951E3010DB009B6B83 /* MainView.xib */,
+				C0BB82971E3010F0009B6B83 /* MainView.swift */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
 		C0D6096D1DEE2E81001DB029 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +212,8 @@
 				C0FBFF361E0233F70045F5FC /* Extentions.swift */,
 				C06ACA3D1DEB7C320080048D /* AppDelegate.swift */,
 				C0FAB2AE1E2ED1C8009252CF /* OpenSans-Light.ttf */,
+				C0BB82931E2FF3A3009B6B83 /* OpenSans-Regular.ttf */,
+				C0BB82911E2FF376009B6B83 /* OpenSans-Bold.ttf */,
 				C06ACA441DEB7C320080048D /* Assets.xcassets */,
 				C06ACA491DEB7C320080048D /* Info.plist */,
 			);
@@ -224,6 +243,7 @@
 				C0758C031E2E7BCF00F05AF4 /* NgrokStreamerView */,
 				C007B2A91E2AF3C3008EC1FC /* CircleView */,
 				C0746B3B1E29C255008DDE0C /* StreamerInfoView */,
+				C0BB82991E3010F7009B6B83 /* MainView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -291,14 +311,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BB82941E2FF3A3009B6B83 /* OpenSans-Regular.ttf in Resources */,
 				C06ACA481DEB7C320080048D /* LaunchScreen.storyboard in Resources */,
 				C015FD261E2EACD20076A8FC /* YoutubeStreamerView.xib in Resources */,
 				C0FAB2AF1E2ED1C8009252CF /* OpenSans-Light.ttf in Resources */,
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
 				C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */,
+				C0BB82921E2FF376009B6B83 /* OpenSans-Bold.ttf in Resources */,
 				C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
 				C07768701E2C653200FCB86C /* NgrokStreamerView.xib in Resources */,
+				C0BB82961E3010DB009B6B83 /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +337,7 @@
 				C0B77AE11DF0E86600136B3E /* WifiTableViewCell.swift in Sources */,
 				C015FD281E2EACE50076A8FC /* YoutubeStreamerView.swift in Sources */,
 				C0CF05141DECC38E0092D270 /* LoadingScreen.swift in Sources */,
+				C0BB82981E3010F0009B6B83 /* MainView.swift in Sources */,
 				C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */,
 				C0DB48B61DFF078300D84652 /* CredentialsViewController.swift in Sources */,
 				C0D632621DF8D71E0040C62C /* NRFManager.swift in Sources */,

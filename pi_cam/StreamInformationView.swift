@@ -11,12 +11,15 @@ import UIKit
 class StreamInformationView: UIView {
     
     @IBOutlet weak var transformingTextLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
     
+    @IBOutlet weak var startStreamButton: UIButton!
     @IBOutlet weak var transformingTextLabelTwo: UILabel!
     var timer = Timer()
         var counter = 0
         var IndexCounter = 0
 
+    @IBOutlet weak var streamerPicture: UIImageView!
         var coolWords = ["Last Stream","Number of streams","Average view count"]
     var coolWordsTwo = ["Dec 7, 9:00pm","145","76"]
     
@@ -31,6 +34,20 @@ class StreamInformationView: UIView {
     override func awakeFromNib() {
         
         timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: "countUp", userInfo: nil, repeats: true)
+        
+        
+//        var borderWidth: CGFloat = 0.5
+//        
+//        streamerPicture.frame = streamerPicture.frame.insetBy(dx: -borderWidth, dy: -borderWidth);
+//        streamerPicture.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+//        streamerPicture.layer.borderWidth = borderWidth;
+        
+        addBorder(view: streamerPicture, width: 0.5)
+        addBorder(view: startStreamButton, width: 0.5)
+        addBorder(view: editButton, width: 0.5)
+
+        
+        
         //let borderWidth: CGFloat = 0.5
         //        borderView.frame = self.frame.insetBy(dx: CGFloat(-borderWidth), dy: CGFloat(-borderWidth))
         //        borderView.layer.borderColor = UIColor.gray.cgColor
@@ -42,6 +59,12 @@ class StreamInformationView: UIView {
     //        mainViewController.performSegue(withIdentifier: "goLive", sender: self)
     //    }
     
+    
+    func addBorder(view:UIView, width:Float){
+        view.frame = view.frame.insetBy(dx: -(CGFloat)(width), dy: -(CGFloat)(width));
+        view.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        view.layer.borderWidth = CGFloat(width);
+    }
     
     
     func countUp(){
