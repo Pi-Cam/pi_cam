@@ -11,25 +11,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NgrokStreamerView" customModule="pi_cam" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PreviousStreamsView" customModule="pi_cam" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="noe-t0-7FN">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="psi-uw-wGe">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="noe-t0-7FN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Efr-cU-QKJ"/>
-                <constraint firstAttribute="bottom" secondItem="noe-t0-7FN" secondAttribute="bottom" id="jK3-bu-Rq4"/>
-                <constraint firstItem="noe-t0-7FN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lmz-no-qO0"/>
-                <constraint firstAttribute="trailing" secondItem="noe-t0-7FN" secondAttribute="trailing" id="nL4-Sz-4h0"/>
+                <constraint firstAttribute="bottom" secondItem="psi-uw-wGe" secondAttribute="bottom" id="4Jz-mY-mMl"/>
+                <constraint firstItem="psi-uw-wGe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7aJ-7e-Wsh"/>
+                <constraint firstAttribute="trailing" secondItem="psi-uw-wGe" secondAttribute="trailing" id="Yfb-LN-XsN"/>
+                <constraint firstItem="psi-uw-wGe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u7X-gD-0D6"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imageView" destination="noe-t0-7FN" id="75g-Bq-NAi"/>
+                <outlet property="tableView" destination="psi-uw-wGe" id="9yy-cf-WGW"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="60.5"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

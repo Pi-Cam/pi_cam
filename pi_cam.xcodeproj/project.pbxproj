@@ -12,6 +12,10 @@
 		C01072941DFE32C0007FBA0B /* TransferInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01072931DFE32C0007FBA0B /* TransferInformationController.swift */; };
 		C015FD261E2EACD20076A8FC /* YoutubeStreamerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C015FD251E2EACD20076A8FC /* YoutubeStreamerView.xib */; };
 		C015FD281E2EACE50076A8FC /* YoutubeStreamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015FD271E2EACE50076A8FC /* YoutubeStreamerView.swift */; };
+		C02246E01E3020BD00C872E0 /* PreviousStreamsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02246DF1E3020BD00C872E0 /* PreviousStreamsView.xib */; };
+		C02246E21E3020DB00C872E0 /* PreviousStreamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02246E11E3020DB00C872E0 /* PreviousStreamsView.swift */; };
+		C02246EB1E30256E00C872E0 /* PreviousStreamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02246E91E30256E00C872E0 /* PreviousStreamsTableViewCell.swift */; };
+		C02246EC1E30256E00C872E0 /* PreviousStreamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02246EA1E30256E00C872E0 /* PreviousStreamsTableViewCell.xib */; };
 		C02861101E019DAF00B83922 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028610F1E019DAF00B83922 /* AddServiceViewController.swift */; };
 		C05ECA3D1E023BE50099B4F2 /* PiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05ECA3C1E023BE50099B4F2 /* PiImage.swift */; };
 		C06ACA3E1DEB7C320080048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06ACA3D1DEB7C320080048D /* AppDelegate.swift */; };
@@ -70,6 +74,10 @@
 		C01072931DFE32C0007FBA0B /* TransferInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferInformationController.swift; sourceTree = "<group>"; };
 		C015FD251E2EACD20076A8FC /* YoutubeStreamerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoutubeStreamerView.xib; sourceTree = "<group>"; };
 		C015FD271E2EACE50076A8FC /* YoutubeStreamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeStreamerView.swift; sourceTree = "<group>"; };
+		C02246DF1E3020BD00C872E0 /* PreviousStreamsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviousStreamsView.xib; sourceTree = "<group>"; };
+		C02246E11E3020DB00C872E0 /* PreviousStreamsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousStreamsView.swift; sourceTree = "<group>"; };
+		C02246E91E30256E00C872E0 /* PreviousStreamsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousStreamsTableViewCell.swift; sourceTree = "<group>"; };
+		C02246EA1E30256E00C872E0 /* PreviousStreamsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviousStreamsTableViewCell.xib; sourceTree = "<group>"; };
 		C028610F1E019DAF00B83922 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		C05ECA3C1E023BE50099B4F2 /* PiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiImage.swift; sourceTree = "<group>"; };
 		C06ACA3A1DEB7C320080048D /* pi_cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pi_cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +146,24 @@
 			name = YoutubeStreamerView;
 			sourceTree = "<group>";
 		};
+		C02246E31E30210C00C872E0 /* PreviousStreamsView */ = {
+			isa = PBXGroup;
+			children = (
+				C02246DF1E3020BD00C872E0 /* PreviousStreamsView.xib */,
+				C02246E11E3020DB00C872E0 /* PreviousStreamsView.swift */,
+			);
+			name = PreviousStreamsView;
+			sourceTree = "<group>";
+		};
+		C02246E81E30251E00C872E0 /* PreviousStreamsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C02246E91E30256E00C872E0 /* PreviousStreamsTableViewCell.swift */,
+				C02246EA1E30256E00C872E0 /* PreviousStreamsTableViewCell.xib */,
+			);
+			name = PreviousStreamsTableViewCell;
+			sourceTree = "<group>";
+		};
 		C05ECA3B1E023BCA0099B4F2 /* ProgromaticViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +196,7 @@
 				C05ECA3B1E023BCA0099B4F2 /* ProgromaticViews */,
 				C0009D431DF85D5C005B6E47 /* Models */,
 				C0D609701DEE3008001DB029 /* Views */,
+				C02246E81E30251E00C872E0 /* PreviousStreamsTableViewCell */,
 				C0D6096F1DEE2FE8001DB029 /* Controllers */,
 				C0D6096D1DEE2E81001DB029 /* Helpers */,
 			);
@@ -244,6 +271,7 @@
 				C007B2A91E2AF3C3008EC1FC /* CircleView */,
 				C0746B3B1E29C255008DDE0C /* StreamerInfoView */,
 				C0BB82991E3010F7009B6B83 /* MainView */,
+				C02246E31E30210C00C872E0 /* PreviousStreamsView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,10 +346,12 @@
 				C06ACA451DEB7C320080048D /* Assets.xcassets in Resources */,
 				C0746B3E1E2AD5FD008DDE0C /* circleView.xib in Resources */,
 				C0BB82921E2FF376009B6B83 /* OpenSans-Bold.ttf in Resources */,
+				C02246E01E3020BD00C872E0 /* PreviousStreamsView.xib in Resources */,
 				C0E0F4411E25C32C0068A6C0 /* StreamInformationView.xib in Resources */,
 				C06ACA431DEB7C320080048D /* Main.storyboard in Resources */,
 				C07768701E2C653200FCB86C /* NgrokStreamerView.xib in Resources */,
 				C0BB82961E3010DB009B6B83 /* MainView.xib in Resources */,
+				C02246EC1E30256E00C872E0 /* PreviousStreamsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +379,10 @@
 				C0E0F4431E25C3440068A6C0 /* StreamInformationView.swift in Sources */,
 				C007B2AB1E2B049A008EC1FC /* MultipleStreamController.swift in Sources */,
 				C007B2A81E2AE12C008EC1FC /* circleView.swift in Sources */,
+				C02246EB1E30256E00C872E0 /* PreviousStreamsTableViewCell.swift in Sources */,
 				C0758C021E2E7AC600F05AF4 /* NgrokStreamerView.swift in Sources */,
 				C0E0F43F1E25BDB90068A6C0 /* HomeScreenController.swift in Sources */,
+				C02246E21E3020DB00C872E0 /* PreviousStreamsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

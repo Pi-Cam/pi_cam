@@ -11,15 +11,30 @@ import MjpegStreamingKit
 
 class NgrokStreamerView: UIView {
     var url: URL?
+    var screenHight: Int = 0
+    var screenWidth: Int = 0
+    
     var streamingController: MjpegStreamingController!
     @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         
+        screenHight = Int(self.bounds.height)
+        screenWidth = Int(self.bounds.width)
+        
+        print(screenWidth)
+        print(screenHight)
+
+        
         // Check for index
         
+        imageView.widthAnchor.constraint(equalToConstant: CGFloat(screenHight)).isActive = true
+        
+         imageView.heightAnchor.constraint(equalToConstant: CGFloat(screenWidth)).isActive = true
         
         
+        imageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2));
+
         streamingController = MjpegStreamingController(imageView: imageView)
         url = URL(string: "http://pistream.ngrok.io/stream/video.mjpeg")
         // http://webcams.hotelcozumel.com.mx:6003/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1458771208837

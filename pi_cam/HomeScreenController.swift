@@ -31,7 +31,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         flow.minimumLineSpacing = -25
         collectionView.collectionViewLayout = flow
         
-//        collectionView.bordwe
+        //        collectionView.bordwe
         
         var borderWidth: CGFloat = 0.5
         
@@ -39,10 +39,10 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
         collectionView.layer.borderWidth = borderWidth;
         
-//        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
-//        self.navigationController?.navigationBar.clipsToBounds = true
-
-
+        //        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        //        self.navigationController?.navigationBar.clipsToBounds = true
+        
+        
         
         //setUpNavBar()
         setUpScrollView()
@@ -53,12 +53,12 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func setUpNavBar(){
-//        self.navigationController?.navigationBar.barTintColor = UIColor.red
-//            self.navigationController?.navigationBar.alpha = 1
+        //        self.navigationController?.navigationBar.barTintColor = UIColor.red
+        //            self.navigationController?.navigationBar.alpha = 1
     }
     
     func setUpTabBar(){
-//        UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
+        //        UITabBar.appearance().barTintColor = UIColor(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
     }
     
     func setUpScrollView(){
@@ -80,16 +80,24 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
                     streamView.frame.size.width = self.mainScrollView.bounds.size.width
                     streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
                 }
+            } else if index == 1{
+                
+                if let streamView = Bundle.main.loadNibNamed("PreviousStreamsView", owner: self, options: nil)?.first as? PreviousStreamsView {
+                    mainScrollView.addSubview(streamView)
+                    streamView.frame.size.height = self.mainScrollView.bounds.size.height
+                    streamView.frame.size.width = self.mainScrollView.bounds.size.width
+                    streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+                }
             }
- 
-
             
-//            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
-//                mainScrollView.addSubview(streamView)
-//                streamView.frame.size.height = self.mainScrollView.bounds.size.height
-//                streamView.frame.size.width = self.mainScrollView.bounds.size.width
-//                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
-//            }
+            
+            
+            //            if let streamView = Bundle.main.loadNibNamed("StreamInformationView", owner: self, options: nil)?.first as? StreamInformationView {
+            //                mainScrollView.addSubview(streamView)
+            //                streamView.frame.size.height = self.mainScrollView.bounds.size.height
+            //                streamView.frame.size.width = self.mainScrollView.bounds.size.width
+            //                streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+            //            }
         }
     }
     
@@ -131,7 +139,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -141,7 +149,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         if indexPath[1] == 1{
             cell.streamerImageView.image = #imageLiteral(resourceName: "LIT")
         } else if indexPath[1] == 2 {
-           cell.streamerImageView.image = UIImage(named: "TC")
+            cell.streamerImageView.image = UIImage(named: "TC")
             cell.statusIndicator.isHidden = true
         }
         
@@ -159,11 +167,11 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         pageIndicator.currentPage = Int(page)
     }
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     
 }
 

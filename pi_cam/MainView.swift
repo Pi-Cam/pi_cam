@@ -27,9 +27,9 @@ class MainView: UIView {
         let a = CGFloat(70)
         
         let yee4 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
-        yee4.image = UIImage(named: "Group 62x")
+        yee4.image = UIImage(named: "N")
         yee4.alpha = 0.9
-        yee4.contentMode = .center
+        yee4.contentMode = .scaleAspectFit
         yee4.isUserInteractionEnabled = true
 //        yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
         
