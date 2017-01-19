@@ -27,8 +27,8 @@ class MainView: UIView {
         let a = CGFloat(70)
         
         let yee4 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
-        yee4.image = UIImage(named: "N")
-        yee4.alpha = 0.9
+        yee4.image = UIImage(named: "TWITCH")
+//        yee4.alpha = 0.7
         yee4.contentMode = .scaleAspectFit
         yee4.isUserInteractionEnabled = true
 //        yee4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
@@ -37,7 +37,8 @@ class MainView: UIView {
         yees.append(yee4)
         
         let yee2 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2)  , y: (viewOne.bounds.size.height / 2)-(a/2) - 5, width: a+5, height: a+5))
-        yee2.image = UIImage(named: "YTICON")
+        yee2.image = UIImage(named: "N")
+     
         yee2.contentMode = .scaleAspectFit
 //        yee2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
         
@@ -49,6 +50,7 @@ class MainView: UIView {
         let yee3 = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) - 16 , y: (viewOne.bounds.size.height / 2)-(a/2) - 16, width: a+32, height: a+32))
         yee3.image = UIImage(named: "U")
         yee3.contentMode = .scaleAspectFit
+//           yee3.alpha = 0.7
         yee3.isUserInteractionEnabled = true
 //        yee3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))
         
@@ -56,7 +58,7 @@ class MainView: UIView {
         yees.append(yee3)
         
         let yee = UIImageView(frame: CGRect(x: (viewOne.bounds.size.width / 2)-(a/2) , y: (viewOne.bounds.size.height / 2)-(a/2), width: a, height: a))
-        yee.image = UIImage(named: "TWITCH")
+        yee.image = UIImage(named: "YTICON")
         yee.contentMode = .scaleAspectFit
         yee.isUserInteractionEnabled = true
 //        yee.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPopUp)))

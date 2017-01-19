@@ -70,6 +70,11 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
+    func showStream(){
+        self.tabBarController?.selectedIndex = 1
+    }
+    
+    
     func loadStreamers() {
         for (index, streamer) in featureArray.enumerated() {
             
@@ -79,6 +84,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
                     streamView.frame.size.height = self.mainScrollView.bounds.size.height
                     streamView.frame.size.width = self.mainScrollView.bounds.size.width
                     streamView.frame.origin.x = CGFloat(index) * self.mainScrollView.bounds.size.width
+                    streamView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showStream)))
                 }
             } else if index == 1{
                 
@@ -132,6 +138,8 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
                 streamView.frame.origin.x = CGFloat(index) * (streamView.frame.width + padding)
                 streamView.clipsToBounds = true
                 streamView.layer.cornerRadius = streamView.frame.size.width / 2
+                streamView.isUserInteractionEnabled = true
+               
                 
             }
         }
@@ -152,6 +160,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
             cell.streamerImageView.image = UIImage(named: "TC")
             cell.statusIndicator.isHidden = true
         }
+         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showStream)))
         
         cell.contentMode = .scaleAspectFit
         

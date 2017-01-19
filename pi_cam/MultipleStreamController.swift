@@ -19,6 +19,7 @@ class MultipleStreamController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         setUpScrollView()
         loadStreamers()
+
         
     }
     
@@ -56,6 +57,7 @@ class MultipleStreamController: UIViewController, UIScrollViewDelegate {
         multipleStreamScrollView.showsHorizontalScrollIndicator = false
         multipleStreamScrollView.delegate = self
         multipleStreamScrollView.contentInset.top = 0
+        
         multipleStreamScrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showAndHideTabBar)))
         
     }

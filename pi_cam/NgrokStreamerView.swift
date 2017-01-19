@@ -17,6 +17,7 @@ class NgrokStreamerView: UIView {
     var streamingController: MjpegStreamingController!
     @IBOutlet weak var imageView: UIImageView!
     
+
     override func awakeFromNib() {
         
         screenHight = Int(self.bounds.height)
@@ -24,8 +25,9 @@ class NgrokStreamerView: UIView {
         
         print(screenWidth)
         print(screenHight)
-
         
+//        _ = DotLoder(frame: 0, masterView: self, counter: 2, height: 0)
+      
         // Check for index
         
         imageView.widthAnchor.constraint(equalToConstant: CGFloat(screenHight)).isActive = true
@@ -33,7 +35,7 @@ class NgrokStreamerView: UIView {
          imageView.heightAnchor.constraint(equalToConstant: CGFloat(screenWidth)).isActive = true
         
         
-        imageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2));
+        imageView.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2));
 
         streamingController = MjpegStreamingController(imageView: imageView)
         url = URL(string: "http://pistream.ngrok.io/stream/video.mjpeg")

@@ -310,9 +310,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="0Ps-Cg-DPc" secondAttribute="leading" id="vPk-XC-opo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="iXl-FZ-8kv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="HOME" id="oaE-LZ-dMK"/>
                     <connections>
                         <outlet property="collectionView" destination="aun-Mk-viw" id="2E0-cC-UFC"/>
                         <outlet property="mainScrollView" destination="XF0-6b-zn1" id="JpL-55-UWP"/>
@@ -380,6 +378,7 @@
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0tR-Tp-vOy">
                                 <rect key="frame" x="168" y="586" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.45882352939999999" green="0.66274509800000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>

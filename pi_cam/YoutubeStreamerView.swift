@@ -19,8 +19,11 @@ class YoutubeStreamerView: UIView {
         screenHight = Int(self.bounds.height)
         screenWidth = Int(self.bounds.width)
 
+//        webView.scrollView.isScrollEnabled = false
+        webView.scrollView.bounces = false
+        
 
-        webView.translatesAutoresizingMaskIntoConstraints = false
+//        webView.translatesAutoresizingMaskIntoConstraints = false
         
         print("Height-> \(screenHight)  Width-> \(screenWidth)")
         
@@ -31,8 +34,10 @@ class YoutubeStreamerView: UIView {
         webView.allowsInlineMediaPlayback = true
         
         // add ?playsinline=1 to your YouTube video URL
+//        667
+//        375
         
-        var b = "<html><body><iframe src=\"http://www.youtube.com/embed/nrZdERIoKLo?playsinline=1\" width=\"375\" height=\"667\" frameborder=\"0\" allowfullscreen></iframe></body></html>"
+        var b = "<html><body><iframe src=\"http://www.youtube.com/embed/UIYSY3EHgNY?playsinline=1\" width=\"360\" height=\"650\" frameborder=\"0\" allowfullscreen></iframe></body></html>"
         
         var a = "<html><body><iframe src=\"http://www.youtube.com/embed/s98vEkSJd4Y?playsinline=1\" width=\"" + String(screenWidth) + " height=\""+String(screenHight)+"\" frameborder=\"0\" allowfullscreen></iframe></body></html>"
         
