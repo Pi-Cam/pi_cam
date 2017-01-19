@@ -9,7 +9,10 @@
 import UIKit
 
 class PreviousStreamsTableViewCell: UITableViewCell {
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var streamTitle: UILabel!
 
+    @IBOutlet weak var streamDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

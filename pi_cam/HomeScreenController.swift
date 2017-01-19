@@ -16,7 +16,7 @@ class HomeScreenController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var mainScrollView: UIScrollView!
     let itemsOnScreen: CGFloat = 5
     let padding: CGFloat = 10
-    var featureArray = [1,2,3]
+    var featureArray = [1,2]
     
     
     override func viewDidLoad() {
